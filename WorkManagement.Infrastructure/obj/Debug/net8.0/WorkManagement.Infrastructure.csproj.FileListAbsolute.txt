@@ -1,0 +1,17 @@
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\bin\Debug\net8.0\WorkManagement.Infrastructure.deps.json
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\bin\Debug\net8.0\WorkManagement.Infrastructure.runtimeconfig.json
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\bin\Debug\net8.0\WorkManagement.Infrastructure.dll
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\bin\Debug\net8.0\WorkManagement.Infrastructure.pdb
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\bin\Debug\net8.0\WorkManagement.Core.dll
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\bin\Debug\net8.0\WorkManagement.Core.pdb
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.csproj.AssemblyReference.cache
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.AssemblyInfoInputs.cache
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.AssemblyInfo.cs
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.csproj.CoreCompileInputs.cache
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkMana.9BD2068F.Up2Date
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.dll
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\refint\WorkManagement.Infrastructure.dll
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.pdb
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.genruntimeconfig.cache
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\ref\WorkManagement.Infrastructure.dll
