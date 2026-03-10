@@ -1,86 +1,153 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\WorkManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\models\\account\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\models\\account\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.core\\entities\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\entities\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\models\\account\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\models\\account\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.infrastructure\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128180759_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WorkManagement.Infrastructure\\Migrations\\20260128180759_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.infrastructure\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.web\\workmanagement.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|c:\\users\\admin\\workmanagement\\workmanagement.infrastructure\\backgroundjobs\\deadlinereminderjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\backgroundjobs\\deadlinereminderjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\workmanagement.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\workmanagement.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\models\\task\\edittaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\models\\task\\edittaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\models\\task\\createtaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\models\\task\\createtaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|c:\\users\\admin\\workmanagement\\workmanagement.core\\dtos\\task\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\dtos\\task\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|c:\\users\\admin\\workmanagement\\workmanagement.infrastructure\\migrations\\20260128182334_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\migrations\\20260128182334_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|c:\\users\\admin\\workmanagement\\workmanagement.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|c:\\users\\admin\\workmanagement\\workmanagement.core\\entities\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\entities\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|c:\\users\\admin\\workmanagement\\workmanagement.infrastructure\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|c:\\users\\admin\\workmanagement\\workmanagement.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128180759_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|c:\\users\\admin\\workmanagement\\workmanagement.infrastructure\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|c:\\users\\admin\\workmanagement\\workmanagement.web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.core\\enums\\taskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|c:\\users\\admin\\workmanagement\\workmanagement.core\\enums\\taskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\enums\\taskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.infrastructure\\data\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|c:\\users\\admin\\workmanagement\\workmanagement.infrastructure\\data\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\data\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.infrastructure\\data\\configurations\\taskconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|c:\\users\\admin\\workmanagement\\workmanagement.infrastructure\\data\\configurations\\taskconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\data\\configurations\\taskconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.infrastructure\\data\\configurations\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|c:\\users\\admin\\workmanagement\\workmanagement.infrastructure\\data\\configurations\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{159860D3-9079-45A4-B960-5B2CD6541A2B}|WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj|solutionrelative:workmanagement.infrastructure\\data\\configurations\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.core\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|c:\\users\\admin\\workmanagement\\workmanagement.core\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.core\\enums\\notificationchannel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|c:\\users\\admin\\workmanagement\\workmanagement.core\\enums\\notificationchannel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\enums\\notificationchannel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.core\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|c:\\users\\admin\\workmanagement\\workmanagement.core\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.core\\enums\\taskpriority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|c:\\users\\admin\\workmanagement\\workmanagement.core\\enums\\taskpriority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\enums\\taskpriority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.core\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|c:\\users\\admin\\workmanagement\\workmanagement.core\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9D84D7F-FA0D-41ED-A956-6B4E7424CE90}|WorkManagement.Core\\WorkManagement.Core.csproj|solutionrelative:workmanagement.core\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|d:\\spkt\\hocky2\\congnghephanmem\\doan\\workmanagement\\workmanagement.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B86D370D-C062-420A-80E7-4A8347A83EDA}|WorkManagement.Web\\WorkManagement.Web.csproj|solutionrelative:workmanagement.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,271 +157,455 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "WorkManagement.Web\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-28T17:10:48.905Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20260128182334_InitialCreate.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs",
-              "RelativeToolTip": "WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "NotificationsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\NotificationsController.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Controllers\\NotificationsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\NotificationsController.cs",
+              "RelativeToolTip": "WorkManagement.Web\\Controllers\\NotificationsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T18:23:35.121Z",
+              "WhenOpened": "2026-03-10T03:41:26.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Models\\Account\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Models\\Account\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Models\\Account\\LoginViewModel.cs",
+              "RelativeToolTip": "WorkManagement.Web\\Models\\Account\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:49:20.196Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "20260128180759_InitialCreate.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128180759_InitialCreate.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Migrations\\20260128180759_InitialCreate.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128180759_InitialCreate.cs",
-              "RelativeToolTip": "WorkManagement.Infrastructure\\Migrations\\20260128180759_InitialCreate.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAQwAsAAABFAAAAAAAAAA==",
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "WorkManagement.Web\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T18:07:59.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T03:41:24.884Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ApplicationDbContextFactory.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
-              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WorkManagement.Web\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T18:07:34.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WorkManagement.Web",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj",
-              "RelativeDocumentMoniker": "WorkManagement.Web\\WorkManagement.Web.csproj",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj",
-              "RelativeToolTip": "WorkManagement.Web\\WorkManagement.Web.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-28T17:59:50.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T03:41:21.93Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "WorkManagement.Web\\appsettings.Development.json",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\appsettings.Development.json",
-              "RelativeToolTip": "WorkManagement.Web\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-28T17:53:31.659Z",
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Controllers\\TasksController.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "WorkManagement.Web\\Controllers\\TasksController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T03:41:29.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Models\\Account\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Models\\Account\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Models\\Account\\RegisterViewModel.cs",
+              "RelativeToolTip": "WorkManagement.Web\\Models\\Account\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T03:01:19.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "WorkManagement.Web\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T03:03:28.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\DbInitializer.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\DbInitializer.cs",
-              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\DbInitializer.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA6wBUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:39:18.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Program.cs",
               "RelativeDocumentMoniker": "WorkManagement.Web\\Program.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Program.cs",
               "RelativeToolTip": "WorkManagement.Web\\Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBAAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T17:37:38.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WorkManagement.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T03:43:15.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "WorkManagement.Web\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T03:01:24.885Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "UserConfiguration.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
-              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAswC4AAAAuAAAAAAAAAA==",
+              "Title": "DeadlineReminderJob.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\BackgroundJobs\\DeadlineReminderJob.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\BackgroundJobs\\DeadlineReminderJob.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\BackgroundJobs\\DeadlineReminderJob.cs",
+              "RelativeToolTip": "WorkManagement.Infrastructure\\BackgroundJobs\\DeadlineReminderJob.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:24:51.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T03:26:15.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TaskConfiguration.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\TaskConfiguration.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\Configurations\\TaskConfiguration.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\TaskConfiguration.cs",
-              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\Configurations\\TaskConfiguration.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:24:50.63Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "NotificationConfiguration.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\NotificationConfiguration.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\Configurations\\NotificationConfiguration.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\NotificationConfiguration.cs",
-              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\Configurations\\NotificationConfiguration.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowCkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:24:46.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:14:51.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "NotificationChannel.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\NotificationChannel.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\NotificationChannel.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\NotificationChannel.cs",
-              "RelativeToolTip": "WorkManagement.Core\\Enums\\NotificationChannel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:12:42.637Z",
+              "DocumentIndex": 5,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "WorkManagement.Web\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T03:07:50.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "TaskPriority.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\TaskPriority.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\TaskPriority.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\TaskPriority.cs",
-              "RelativeToolTip": "WorkManagement.Core\\Enums\\TaskPriority.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Title": "EditTaskViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Models\\Task\\EditTaskViewModel.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Models\\Task\\EditTaskViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Models\\Task\\EditTaskViewModel.cs",
+              "RelativeToolTip": "WorkManagement.Web\\Models\\Task\\EditTaskViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:12:37.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T03:01:14.788Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "NotificationType.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\NotificationType.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\NotificationType.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\NotificationType.cs",
-              "RelativeToolTip": "WorkManagement.Core\\Enums\\NotificationType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:12:27.963Z",
-              "EditorCaption": ""
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WorkManagement.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T03:00:37.787Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TaskStatus.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\TaskStatus.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\TaskStatus.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\TaskStatus.cs",
-              "RelativeToolTip": "WorkManagement.Core\\Enums\\TaskStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:12:20.403Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\UserRole.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\UserRole.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Enums\\UserRole.cs",
-              "RelativeToolTip": "WorkManagement.Core\\Enums\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:12:13.476Z",
-              "EditorCaption": ""
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WorkManagement.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T16:04:30.371Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Entities\\Notification.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Core\\Entities\\Notification.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Entities\\Notification.cs",
-              "RelativeToolTip": "WorkManagement.Core\\Entities\\Notification.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:12:00.184Z",
-              "EditorCaption": ""
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "WorkManagement.Web\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T03:07:51.526Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Task.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Entities\\Task.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Core\\Entities\\Task.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Entities\\Task.cs",
-              "RelativeToolTip": "WorkManagement.Core\\Entities\\Task.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:11:51.015Z",
-              "EditorCaption": ""
+              "DocumentIndex": 13,
+              "Title": "WorkManagement.Web.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\WorkManagement.Web.csproj",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj",
+              "RelativeToolTip": "WorkManagement.Web\\WorkManagement.Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-28T17:59:50.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "WorkManagement.Core\\Entities\\User.cs",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\Entities\\User.cs",
-              "RelativeToolTip": "WorkManagement.Core\\Entities\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAsAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "CreateTaskViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Models\\Task\\CreateTaskViewModel.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\Models\\Task\\CreateTaskViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\Models\\Task\\CreateTaskViewModel.cs",
+              "RelativeToolTip": "WorkManagement.Web\\Models\\Task\\CreateTaskViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T17:11:32.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T03:01:12.143Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "WorkManagement.Web\\Views\\Account\\Register.cshtml",
-              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "WorkManagement.Web\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-28T17:10:48.905Z",
-              "EditorCaption": ""
+              "Title": "CreateTaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\DTOs\\Task\\CreateTaskDto.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Core\\DTOs\\Task\\CreateTaskDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\DTOs\\Task\\CreateTaskDto.cs",
+              "RelativeToolTip": "WorkManagement.Core\\DTOs\\Task\\CreateTaskDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:48:51.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20260128182334_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs",
+              "RelativeToolTip": "WorkManagement.Infrastructure\\Migrations\\20260128182334_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T18:23:35.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20260128180759_InitialCreate.cs",
+              "DocumentMoniker": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128180759_InitialCreate.cs",
+              "ToolTip": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\Migrations\\20260128180759_InitialCreate.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAQwAsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T18:07:59.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T18:07:34.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "WorkManagement.Web\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Web\\appsettings.Development.json",
+              "RelativeToolTip": "WorkManagement.Web\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-28T17:53:31.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\DbInitializer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA6wBUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:39:18.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAswC4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:24:51.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "TaskConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\TaskConfiguration.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\Configurations\\TaskConfiguration.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\TaskConfiguration.cs",
+              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\Configurations\\TaskConfiguration.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:24:50.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "NotificationConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\NotificationConfiguration.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\Configurations\\NotificationConfiguration.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\Configurations\\NotificationConfiguration.cs",
+              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\Configurations\\NotificationConfiguration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowCkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:24:46.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "WorkManagement.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:14:51.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "NotificationChannel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\NotificationChannel.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\NotificationChannel.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\NotificationChannel.cs",
+              "RelativeToolTip": "WorkManagement.Core\\Enums\\NotificationChannel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:12:42.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "TaskPriority.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\TaskPriority.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\TaskPriority.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\TaskPriority.cs",
+              "RelativeToolTip": "WorkManagement.Core\\Enums\\TaskPriority.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:12:37.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "NotificationType.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\NotificationType.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\NotificationType.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\NotificationType.cs",
+              "RelativeToolTip": "WorkManagement.Core\\Enums\\NotificationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:12:27.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TaskStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\TaskStatus.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\TaskStatus.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\TaskStatus.cs",
+              "RelativeToolTip": "WorkManagement.Core\\Enums\\TaskStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:12:20.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Core\\Enums\\UserRole.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Enums\\UserRole.cs",
+              "RelativeToolTip": "WorkManagement.Core\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:12:13.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Entities\\Notification.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Core\\Entities\\Notification.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Entities\\Notification.cs",
+              "RelativeToolTip": "WorkManagement.Core\\Entities\\Notification.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:12:00.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Entities\\Task.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Core\\Entities\\Task.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Entities\\Task.cs",
+              "RelativeToolTip": "WorkManagement.Core\\Entities\\Task.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:11:51.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "WorkManagement.Core\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\Entities\\User.cs",
+              "RelativeToolTip": "WorkManagement.Core\\Entities\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T17:11:32.989Z"
             }
           ]
         }

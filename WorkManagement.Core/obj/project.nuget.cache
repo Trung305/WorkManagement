@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NMmFGmuIGLs=",
+  "dgSpecHash": "M5Uf3F/9LfQ=",
   "success": true,
-  "projectFilePath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.303\\microsoft.net.sdk.compilers.toolset.9.0.303.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.18\\microsoft.windowsdesktop.app.ref.8.0.18.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.18\\microsoft.netcore.app.ref.8.0.18.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.18\\microsoft.aspnetcore.app.ref.8.0.18.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Admin\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
