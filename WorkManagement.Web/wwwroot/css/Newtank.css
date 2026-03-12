@@ -1,0 +1,259 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #e4e9f7;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ddd;
+}
+
+.logo {
+    background: #5a5c69;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu {
+    list-style: none;
+    padding: 20px 10px;
+    flex: 1;
+}
+
+    .menu li {
+        margin-bottom: 5px;
+    }
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #555;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+    .menu-link.active {
+        background: #ebeefb;
+        color: #4e73df;
+    }
+
+.logout {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: transparent;
+}
+
+.search-bar {
+    background: #d1d8ec;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 300px;
+    outline: none;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+    .profile-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+/* KHUNG FORM TẠO MỚI (Lấy từ Popup) */
+.form-container {
+    background: white;
+    margin: 0 30px 30px 30px;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+    .header-actions h2 {
+        font-size: 20px;
+        color: #333;
+    }
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-cancel {
+    background: transparent;
+    border: none;
+    color: #2ecc71;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.btn-create {
+    background: #6ce5e8;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Lưới chia 2 cột cho Form */
+.form-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* CSS Cột Upload */
+.upload-section h4 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.drop-zone {
+    background: #eef1f5;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 13px;
+    border: 2px dashed #ccc;
+}
+
+.uploading-box {
+    background: #c2dcd7;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pdf-icon {
+    background: white;
+    color: red;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 8px 5px;
+    border-radius: 4px;
+    border: 1px solid red;
+}
+
+/* CSS Cột Nhập liệu */
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .form-group .label-red {
+        color: red;
+    }
+
+.form-input {
+    width: 100%;
+    background: #f0f3f8;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+}
+
+.date-time-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.date-input-wrap {
+    display: flex;
+    align-items: center;
+    background: #e0e5ec;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    gap: 10px;
+}
+
+.assignee-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e0e5ec;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+    .assignee-box img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }

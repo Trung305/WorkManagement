@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Notifications";
+}
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="/css/Thongbao.css">
+
+<div class="sidebar">
+    <div class="logo"><span style="background: white; color: #5a5c69; padding: 2px 8px; border-radius: 4px;">C</span> CodingLab</div>
+    <ul class="menu">
+        <li><a href="/Home/Index" class="menu-link" style="color:#555; background:transparent;">🏠 Trang chủ</a></li>
+        <li><a href="#" class="menu-link" style="color:#555; background:transparent;">📄 Công việc</a></li>
+    </ul>
+    <div class="logout">🚪 Đăng xuất</div>
+</div>
+
+<div class="main-content">
+    <div class="topbar">
+        <input type="text" class="search-bar" placeholder="🔍 Search...">
+        <div class="topbar-actions">
+            <a href="/Home/NewTask" class="add-new-btn">+ Add New</a>
+            <a href="/Home/Notifications" style="font-size: 20px; text-decoration: none; background: #ffe4c4; padding: 5px 10px; border-radius: 50%;">🔔</a>
+            <div class="profile-img"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile"></div>
+        </div>
+    </div>
+
+    <div class="notification-container">
+        <table class="notification-table">
+            <thead>
+                <tr>
+                    <th class="col-title">Tiêu đề</th>
+                    <th class="col-sender" style="background-color: white; color: black;">Người gửi</th>
+                    <th class="col-time" style="background-color: white; color: black;">Thời gian gửi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>🔔 Bạn vừa được giao một công việc mới: Thiết kế Website. Vui lòng kiểm tra và thực hiện.</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>10:30 AM, 12-03-2026</td>
+                </tr>
+                <tr>
+                    <td>⏰ Công việc Thiết kế Website sắp đến hạn. Hạn hoàn thành: 01-04-2026.</td>
+                    <td>Hệ thống</td>
+                    <td>09:00 AM, 11-03-2026</td>
+                </tr>
+                <tr>
+                    <td>⚠️ Công việc Thiết kế Website đã quá hạn. Vui lòng cập nhật tiến độ hoặc hoàn thành sớm.</td>
+                    <td>Hệ thống</td>
+                    <td>08:15 AM, 10-03-2026</td>
+                </tr>
+                <tr>
+                    <td>📊 Công việc Thiết kế Website vừa được cập nhật tiến độ. Nhấn để xem chi tiết.</td>
+                    <td>Trần Văn B</td>
+                    <td>14:20 PM, 09-03-2026</td>
+                </tr>
+                <tr>
+                    <td>💬 Nguyễn Văn A vừa bình luận trong công việc Thiết kế Website.</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>11:05 AM, 08-03-2026</td>
+                </tr>
+                <tr>
+                    <td>🔄 Trạng thái công việc Thiết kế Website đã được cập nhật thành Thiết kế UX/UI.</td>
+                    <td>Lê Thị C</td>
+                    <td>16:45 PM, 07-03-2026</td>
+                </tr>
+                <tr>
+                    <td>✅ Công việc Thiết kế Website đã được đánh dấu hoàn thành.</td>
+                    <td>Trần Văn B</td>
+                    <td>09:30 AM, 06-03-2026</td>
+                </tr>
+                <tr>
+                    <td>👥 Trần Văn B đã thêm bạn vào công việc Thiết kế Website.</td>
+                    <td>Trần Văn B</td>
+                    <td>15:00 PM, 05-03-2026</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

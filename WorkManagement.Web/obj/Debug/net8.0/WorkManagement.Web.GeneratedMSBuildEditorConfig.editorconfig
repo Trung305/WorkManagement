@@ -9,49 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WorkManagement.Web
 build_property.RootNamespace = WorkManagement.Web
-build_property.ProjectDir = D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\
+build_property.ProjectDir = D:\WorkManagement\WorkManagement.Web\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web
+build_property.MSBuildProjectDirectory = D:\WorkManagement\WorkManagement.Web
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/SPKT/HocKy2/CongNghePhanMem/DoAn/WorkManagement/WorkManagement.Web/Views/Account/Login.cshtml]
+[D:/WorkManagement/WorkManagement.Web/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SPKT/HocKy2/CongNghePhanMem/DoAn/WorkManagement/WorkManagement.Web/Views/Account/Register.cshtml]
+[D:/WorkManagement/WorkManagement.Web/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SPKT/HocKy2/CongNghePhanMem/DoAn/WorkManagement/WorkManagement.Web/Views/Home/Index.cshtml]
+[D:/WorkManagement/WorkManagement.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SPKT/HocKy2/CongNghePhanMem/DoAn/WorkManagement/WorkManagement.Web/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/WorkManagement/WorkManagement.Web/Views/Home/NewTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdUYXNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SPKT/HocKy2/CongNghePhanMem/DoAn/WorkManagement/WorkManagement.Web/Views/Shared/Error.cshtml]
+[D:/WorkManagement/WorkManagement.Web/Views/Home/Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RpZmljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WorkManagement/WorkManagement.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SPKT/HocKy2/CongNghePhanMem/DoAn/WorkManagement/WorkManagement.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/WorkManagement/WorkManagement.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SPKT/HocKy2/CongNghePhanMem/DoAn/WorkManagement/WorkManagement.Web/Views/_ViewImports.cshtml]
+[D:/WorkManagement/WorkManagement.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SPKT/HocKy2/CongNghePhanMem/DoAn/WorkManagement/WorkManagement.Web/Views/_ViewStart.cshtml]
+[D:/WorkManagement/WorkManagement.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SPKT/HocKy2/CongNghePhanMem/DoAn/WorkManagement/WorkManagement.Web/Views/Shared/_Layout.cshtml]
+[D:/WorkManagement/WorkManagement.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-fnkybxv4zz

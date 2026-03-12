@@ -1,5 +1,9 @@
+wwwroot\css\dashboard.css
+wwwroot\css\Newtank.css
 wwwroot\css\site.css
+wwwroot\css\Thongbao.css
 wwwroot\favicon.ico
+wwwroot\images\anhnen.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

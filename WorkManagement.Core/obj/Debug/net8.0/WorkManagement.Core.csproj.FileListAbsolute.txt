@@ -9,3 +9,15 @@ D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Core\obj\Debug
 D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\refint\WorkManagement.Core.dll
 D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.pdb
 D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\ref\WorkManagement.Core.dll
+D:\WorkManagement\WorkManagement.Core\bin\Debug\net8.0\WorkManagement.Core.deps.json
+D:\WorkManagement\WorkManagement.Core\bin\Debug\net8.0\WorkManagement.Core.dll
+D:\WorkManagement\WorkManagement.Core\bin\Debug\net8.0\WorkManagement.Core.pdb
+D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.AssemblyInfoInputs.cache
+D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.AssemblyInfo.cs
+D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.csproj.CoreCompileInputs.cache
+D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.sourcelink.json
+D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.dll
+D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\refint\WorkManagement.Core.dll
+D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.pdb
+D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\ref\WorkManagement.Core.dll

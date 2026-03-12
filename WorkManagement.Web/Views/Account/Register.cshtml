@@ -1,5 +1,193 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Register";
+    Layout = null;
 }
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* CONTAINER CHÍNH (Kích thước bằng form Login) */
+        .container {
+            display: flex;
+            width: 900px;
+            height: 550px;
+            background: #9ba9cd;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* BÊN TRÁI (Ảnh nền) */
+        .left {
+            flex: 1;
+            background-color: white;
+            border: 4px solid #338df2;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: -2px 0 -2px -2px; /* Tạo hiệu ứng khung như form login */
+        }
+
+            .left img {
+                width: 100%;
+                max-width: 380px;
+                object-fit: contain;
+            }
+
+        /* BÊN PHẢI (Form đăng ký) */
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .form-box {
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .form-box h2 {
+                text-align: center;
+                margin-bottom: 25px;
+                color: black;
+                font-size: 24px;
+            }
+
+        /* Ô NHẬP LIỆU */
+        .input-box {
+            padding: 14px 20px;
+            margin-bottom: 12px; /* Giảm margin một chút để vừa 3 ô input */
+            border: none;
+            border-radius: 30px;
+            font-size: 14px;
+            background: #ffffff;
+            color: #333;
+            outline: none;
+        }
+
+            .input-box::placeholder {
+                color: #555;
+            }
+
+        /* NÚT ĐĂNG KÝ */
+        .register-btn {
+            padding: 14px;
+            border: none;
+            background: black;
+            color: white;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            transition: background 0.3s ease;
+        }
+
+            .register-btn:hover {
+                background: #333;
+            }
+
+        /* NÚT GOOGLE */
+        .google-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: white;
+            color: #4a5568;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: background 0.3s ease;
+        }
+
+            .google-btn:hover {
+                background: #f8f9fa;
+            }
+
+        /* CHỮ ĐĂNG NHẬP */
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+            color: #333;
+            font-size: 14px;
+        }
+
+            .login-link a {
+                color: #c9e2fb;
+                text-decoration: none;
+                font-weight: bold;
+                margin-left: 5px;
+            }
+
+                .login-link a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="left">
+            <img src="/images/anhnen.png" alt="Illustration">
+        </div>
+
+        <div class="right">
+
+            <form class="form-box" method="post" action="/Account/Register">
+
+                <h2>Đăng ký</h2>
+
+                <input class="input-box" type="email" name="email" placeholder="Email" required>
+
+                <input class="input-box" type="password" name="password" placeholder="Mật khẩu" required>
+
+                <input class="input-box" type="password" name="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+
+                <button type="submit" class="register-btn">Đăng ký</button>
+
+                <button type="button" class="google-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" width="18" alt="Google Logo">
+                    Đăng nhập với Google
+                </button>
+
+                <div class="login-link">
+                    Đã có tài khoản?
+                    <a href="/Account/Login">Đăng nhập</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
