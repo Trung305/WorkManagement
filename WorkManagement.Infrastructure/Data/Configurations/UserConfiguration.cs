@@ -28,9 +28,6 @@ namespace WorkManagement.Infrastructure.Data.Configurations
             builder.HasIndex(u => u.Email)
                 .IsUnique();
 
-            builder.Property(u => u.ApplicationUserId)
-                .HasMaxLength(450);
-
             builder.Property(u => u.IsActive)
                 .HasDefaultValue(true);
 
@@ -38,6 +35,7 @@ namespace WorkManagement.Infrastructure.Data.Configurations
                 .HasDefaultValueSql("GETDATE()");
 
             // Relationships
+
             builder.HasMany(u => u.AssignedTasks)
                 .WithOne(t => t.AssignedToUser)
                 .HasForeignKey(t => t.AssignedTo)
