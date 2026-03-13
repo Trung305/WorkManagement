@@ -21,3 +21,4 @@ D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.dll
 D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\refint\WorkManagement.Core.dll
 D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.pdb
 D:\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\ref\WorkManagement.Core.dll
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Core\obj\Debug\net8.0\WorkManagement.Core.sourcelink.json

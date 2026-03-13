@@ -285,3 +285,4 @@ D:\WorkManagement\WorkManagement.Web\obj\Debug\net8.0\refint\WorkManagement.Web.
 D:\WorkManagement\WorkManagement.Web\obj\Debug\net8.0\WorkManagement.Web.pdb
 D:\WorkManagement\WorkManagement.Web\obj\Debug\net8.0\WorkManagement.Web.genruntimeconfig.cache
 D:\WorkManagement\WorkManagement.Web\obj\Debug\net8.0\ref\WorkManagement.Web.dll
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\obj\Debug\net8.0\WorkManagement.Web.sourcelink.json

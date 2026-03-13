@@ -33,3 +33,4 @@ D:\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\refint\WorkMana
 D:\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.pdb
 D:\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.genruntimeconfig.cache
 D:\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\ref\WorkManagement.Infrastructure.dll
+D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\obj\Debug\net8.0\WorkManagement.Infrastructure.sourcelink.json

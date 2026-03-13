@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj": {}
+    "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj": {}
   },
   "projects": {
-    "D:\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj": {
+    "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj",
+        "projectUniqueName": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj",
         "projectName": "WorkManagement.Core",
-        "projectPath": "D:\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkManagement\\WorkManagement.Core\\obj\\",
+        "projectPath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -60,29 +60,47 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.303, 9.0.303]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj": {
+    "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj",
+        "projectUniqueName": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj",
         "projectName": "WorkManagement.Infrastructure",
-        "projectPath": "D:\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkManagement\\WorkManagement.Infrastructure\\obj\\",
+        "projectPath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,8 +115,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj": {
-                "projectPath": "D:\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj"
+              "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj": {
+                "projectPath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Core\\WorkManagement.Core.csproj"
               }
             }
           }
@@ -151,29 +169,47 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.303, 9.0.303]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj": {
+    "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj",
+        "projectUniqueName": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj",
         "projectName": "WorkManagement.Web",
-        "projectPath": "D:\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkManagement\\WorkManagement.Web\\obj\\",
+        "projectPath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\WorkManagement.Web.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -188,8 +224,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj": {
-                "projectPath": "D:\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj"
+              "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj": {
+                "projectPath": "D:\\SPKT\\HocKy2\\CongNghePhanMem\\DoAn\\WorkManagement\\WorkManagement.Infrastructure\\WorkManagement.Infrastructure.csproj"
               }
             }
           }
@@ -228,6 +264,28 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.303, 9.0.303]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -236,7 +294,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
