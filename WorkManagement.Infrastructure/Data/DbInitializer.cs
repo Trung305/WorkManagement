@@ -18,45 +18,63 @@ namespace WorkManagement.Infrastructure.Data
             {
                 return; 
             }
-
+            var password = BCrypt.Net.BCrypt.HashPassword("123456");
             var users = new[]
             {
                 new User
                 {
-                    FullName = "Admin",
                     Email = "admin@workmanagement.com",
+                    PasswordHash = password,
+                    FullName = "Admin",
                     Role = (int)UserRole.Admin,
                     IsActive = true,
                     CreatedAt = DateTime.Now
                 },
                 new User
                 {
-                    FullName = "Manager",
                     Email = "manager@workmanagement.com",
+                    PasswordHash = password,
+                    FullName = "Manager",
                     Role = (int)UserRole.Manager,
                     IsActive = true,
                     CreatedAt = DateTime.Now
                 },
                 new User
                 {
-                    FullName = "User1",
                     Email = "user1@workmanagement.com",
+                    PasswordHash = password,
+                    FullName = "User1",
                     Role = (int)UserRole.User,
                     IsActive = true,
                     CreatedAt = DateTime.Now
                 },
                 new User
                 {
-                    FullName = "User2",
                     Email = "user2@workmanagement.com",
+                    PasswordHash = password,
+                    FullName = "User2",
                     Role = (int)UserRole.User,
                     IsActive = true,
                     CreatedAt = DateTime.Now
                 },
+
+                // user login bằng Google
                 new User
                 {
-                    FullName = "User3",
+                    Email = "googleuser@gmail.com",
+                    GoogleId = "google_123456",
+                    FullName = "Google User",
+                    Role = (int)UserRole.User,
+                    IsActive = true,
+                    CreatedAt = DateTime.Now
+                },
+
+                // user bị disable
+                new User
+                {
                     Email = "inactive@workmanagement.com",
+                    PasswordHash = password,
+                    FullName = "Inactive User",
                     Role = (int)UserRole.User,
                     IsActive = false,
                     CreatedAt = DateTime.Now.AddMonths(-6)

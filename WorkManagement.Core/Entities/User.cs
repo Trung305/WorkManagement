@@ -22,7 +22,7 @@ namespace WorkManagement.Core.Entities
         public string? AvatarUrl { get; set; }
 
         // Role hệ thống
-        public int Role { get; set; }   // Admin / Manager / User
+        public string Role { get; set; }   // Admin / Manager / User
 
         // Trạng thái
         public bool IsActive { get; set; }

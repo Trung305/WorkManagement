@@ -20,6 +20,7 @@ namespace WorkManagement.Infrastructure.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Core.Entities.Task> Tasks { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
