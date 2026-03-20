@@ -1,4 +1,5 @@
-﻿@{
+﻿@model WorkManagement.Core.DTOs.Auth.RegisterDto
+@{
     ViewData["Title"] = "Register";
     Layout = null;
 }
@@ -28,7 +29,7 @@
         .container {
             display: flex;
             width: 900px;
-            height: 550px;
+            height: 600px;
             background: #9ba9cd;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -161,15 +162,36 @@
 
         <div class="right">
 
-            <form class="form-box" method="post" action="/Account/Register">
+            <form class="form-box" asp-action="Register" asp-controller="Account" method="post">
+                @Html.AntiForgeryToken()
 
                 <h2>Đăng ký</h2>
 
-                <input class="input-box" type="email" name="email" placeholder="Email" required>
+                @if (ViewBag.Error != null)
+                {
+                    <div style="color:red; text-align:center; margin-bottom:10px; font-size:13px;">
+                        @ViewBag.Error
+                    </div>
+                }
 
-                <input class="input-box" type="password" name="password" placeholder="Mật khẩu" required>
+                @if (TempData["Success"] != null)
+                {
+                    <div style="color:green; text-align:center; margin-bottom:10px; font-size:13px;">
+                        @TempData["Success"]
+                    </div>
+                }
 
-                <input class="input-box" type="password" name="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                <input class="input-box" asp-for="FullName" placeholder="Họ và tên" />
+                <span asp-validation-for="FullName" style="color:red; font-size:12px; margin-bottom:6px;"></span>
+
+                <input class="input-box" asp-for="Email" placeholder="Email" />
+                <span asp-validation-for="Email" style="color:red; font-size:12px; margin-bottom:6px;"></span>
+
+                <input class="input-box" asp-for="Password" type="password" placeholder="Mật khẩu" />
+                <span asp-validation-for="Password" style="color:red; font-size:12px; margin-bottom:6px;"></span>
+
+                <input class="input-box" asp-for="ConfirmPassword" type="password" placeholder="Nhập lại mật khẩu" />
+                <span asp-validation-for="ConfirmPassword" style="color:red; font-size:12px; margin-bottom:6px;"></span>
 
                 <button type="submit" class="register-btn">Đăng ký</button>
 

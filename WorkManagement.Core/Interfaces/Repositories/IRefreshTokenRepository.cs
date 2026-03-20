@@ -13,5 +13,6 @@ namespace WorkManagement.Core.Interfaces.Repositories
         System.Threading.Tasks.Task AddAsync(RefreshToken token);
         System.Threading.Tasks.Task RevokeAllByUserIdAsync(int userId);
         System.Threading.Tasks.Task RevokeByIdAsync(int tokenId);
+        System.Threading.Tasks.Task RevokeAllByUserAsync(int userId);
     }
 }

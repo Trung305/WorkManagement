@@ -1,82 +1,379 @@
-﻿@{
-    ViewData["Title"] = "Notifications";
-}
+﻿@model List<WorkManagement.Core.DTOs.Notification.NotificationDto>
 @{
-    Layout = null;
+    ViewData["Title"] = "Thông báo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var unreadCount = Model.Count(n => !n.IsRead);
 }
 
-<link rel="stylesheet" href="/css/Thongbao.css">
+<style>
 
-<div class="sidebar">
-    <div class="logo"><span style="background: white; color: #5a5c69; padding: 2px 8px; border-radius: 4px;">C</span> CodingLab</div>
-    <ul class="menu">
-        <li><a href="/Home/Index" class="menu-link" style="color:#555; background:transparent;">🏠 Trang chủ</a></li>
-        <li><a href="#" class="menu-link" style="color:#555; background:transparent;">📄 Công việc</a></li>
-    </ul>
-    <div class="logout">🚪 Đăng xuất</div>
-</div>
+    .notif-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
 
-<div class="main-content">
-    <div class="topbar">
-        <input type="text" class="search-bar" placeholder="🔍 Search...">
-        <div class="topbar-actions">
-            <a href="/Home/NewTask" class="add-new-btn">+ Add New</a>
-            <a href="/Home/Notifications" style="font-size: 20px; text-decoration: none; background: #ffe4c4; padding: 5px 10px; border-radius: 50%;">🔔</a>
-            <div class="profile-img"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile"></div>
+        .notif-header h1 {
+            font-size: 21px;
+            font-weight: 700;
+            color: #111827;
+            margin: 0 0 3px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .notif-header p {
+            font-size: 13px;
+            color: #6b7280;
+            margin: 0;
+        }
+
+    .notif-unread-count {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 22px;
+        height: 22px;
+        padding: 0 6px;
+        border-radius: 20px;
+        background: #4f46e5;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        font-family: 'DM Mono', monospace;
+    }
+
+    .notif-mark-all {
+        font-size: 13px;
+        font-weight: 500;
+        color: #4f46e5;
+        background: none;
+        border: 0.5px solid #e5e7eb;
+        cursor: pointer;
+        padding: 7px 14px;
+        border-radius: 8px;
+        transition: background .15s;
+        font-family: 'DM Sans', sans-serif;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+        .notif-mark-all:hover {
+            background: #eef2ff;
+            border-color: #c7d2fe;
+        }
+
+    .notif-card {
+        background: #fff;
+        border: 0.5px solid #e5e7eb;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    .notif-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .notif-table thead tr {
+            background: #f9fafb;
+            border-bottom: 0.5px solid #e5e7eb;
+        }
+
+        .notif-table th {
+            padding: 11px 16px;
+            font-size: 11.5px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            text-align: left;
+        }
+
+        .notif-table td {
+            padding: 14px 16px;
+            border-bottom: 0.5px solid #f3f4f6;
+            vertical-align: middle;
+            font-size: 13.5px;
+            color: #374151;
+        }
+
+        .notif-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .notif-table tbody tr {
+            transition: background .15s;
+            cursor: pointer;
+        }
+
+            .notif-table tbody tr:hover {
+                background: #fafafa;
+            }
+
+            .notif-table tbody tr.unread {
+                background: #f5f7ff;
+            }
+
+                .notif-table tbody tr.unread:hover {
+                    background: #eef2ff;
+                }
+
+    .notif-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        flex-shrink: 0;
+    }
+
+    .notif-icon--assigned {
+        background: #ede9fe;
+    }
+
+    .notif-icon--deadline {
+        background: #fef3c7;
+    }
+
+    .notif-icon--status {
+        background: #dbeafe;
+    }
+
+    .notif-icon--review {
+        background: #dcfce7;
+    }
+
+    .notif-icon--rejected {
+        background: #fee2e2;
+    }
+
+    .notif-icon--system {
+        background: #f3f4f6;
+    }
+
+    .notif-title-cell {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .notif-title-text {
+        font-size: 13.5px;
+        font-weight: 500;
+        color: #111827;
+        line-height: 1.4;
+    }
+
+    .unread .notif-title-text {
+        font-weight: 700;
+    }
+
+    .notif-sender {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .notif-sender-avatar {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #ede9fe;
+        color: #4f46e5;
+        font-size: 11px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .notif-sender-system {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #f3f4f6;
+        color: #6b7280;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .notif-badge-unread {
+        display: inline-flex;
+        align-items: center;
+        padding: 2px 8px;
+        border-radius: 20px;
+        background: #eef2ff;
+        color: #4f46e5;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .notif-time {
+        font-size: 12.5px;
+        color: #6b7280;
+        font-family: 'DM Mono', monospace;
+        white-space: nowrap;
+    }
+
+    .notif-empty {
+        text-align: center;
+        padding: 64px 0;
+    }
+
+        .notif-empty p {
+            font-size: 14px;
+            color: #9ca3af;
+            margin: 12px 0 0;
+        }
+</style>
+
+<div class="notif-page">
+    <div class="notif-header">
+        <div>
+            <h1>
+                Thông báo
+                @if (unreadCount > 0)
+                {
+                    <span class="notif-unread-count">@unreadCount</span>
+                }
+            </h1>
+            <p>Các thông báo và cập nhật công việc của bạn</p>
         </div>
+        @if (unreadCount > 0)
+        {
+            <button class="notif-mark-all" onclick="markAllRead()">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Đánh dấu tất cả đã đọc
+            </button>
+        }
     </div>
 
-    <div class="notification-container">
-        <table class="notification-table">
-            <thead>
-                <tr>
-                    <th class="col-title">Tiêu đề</th>
-                    <th class="col-sender" style="background-color: white; color: black;">Người gửi</th>
-                    <th class="col-time" style="background-color: white; color: black;">Thời gian gửi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>🔔 Bạn vừa được giao một công việc mới: Thiết kế Website. Vui lòng kiểm tra và thực hiện.</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>10:30 AM, 12-03-2026</td>
-                </tr>
-                <tr>
-                    <td>⏰ Công việc Thiết kế Website sắp đến hạn. Hạn hoàn thành: 01-04-2026.</td>
-                    <td>Hệ thống</td>
-                    <td>09:00 AM, 11-03-2026</td>
-                </tr>
-                <tr>
-                    <td>⚠️ Công việc Thiết kế Website đã quá hạn. Vui lòng cập nhật tiến độ hoặc hoàn thành sớm.</td>
-                    <td>Hệ thống</td>
-                    <td>08:15 AM, 10-03-2026</td>
-                </tr>
-                <tr>
-                    <td>📊 Công việc Thiết kế Website vừa được cập nhật tiến độ. Nhấn để xem chi tiết.</td>
-                    <td>Trần Văn B</td>
-                    <td>14:20 PM, 09-03-2026</td>
-                </tr>
-                <tr>
-                    <td>💬 Nguyễn Văn A vừa bình luận trong công việc Thiết kế Website.</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>11:05 AM, 08-03-2026</td>
-                </tr>
-                <tr>
-                    <td>🔄 Trạng thái công việc Thiết kế Website đã được cập nhật thành Thiết kế UX/UI.</td>
-                    <td>Lê Thị C</td>
-                    <td>16:45 PM, 07-03-2026</td>
-                </tr>
-                <tr>
-                    <td>✅ Công việc Thiết kế Website đã được đánh dấu hoàn thành.</td>
-                    <td>Trần Văn B</td>
-                    <td>09:30 AM, 06-03-2026</td>
-                </tr>
-                <tr>
-                    <td>👥 Trần Văn B đã thêm bạn vào công việc Thiết kế Website.</td>
-                    <td>Trần Văn B</td>
-                    <td>15:00 PM, 05-03-2026</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="notif-card">
+        @if (Model.Any())
+        {
+            @Html.AntiForgeryToken()
+            <table class="notif-table">
+                <thead>
+                    <tr>
+                        <th style="width:50%">Thông báo</th>
+                        <th style="width:20%">Người gửi</th>
+                        <th style="width:15%">Thời gian</th>
+                        <th style="width:15%">Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var n in Model.OrderByDescending(x => x.CreatedAt))
+                    {
+                        var (iconCls, iconEmoji) = n.Type switch
+                        {
+                            1 => ("notif-icon--assigned", "🔔"),
+                            2 => ("notif-icon--deadline", "⏰"),
+                            3 => ("notif-icon--status", "🔄"),
+                            4 => ("notif-icon--review", "✅"),
+                            5 => ("notif-icon--rejected", "❌"),
+                            _ => ("notif-icon--system", "💬")
+                        };
+
+                        var senderName = n.Type switch
+                        {
+                            2 => "Hệ thống",
+                            _ => n.SenderName ?? "Hệ thống"
+                        };
+
+                        var isSystem = string.IsNullOrEmpty(n.SenderName) || n.Type == 2;
+                        var unreadCls = !n.IsRead ? "unread" : "";
+                        var taskUrl = n.TaskId.HasValue
+                        ? Url.Action("Edit", "Tasks", new { id = n.TaskId })
+                        : "#";
+
+                        <tr class="@unreadCls" onclick="goNotif(@n.Id, '@taskUrl')">
+                            <td>
+                                <div class="notif-title-cell">
+                                    <div class="notif-icon @iconCls">@iconEmoji</div>
+                                    <span class="notif-title-text">@n.Title</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="notif-sender">
+                                    @if (isSystem)
+                                    {
+                                        <div class="notif-sender-system">⚙️</div>
+                                        <span style="font-size:13px;color:#6b7280;">Hệ thống</span>
+                                    }
+                                    else
+                                    {
+                                        <div class="notif-sender-avatar">
+                                            @senderName[0].ToString().ToUpper()
+                                        </div>
+                                        <span style="font-size:13px;color:#374151;font-weight:500;">@senderName</span>
+                                    }
+                                </div>
+                            </td>
+                            <td>
+                                <div class="notif-time">
+                                    @n.CreatedAt.ToLocalTime().ToString("HH:mm")<br />
+                                    <span style="color:#9ca3af;font-size:11.5px;">@n.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy")</span>
+                                </div>
+                            </td>
+                            <td>
+                                @if (!n.IsRead)
+                                {
+                                    <span class="notif-badge-unread">Chưa đọc</span>
+                                }
+                                else
+                                {
+                                    <span style="font-size:12.5px;color:#9ca3af;">Đã đọc</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="notif-empty">
+                <svg width="48" height="48" fill="none" stroke="#d1d5db" stroke-width="1.2" viewBox="0 0 24 24">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+                <p>Không có thông báo nào</p>
+            </div>
+        }
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        const ANTIFORGERY = () => document.querySelector('input[name="__RequestVerificationToken"]')?.value ?? '';
+
+        async function goNotif(id, url) {
+            await fetch(`/Home/MarkRead/${id}`, {
+                method: 'POST',
+                headers: { 'RequestVerificationToken': ANTIFORGERY() }
+            });
+            if (url && url !== '#') location.href = url;
+            else location.reload();
+        }
+
+        async function markAllRead() {
+            const res = await fetch('/Home/MarkAllRead', {
+                method: 'POST',
+                headers: { 'RequestVerificationToken': ANTIFORGERY() }
+            });
+            if (res.ok) location.reload();
+        }
+    </script>
+}

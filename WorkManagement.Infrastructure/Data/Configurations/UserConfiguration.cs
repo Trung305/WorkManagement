@@ -37,7 +37,7 @@ namespace WorkManagement.Infrastructure.Data.Configurations
             // Relationships
 
             builder.HasMany(u => u.AssignedTasks)
-                .WithOne(t => t.AssignedToUser)
+                .WithOne(t => t.AssignedUser)
                 .HasForeignKey(t => t.AssignedTo)
                 .OnDelete(DeleteBehavior.Restrict);
 

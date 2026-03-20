@@ -1,35 +1,59 @@
 using System.Diagnostics;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using WorkManagement.Core.Interfaces.Services;
 using WorkManagement.Web.Models;
 
 namespace WorkManagement.Web.Controllers;
-
+[Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly INotificationService _notifService;
+    private readonly IDashboardService _dashboardService;
 
-    public HomeController(ILogger<HomeController> logger)
+    private int CurrentUserId =>
+        int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)
+            ?? User.FindFirstValue("sub") ?? "0");
+
+    private int CurrentUserRole =>
+        int.Parse(User.FindFirstValue(ClaimTypes.Role) ?? "3");
+
+    public HomeController(ILogger<HomeController> logger, IDashboardService dashboardService, INotificationService notifService)
     {
         _logger = logger;
+        _dashboardService = dashboardService;
+        _notifService = notifService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
-    }
-
-    public IActionResult Notifications()
-    {
-        return View();
+        var stats = await _dashboardService.GetStatsAsync(CurrentUserId, CurrentUserRole);
+        return View(stats);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    public IActionResult Error() =>
+        View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    public async Task<IActionResult> Notifications()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        var result = await _notifService.GetByUserIdAsync(CurrentUserId);
+        return View(result.Data ?? new());
     }
-    public IActionResult NewTask()
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> MarkRead(int id)
     {
-        return View();
+        await _notifService.MarkAsReadAsync(id, CurrentUserId);
+        return Ok();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> MarkAllRead()
+    {
+        await _notifService.MarkAllAsReadAsync(CurrentUserId);
+        return Ok();
     }
 }

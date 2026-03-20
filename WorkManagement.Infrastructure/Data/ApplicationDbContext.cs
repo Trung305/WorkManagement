@@ -21,6 +21,7 @@ namespace WorkManagement.Infrastructure.Data
         public DbSet<Core.Entities.Task> Tasks { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<FileAttachment> FileAttachments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

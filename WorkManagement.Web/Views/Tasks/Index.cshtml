@@ -1,0 +1,1059 @@
+﻿@model WorkManagement.Web.Models.Task.TaskIndexViewModel
+@{
+    ViewData["Title"] = "Công việc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var r = Model.PagedResult;
+    bool canManage = Model.ViewerRole == 0 || Model.ViewerRole == 2;
+}
+<style>
+    .tk-row--clickable {
+        cursor: pointer;
+    }
+
+        .tk-row--clickable:hover {
+            background: #f9fafb;
+        }
+
+    /* Modal */
+    .tm-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .tm-overlay.open {
+            display: flex;
+        }
+
+    .tm-modal {
+        background: #fff;
+        border-radius: 16px;
+        width: 520px;
+        max-width: 95vw;
+        max-height: 88vh;
+        overflow-y: auto;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        animation: tmIn .18s ease;
+    }
+    @@keyframes tmIn {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+
+    }
+
+    .tm-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 22px 24px 16px;
+        border-bottom: 0.5px solid #f3f4f6;
+    }
+
+    .tm-title {
+        font-size: 15px; /* match .card-title */
+        font-weight: 700;
+        color: #111827;
+        margin: 0 0 6px;
+        line-height: 1.4;
+    }
+
+    .tm-close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #9ca3af;
+        padding: 2px;
+        display: flex;
+        flex-shrink: 0;
+        margin-left: 12px;
+        transition: color .15s;
+    }
+
+        .tm-close:hover {
+            color: #111827;
+        }
+
+    .tm-body {
+        padding: 20px 24px;
+    }
+
+    .tm-section {
+        margin-bottom: 20px;
+    }
+
+    .tm-section-label {
+        font-size: 11.5px; /* match thead th */
+        font-weight: 600;
+        color: #9ca3af;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .tm-desc {
+        font-size: 13.5px; /* match .tk-input / .tk-label */
+        color: #374151;
+        line-height: 1.7;
+        white-space: pre-wrap;
+        background: #fafafa;
+        border: 0.5px solid #f3f4f6;
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin: 0;
+    }
+
+    .tm-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .tm-item {
+        background: #fafafa;
+        border: 0.5px solid #f3f4f6;
+        border-radius: 8px;
+        padding: 10px 12px;
+    }
+
+    .tm-item-label {
+        font-size: 11.5px; /* match thead th */
+        color: #9ca3af;
+        font-weight: 600;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .tm-item-val {
+        font-size: 13px; /* match .tk-assignee span */
+        font-weight: 600;
+        color: #111827;
+        font-family: 'DM Mono', monospace;
+    }
+
+    .tm-assignee {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 14px;
+        background: #fafafa;
+        border: 0.5px solid #f3f4f6;
+        border-radius: 8px;
+    }
+
+    .tm-avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #ede9fe;
+        color: #4f46e5;
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+        .tm-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .tm-assignee-name {
+        font-size: 13.5px; /* match .tk-input */
+        font-weight: 600;
+        color: #111827;
+    }
+
+    .tm-assignee-role {
+        font-size: 12px; /* match .tk-task-desc */
+        color: #6b7280;
+    }
+</style>
+
+    <div class="tk-header">
+        <div>
+            <h1 class="tk-title">Công việc</h1>
+            <p class="tk-subtitle">Theo dõi và quản lý tiến độ công việc</p>
+        </div>
+        <div class="tk-header-actions">
+            <div class="tk-view-toggle">
+                <a href="@Url.Action("Index", new { q=Model.SearchQuery, status=Model.StatusFilter, priority=Model.PriorityFilter, assignedTo=Model.AssignedToFilter, view="table" })"
+                   class="tk-view-btn @(Model.ViewMode=="table"?"tk-view-btn--active":"")">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+                    </svg>
+                    Table
+                </a>
+                <a href="@Url.Action("Index", new { q=Model.SearchQuery, status=Model.StatusFilter, priority=Model.PriorityFilter, assignedTo=Model.AssignedToFilter, view="kanban" })"
+                   class="tk-view-btn @(Model.ViewMode=="kanban"?"tk-view-btn--active":"")">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="11" rx="1"/>
+                    </svg>
+                    Kanban
+                </a>
+            </div>
+            @if (canManage)
+            {
+                <a href="@Url.Action("Create")" class="tk-btn-primary">
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    Tạo công việc
+                </a>
+            }
+        </div>
+    </div>
+
+    <div class="tk-stats">
+        @{
+            var statCards = new[] {
+                (label:"Chờ xử lý",    val:r.CountPending,       cls:"tk-stat--pending",  filter:1),
+                (label:"Đang làm",     val:r.CountInProgress,    cls:"tk-stat--progress", filter:2),
+                (label:"Chờ duyệt",    val:r.CountPendingReview, cls:"tk-stat--review",   filter:3),
+                (label:"Hoàn thành",   val:r.CountCompleted,     cls:"tk-stat--done",     filter:4),
+                (label:"Từ chối",      val:r.CountRejected,      cls:"tk-stat--rejected", filter:5),
+            };
+            foreach (var sc in statCards)
+            {
+                var isActive = Model.StatusFilter == sc.filter;
+                var href = isActive
+                    ? Url.Action("Index", new { q=Model.SearchQuery, priority=Model.PriorityFilter })
+                    : Url.Action("Index", new { status=sc.filter, q=Model.SearchQuery, priority=Model.PriorityFilter });
+            <a href="@href" class="tk-stat @sc.cls @(isActive?"tk-stat--active":"")">
+                <span class="tk-stat__val">@sc.val</span>
+                <span class="tk-stat__label">@sc.label</span>
+            </a>
+            }
+        }
+    </div>
+    <form method="get" action="@Url.Action("Index")" class="tk-filters">
+        <input type="hidden" name="view" value="@Model.ViewMode" />
+        <div class="tk-filters__left">
+            <div class="tk-search-wrap">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                </svg>
+                <input name="q" value="@Model.SearchQuery" placeholder="Tìm công việc..." class="tk-search-input" />
+            </div>
+            <select name="status" class="tk-select">
+                <option value="">Tất cả trạng thái</option>
+                @if (Model.StatusFilter == 1)
+                {
+                    <option value="1" selected>Chờ xử lý</option>
+                }
+                else
+                {
+                    <option value="1">Chờ xử lý</option>
+                }
+                @if (Model.StatusFilter == 2)
+                {
+                    <option value="2" selected>Đang làm</option>
+                }
+                else
+                {
+                    <option value="2">Đang làm</option>
+                }
+                @if (Model.StatusFilter == 3)
+                {
+                    <option value="3" selected>Chờ duyệt</option>
+                }
+                else
+                {
+                    <option value="3">Chờ duyệt</option>
+                }
+                @if (Model.StatusFilter == 4)
+                {
+                    <option value="4" selected>Hoàn thành</option>
+                }
+                else
+                {
+                    <option value="4">Hoàn thành</option>
+                }
+                @if (Model.StatusFilter == 5)
+                {
+                    <option value="5" selected>Từ chối</option>
+                }
+                else
+                {
+                    <option value="5">Từ chối</option>
+                }
+            </select>
+
+            <select name="priority" class="tk-select">
+                <option value="">Tất cả độ ưu tiên</option>
+                @if (Model.PriorityFilter == 0)
+                {
+                    <option value="0" selected>🟢 Thấp</option>
+                }
+                else
+                {
+                    <option value="0">🟢 Thấp</option>
+                }
+                @if (Model.PriorityFilter == 1)
+                {
+                    <option value="1" selected>🟡 Trung bình</option>
+                }
+                else
+                {
+                    <option value="1">🟡 Trung bình</option>
+                }
+                @if (Model.PriorityFilter == 2)
+                {
+                    <option value="2" selected>🔴 Cao</option>
+                }
+                else
+                {
+                    <option value="2">🔴 Cao</option>
+                }
+            </select>
+            @if (canManage && Model.Users.Any())
+            {
+                <select name="assignedTo" class="tk-select">
+                    <option value="">Tất cả người thực hiện</option>
+                    @foreach (var u in Model.Users)
+                    {
+                        @if (Model.AssignedToFilter == u.Id)
+                        {
+                            <option value="@u.Id" selected>@u.FullName</option>
+                        }
+                        else
+                        {
+                            <option value="@u.Id">@u.FullName</option>
+                        }
+                    }
+                </select>
+            }
+            <button type="submit" class="tk-btn-secondary">Lọc</button>
+            @if (Model.SearchQuery != null || Model.StatusFilter != null || Model.PriorityFilter != null || Model.AssignedToFilter != null)
+            {
+                <a href="@Url.Action("Index", new { view = Model.ViewMode })" class="tk-btn-ghost">✕ Xóa lọc</a>
+            }
+        </div>
+        <span class="tk-total">@r.TotalCount công việc</span>
+    </form>
+
+
+    @if (Model.ViewMode == "table")
+    {
+        <div class="tk-table-card">
+            <table class="tk-table">
+                <thead>
+                    <tr>
+                        <th style="width:34%">Công việc</th>
+                        <th>Ưu tiên</th>
+                        <th>Trạng thái</th>
+                        <th>Người thực hiện</th>
+                        <th>Ngày hết hạn</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var t in r.Items)
+                    {
+                        <tr class="tk-row">
+                            <td>
+                                <div class="tk-task-cell">
+                                    <span class="tk-task-title" style="cursor:pointer"
+                                          onclick="location.href='@Url.Action("Edit", new { id = t.Id })'">@t.Title</span>
+                                    @if (!string.IsNullOrEmpty(t.Description))
+                                    {
+                                        <span class="tk-task-desc">@(t.Description.Length > 60 ? t.Description.Substring(0,60)+"…" : t.Description)</span>
+                                    }
+                                </div>
+                            </td>
+                            <td>@Html.Partial("_PriorityBadge", t.Priority)</td>
+                            <td>@Html.Partial("_StatusBadge", t.Status)</td>
+                            <td>
+                                <div class="tk-assignee">
+                                    <div class="tk-mini-avatar">
+                                        @if (!string.IsNullOrEmpty(t.AssignedToAvatar))
+                                        {
+                                            <img src="@t.AssignedToAvatar" alt="" />
+                                        }
+                                        else
+                                        {
+                                            @t.AssignedToName!.Substring(0, 1).ToUpper()
+                                        }
+                                    </div>
+                                    <span>@t.AssignedToName</span>
+                                </div>
+                            </td>
+                            <td>
+                                @if (t.Deadline.HasValue)
+                                {
+                                    var overdue = t.Deadline.Value < DateTime.UtcNow && t.Status < 4;
+                                    <span class="tk-deadline @(overdue?"tk-deadline--over":"")">
+                                        @t.Deadline.Value.ToLocalTime().ToString("dd/MM/yyyy")
+                                    </span>
+                                }
+                                else { <span class="tk-unassigned">—</span> }
+                            </td>
+                            <td>
+                                <div class="tk-row-actions">
+                                    @if (canManage)
+                                    {
+                                        <a href="@Url.Action("Edit", new { id = t.Id })"
+                                           class="tk-action-btn tk-action-btn--edit" title="Chỉnh sửa">
+                                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+                                                <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+                                            </svg>
+                                        </a>
+
+                                        @if (t.Status == 3)
+                                        {
+                                            <a href="@Url.Action("Review", new { id = t.Id })"
+                                               class="tk-action-btn tk-action-btn--review" title="Đánh giá">
+                                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                                    <path d="M9 11l3 3L22 4" />
+                                                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                                                </svg>
+                                            </a>
+                                        }
+
+                                        <form method="post" action="@Url.Action("Delete", new { id = t.Id })"
+                                              onsubmit="return confirm('Xóa task \'@Html.Raw(t.Title.Replace("'", "\\'"))\'?')">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="tk-action-btn tk-action-btn--delete" title="Xóa">
+                                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                                    <polyline points="3 6 5 6 21 6" />
+                                                    <path d="M19 6l-1 14H6L5 6M10 11v6M14 11v6M9 6V4h6v2" />
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    }
+
+                                    @* User cập nhật trạng thái *@
+                                    @if (Model.ViewerRole == 1)
+                                    {
+                                        @if (t.Status == 1)
+                                        {
+                                            <form method="post" action="@Url.Action("UpdateStatus", new { id = t.Id })">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="newStatus" value="1" />
+                                                <button type="submit" class="tk-action-btn tk-action-btn--start" title="Bắt đầu làm">
+                                                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                                        <polygon points="5 3 19 12 5 21 5 3" />
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        }
+                                        @if (t.Status == 2)
+                                        {
+                                            <form method="post" action="@Url.Action("UpdateStatus", new { id = t.Id })">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="newStatus" value="2" />
+                                                <button type="submit" class="tk-action-btn tk-action-btn--submit" title="Gửi đánh giá">
+                                                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                                        <line x1="22" y1="2" x2="11" y2="13" />
+                                                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        }
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    @if (!r.Items.Any())
+                    {
+                        <tr><td colspan="6">
+                            <div class="tk-empty">
+                                <svg width="44" height="44" fill="none" stroke="#d1d5db" stroke-width="1.2" viewBox="0 0 24 24">
+                                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                </svg>
+                                <p>Không có công việc nào</p>
+                            </div>
+                        </td></tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (r.TotalPages > 1)
+        {
+            <div class="tk-pagination">
+                <span class="tk-page-info">@((r.Page - 1) * r.PageSize + 1)–@(Math.Min(r.Page * r.PageSize, r.TotalCount)) / @r.TotalCount</span>
+                <div class="tk-page-list">
+                    @for (int i = 1; i <= r.TotalPages; i++)
+                    {
+                        <a href="@Url.Action("Index", new{page=i,q=Model.SearchQuery,status=Model.StatusFilter,priority=Model.PriorityFilter,assignedTo=Model.AssignedToFilter,view="table"})"
+                           class="tk-page-btn @(i==r.Page?"tk-page-btn--active":"")">@i</a>
+                    }
+                </div>
+            </div>
+        }
+    }
+
+    @if (Model.ViewMode == "kanban")
+    {
+        var columns = new[] {
+            (label:"Chờ xử lý",  status:1, cls:"kb-col--pending"),
+            (label:"Đang làm",   status:2, cls:"kb-col--progress"),
+            (label:"Chờ duyệt",  status:3, cls:"kb-col--review"),
+            (label:"Hoàn thành", status:4, cls:"kb-col--done"),
+            (label:"Từ chối",    status:5, cls:"kb-col--rejected"),
+        };
+
+        <div class="kb-board">
+            @foreach (var col in columns)
+            {
+                List<WorkManagement.Core.DTOs.Task.TaskListDto> colItems =
+                r.Items.Where(t => t.Status == col.status).ToList();
+                <div class="kb-col @col.cls">
+                    <div class="kb-col__header">
+                        <span class="kb-col__label">@col.label</span>
+                        <span class="kb-col__count">@colItems.Count</span>
+                    </div>
+                    <div class="kb-col__body">
+                        @foreach (var t in colItems)
+                        {
+                            <div class="kb-card">
+                                <div class="kb-card__top">
+                                    @Html.Partial("_PriorityBadge", t.Priority)
+                                    @if (canManage)
+                                    {
+                                        <div class="kb-card__actions">
+                                            <a href="@Url.Action("Edit", new{id=t.Id})" class="tk-action-btn tk-action-btn--edit">
+                                                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                                    <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                                                    <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    }
+                                </div>
+                                <p class="kb-card__title">@t.Title</p>
+                                @if (!string.IsNullOrEmpty(t.Description))
+                                {
+                                    <p class="kb-card__desc">@(t.Description.Length>80?t.Description.Substring(0,80)+"…":t.Description)</p>
+                                }
+                                <div class="kb-card__footer">
+                                    <div class="tk-assignee">
+                                        <div class="tk-mini-avatar tk-mini-avatar--sm">
+                                            @if (!string.IsNullOrEmpty(t.AssignedToAvatar))
+                                            {
+                                                <img src="@t.AssignedToAvatar" alt="" />
+                                            }
+                                            else
+                                            {
+                                                @t.AssignedToName!.Substring(0, 1).ToUpper()
+                                            }
+                                        </div>
+                                        <span class="kb-card__assignee">@t.AssignedToName</span>
+                                    </div>
+                                    @if (t.Deadline.HasValue)
+                                    {
+                                        var over = t.Deadline.Value < DateTime.UtcNow && t.Status < 3;
+                                        <span class="tk-deadline @(over?"tk-deadline--over":"") kb-deadline">
+                                            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                                <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+                                            </svg>
+                                            @t.Deadline.Value.ToLocalTime().ToString("dd/MM")
+                                        </span>
+                                    }
+                                </div>
+                                @if (t.Status == 2 && canManage)
+                                {
+                                    <a href="@Url.Action("Review", new{id=t.Id})" class="kb-review-btn">
+                                        Đánh giá →
+                                    </a>
+                                }
+                            </div>
+                        }
+                        @if (!colItems.Any())
+                        {
+                            <div class="kb-empty">Trống</div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+<div class="tm-overlay" id="taskModal" onclick="closeOnOverlay(event)">
+    <div class="tm-modal" style="width:820px;max-width:96vw;">
+        <div class="tm-header">
+            <div style="flex:1;min-width:0;">
+                <div class="tm-title" id="tm-title"></div>
+                <div id="tm-badges" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:16px;" id="tm-header-actions">
+            </div>
+            <button class="tm-close" onclick="closeTaskModal()" style="margin-left:12px;">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="tm-body" style="padding:0;">
+            <div style="display:grid;grid-template-columns:260px 1fr;min-height:300px;">
+
+                <div style="border-right:0.5px solid #f3f4f6;padding:20px;">
+
+                    <div id="tm-manager-files-section">
+                        <div class="tm-section-label">Tài liệu từ Manager</div>
+                        <div id="tm-manager-files"></div>
+                    </div>
+                    <div id="tm-upload-section" style="display:none;margin-top:16px;">
+                        <div class="tm-section-label">File của bạn</div>
+                        <div id="tm-user-files" style="margin-bottom:10px;"></div>
+                        <div class="cf-drop-zone" id="tm-drop-zone" style="padding:18px 12px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                                <polyline points="17 8 12 3 7 8" />
+                                <line x1="12" y1="3" x2="12" y2="15" />
+                            </svg>
+                            <p style="font-size:12px;"><span>Click để tải lên</span><br />hoặc kéo thả · tối đa 5MB</p>
+                        </div>
+                        <input type="file" id="tm-file-input" class="cf-drop-input" multiple
+                               accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.xlsx" />
+                        <div id="tm-new-files" style="margin-top:8px;display:flex;flex-direction:column;gap:6px;"></div>
+                    </div>
+
+                    <div id="tm-no-files" style="display:none;text-align:center;padding:24px 0;">
+                        <svg width="32" height="32" fill="none" stroke="#d1d5db" stroke-width="1.2" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                        <p style="font-size:12px;color:#9ca3af;margin:6px 0 0;">Chưa có tệp đính kèm</p>
+                    </div>
+                </div>
+
+
+                <div style="padding:20px;overflow-y:auto;max-height:72vh;">
+
+                    <div class="tm-section" id="tm-desc-section">
+                        <div class="tm-section-label">Mô tả</div>
+                        <pre class="tm-desc" id="tm-desc"></pre>
+                    </div>
+
+                    <div class="tm-section">
+                        <div class="tm-section-label">Người thực hiện</div>
+                        <div class="tm-assignee">
+                            <div class="tm-avatar" id="tm-avatar"></div>
+                            <div>
+                                <div class="tm-assignee-name" id="tm-assignee-name"></div>
+                                <div class="tm-assignee-role">Thành viên</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tm-section">
+                        <div class="tm-section-label">Thời gian</div>
+                        <div class="tm-grid">
+                            <div class="tm-item">
+                                <div class="tm-item-label">Bắt đầu</div>
+                                <div class="tm-item-val" id="tm-start"></div>
+                            </div>
+                            <div class="tm-item">
+                                <div class="tm-item-label">Deadline</div>
+                                <div class="tm-item-val" id="tm-deadline"></div>
+                            </div>
+                            <div class="tm-item">
+                                <div class="tm-item-label">Đã bắt đầu</div>
+                                <div class="tm-item-val" id="tm-started"></div>
+                            </div>
+                            <div class="tm-item">
+                                <div class="tm-item-label">Hoàn thành</div>
+                                <div class="tm-item-val" id="tm-completed"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tm-section">
+                        <div class="tm-section-label">Thông tin khác</div>
+                        <div class="tm-grid">
+                            <div class="tm-item">
+                                <div class="tm-item-label">Tạo bởi</div>
+                                <div class="tm-item-val" id="tm-createdby"></div>
+                            </div>
+                            <div class="tm-item">
+                                <div class="tm-item-label">Ngày tạo</div>
+                                <div class="tm-item-val" id="tm-createdat"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tm-section" id="tm-status-section" style="display:none;">
+                        <div class="tm-section-label">Cập nhật trạng thái</div>
+                        <select id="tm-status-select" class="cf-input cf-select"
+                                style="background:#fafafa;border:0.5px solid #e5e7eb;border-radius:8px;
+                   padding:9px 12px;font-size:13.5px;font-family:'DM Sans',sans-serif;
+                   width:100%;outline:none;">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+               const PRIORITY_LABEL = ['🟢 Thấp', '🟡 Trung bình', '🔴 Cao'];
+        const STATUS_LABEL   = ['Chờ xử lý','Đang làm','Chờ duyệt','Hoàn thành','Từ chối'];
+        const VIEWER_ROLE    = @Model.ViewerRole;
+        const ANTIFORGERY    = () => document.querySelector('input[name="__RequestVerificationToken"]')?.value ?? '';
+
+        let currentTaskId = null;
+        let currentStatus = null;
+        let newFiles      = [];
+
+        async function openTaskModal(id) {
+            currentTaskId = id;
+            newFiles = [];
+
+            const res = await fetch(`/Tasks/${id}/detail`);
+            if (!res.ok) return;
+            const t = await res.json();
+            currentStatus = t.status;
+
+            // Header
+            document.getElementById('tm-title').textContent = t.title;
+            document.getElementById('tm-badges').innerHTML = `
+                <span class="tk-priority-badge tk-priority-badge--${t.priority}">${PRIORITY_LABEL[t.priority] ?? ''}</span>
+                <span class="tk-status-badge tk-status-badge--${t.status}">${STATUS_LABEL[t.status] ?? ''}</span>
+            `;
+
+            // Header action buttons
+            renderHeaderActions(t.status);
+
+            // Mô tả
+            const descSection = document.getElementById('tm-desc-section');
+            if (t.description) {
+                document.getElementById('tm-desc').textContent = t.description;
+                descSection.style.display = '';
+            } else {
+                descSection.style.display = 'none';
+            }
+
+            // Assignee
+            const avatar = document.getElementById('tm-avatar');
+            avatar.innerHTML = t.assignedToAvatar
+                ? `<img src="${t.assignedToAvatar}" alt=""/>`
+                : (t.assignedToName ?? '?')[0].toUpperCase();
+            document.getElementById('tm-assignee-name').textContent = t.assignedToName ?? '—';
+
+            // Thời gian
+            document.getElementById('tm-start').textContent     = t.startDate   ?? '—';
+            document.getElementById('tm-deadline').textContent  = t.deadline    ?? '—';
+            document.getElementById('tm-started').textContent   = t.startedAt   ?? '—';
+            document.getElementById('tm-completed').textContent = t.completedAt ?? '—';
+            document.getElementById('tm-createdby').textContent = t.createdByName ?? '—';
+            document.getElementById('tm-createdat').textContent = t.createdAt   ?? '—';
+            const statusSection = document.getElementById('tm-status-section');
+            if (VIEWER_ROLE === 3 && (t.status === 0 || t.status === 1)) {
+                statusSection.style.display = '';
+                const sel = document.getElementById('tm-status-select');
+                sel.innerHTML = '';
+                if (t.status === 0) {
+                    sel.innerHTML = `
+                        <option value="0" selected>⏳ Chờ xử lý</option>
+                        <option value="1">▶️ Đang làm</option>`;
+                } else {
+                    sel.innerHTML = `
+                        <option value="1" selected>▶️ Đang làm</option>`;
+                }
+            } else {
+                statusSection.style.display = 'none';
+            }
+
+            // Files
+            await loadFiles(id, t.status);
+
+            document.getElementById('taskModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function renderHeaderActions(status) {
+            const wrap = document.getElementById('tm-header-actions');
+            if (VIEWER_ROLE !== 3) { wrap.innerHTML = ''; return; }
+
+            if (status === 0 || status === 1) {
+                wrap.innerHTML = `
+                    <button class="tm-btn tm-btn--save" onclick="saveTask(event)">
+                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/>
+                            <polyline points="17 21 17 13 7 13 7 21"/>
+                            <polyline points="7 3 7 8 15 8"/>
+                        </svg>
+                        Lưu
+                    </button>
+                    ${status === 1 ? `
+                    <button class="tm-btn tm-btn--submit" onclick="submitTask(event)">
+                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                        Gửi đánh giá
+                    </button>` : ''}
+                `;
+            } else {
+                wrap.innerHTML = '';
+            }
+        }
+
+        async function loadFiles(taskId, status) {
+            const res = await fetch(`/Tasks/${taskId}/files`);
+            if (!res.ok) return;
+            const files = await res.json();
+
+            const managerFiles = files.filter(f => f.uploadedByRole <= 2);
+            const userFiles    = files.filter(f => f.uploadedByRole === 3);
+
+            // File Manager
+            const managerSection = document.getElementById('tm-manager-files-section');
+            const managerList    = document.getElementById('tm-manager-files');
+            if (managerFiles.length > 0) {
+                managerSection.style.display = '';
+                managerList.innerHTML = managerFiles.map(renderDlFile).join('');
+            } else {
+                managerSection.style.display = 'none';
+            }
+
+            // Upload section (chỉ InProgress + User)
+            const uploadSection = document.getElementById('tm-upload-section');
+            if (status === 1 && VIEWER_ROLE === 3) {
+                uploadSection.style.display = '';
+                document.getElementById('tm-user-files').innerHTML =
+                    userFiles.length > 0 ? userFiles.map(renderDlFile).join('') : '';
+                setupDropZone();
+            } else {
+                uploadSection.style.display = 'none';
+                // Nếu không phải InProgress nhưng user có file → hiện ở manager section
+                if (userFiles.length > 0) {
+                    managerSection.style.display = '';
+                    managerList.innerHTML += `
+                        <div class="tm-section-label" style="margin-top:12px;">File của bạn</div>
+                        ${userFiles.map(renderDlFile).join('')}`;
+                }
+            }
+
+            // Không có file nào
+            const noFiles = document.getElementById('tm-no-files');
+            noFiles.style.display = (managerFiles.length === 0 && userFiles.length === 0 && status !== 1) ? '' : 'none';
+        }
+
+        function renderDlFile(f) {
+            const ext     = f.fileName.split('.').pop().toUpperCase();
+            const size    = formatSize(f.fileSize);
+            const iconCls = getIconClass(f.fileName);
+            const uploader = f.uploadedByName ?? '—';
+            const date     = f.uploadedAt ? new Date(f.uploadedAt).toLocaleDateString('vi-VN') : '—';
+
+            return `
+                <a href="/Tasks/download/${f.id}" class="tm-file-dl" download>
+                    <div class="cf-file-icon ${iconCls}"
+                         style="width:28px;height:28px;font-size:9px;border-radius:5px;flex-shrink:0;">${ext}</div>
+                    <div style="flex:1;min-width:0;">
+                        <div class="tm-file-dl-name">${f.fileName}</div>
+                        <div style="font-size:11px;color:#9ca3af;margin-top:2px;font-family:'DM Mono',monospace;">
+                            ${uploader} · ${date} · ${size}
+                        </div>
+                    </div>
+                    <svg width="13" height="13" fill="none" stroke="#9ca3af" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                </a>`;
+        }
+
+        function setupDropZone() {
+            newFiles = [];
+            document.getElementById('tm-new-files').innerHTML = '';
+
+            const dropZone  = document.getElementById('tm-drop-zone');
+            const fileInput = document.getElementById('tm-file-input');
+
+            const newDrop  = dropZone.cloneNode(true);
+            const newInput = fileInput.cloneNode(true);
+            dropZone.parentNode.replaceChild(newDrop, dropZone);
+            fileInput.parentNode.replaceChild(newInput, fileInput);
+
+            newDrop.addEventListener('dragover',  e => { e.preventDefault(); newDrop.classList.add('dragover'); });
+            newDrop.addEventListener('dragleave', () => newDrop.classList.remove('dragover'));
+            newDrop.addEventListener('drop', e => {
+                e.preventDefault(); newDrop.classList.remove('dragover');
+                addNewFiles(e.dataTransfer.files);
+            });
+            newDrop.addEventListener('click', () => newInput.click());
+            newInput.addEventListener('change', () => addNewFiles(newInput.files));
+        }
+
+        function addNewFiles(files) {
+            Array.from(files).forEach(f => {
+                if (f.size > 5 * 1024 * 1024) { alert(`File "${f.name}" vượt quá 5MB.`); return; }
+                if (!newFiles.find(x => x.name === f.name && x.size === f.size)) newFiles.push(f);
+            });
+            renderNewFiles();
+        }
+
+        function renderNewFiles() {
+            document.getElementById('tm-new-files').innerHTML = newFiles.map((f, i) => `
+                <div class="cf-file-item" style="padding:8px 10px;">
+                    <div class="cf-file-icon ${getIconClass(f.name)}" style="width:28px;height:28px;font-size:9px;">
+                        ${f.name.split('.').pop().toUpperCase()}
+                    </div>
+                    <div class="cf-file-info">
+                        <div class="cf-file-name">${f.name}</div>
+                        <div class="cf-file-size">${formatSize(f.size)}</div>
+                    </div>
+                    <button type="button" class="cf-file-remove" onclick="removeNewFile(${i})">
+                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>`).join('');
+        }
+
+        function removeNewFile(i) {
+            newFiles.splice(i, 1);
+            renderNewFiles();
+        }
+
+        async function startTask(e) {
+            const btn = e.currentTarget;
+            btn.disabled = true; btn.textContent = 'Đang xử lý...';
+
+            const fd = new FormData();
+            fd.append('newStatus', '1');
+            fd.append('__RequestVerificationToken', ANTIFORGERY());
+
+            const res = await fetch(`/Tasks/${currentTaskId}/status`, { method: 'POST', body: fd });
+            if (res.ok) {
+                showToast('Đã bắt đầu công việc!');
+                closeTaskModal();
+                setTimeout(() => location.reload(), 600);
+            } else {
+                btn.disabled = false; btn.textContent = 'Bắt đầu làm';
+                showToast('Có lỗi xảy ra.', true);
+            }
+        }
+
+        async function saveTask(e) {
+            const btn = e.currentTarget;
+            btn.disabled = true; btn.textContent = 'Đang lưu...';
+
+            try {
+                // 1. Cập nhật status nếu thay đổi
+                const sel = document.getElementById('tm-status-select');
+                const newStatus = sel ? parseInt(sel.value) : null;
+
+                if (newStatus !== null && newStatus !== currentStatus) {
+                    const fd = new FormData();
+                    fd.append('newStatus', newStatus.toString());
+                    fd.append('__RequestVerificationToken', ANTIFORGERY());
+                    const res = await fetch(`/Tasks/${currentTaskId}/status`, { method: 'POST', body: fd });
+                    if (!res.ok) { showToast(await res.text() || 'Lỗi cập nhật trạng thái.', true); return; }
+                    currentStatus = newStatus;
+                }
+
+                // 2. Upload file nếu có
+                if (newFiles.length > 0) {
+                    const fd = new FormData();
+                    fd.append('__RequestVerificationToken', ANTIFORGERY());
+                    newFiles.forEach(f => fd.append('files', f));
+                    const res = await fetch(`/Tasks/${currentTaskId}/upload`, { method: 'POST', body: fd });
+                    if (!res.ok) { showToast('Lỗi khi lưu file.', true); return; }
+                    newFiles = [];
+                }
+
+                showToast('Đã lưu thành công!');
+                closeTaskModal();
+                setTimeout(() => location.reload(), 600);
+            } finally {
+                btn.disabled = false; btn.textContent = 'Lưu';
+            }
+        }
+
+        async function submitTask(e) {
+            if (!confirm('Gửi công việc để Manager đánh giá?')) return;
+
+            const btn = e.currentTarget;
+            btn.disabled = true; btn.textContent = 'Đang gửi...';
+
+            // Upload file trước nếu có
+            if (newFiles.length > 0) {
+                const fd = new FormData();
+                fd.append('__RequestVerificationToken', ANTIFORGERY());
+                newFiles.forEach(f => fd.append('files', f));
+                const upRes = await fetch(`/Tasks/${currentTaskId}/upload`, { method: 'POST', body: fd });
+                if (!upRes.ok) {
+                    showToast('Lỗi khi upload file.', true);
+                    btn.disabled = false; btn.textContent = 'Gửi đánh giá';
+                    return;
+                }
+            }
+
+            const fd2 = new FormData();
+            fd2.append('__RequestVerificationToken', ANTIFORGERY());
+            const res = await fetch(`/Tasks/${currentTaskId}/submit`, { method: 'POST', body: fd2 });
+
+            if (res.ok) {
+                showToast('Đã gửi đánh giá!');
+                closeTaskModal();
+                setTimeout(() => location.reload(), 600);
+            } else {
+                showToast(await res.text() || 'Có lỗi xảy ra.', true);
+                btn.disabled = false; btn.textContent = 'Gửi đánh giá';
+            }
+        }
+
+        // ── Helpers ──────────────────────────────────────────────
+        function showToast(msg, isError = false) {
+            document.querySelectorAll('.tk-toast').forEach(t => t.remove());
+            const toast = document.createElement('div');
+            toast.className = `tk-toast ${isError ? 'tk-toast--err' : 'tk-toast--ok'}`;
+            toast.innerHTML = isError
+                ? `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> ${msg}`
+                : `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> ${msg}`;
+            document.querySelector('.tk-page')?.prepend(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        function getIconClass(name) {
+            const ext = name.split('.').pop().toLowerCase();
+            if (['png','jpg','jpeg','gif','webp'].includes(ext)) return 'cf-file-icon--img';
+            if (ext === 'pdf') return 'cf-file-icon--pdf';
+            return '';
+        }
+
+        function formatSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+
+        function closeTaskModal() {
+            document.getElementById('taskModal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function closeOnOverlay(e) {
+            if (e.target === document.getElementById('taskModal')) closeTaskModal();
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTaskModal(); });
+    </script>
+}

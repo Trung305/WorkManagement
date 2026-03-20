@@ -10,6 +10,8 @@ namespace WorkManagement.Core.Enums
     {
         Pending = 1,
         InProgress = 2,
-        Completed = 3
+        PendingReview = 3,
+        Completed = 4,
+        Rejected =5
     }
 }

@@ -34,5 +34,13 @@ namespace WorkManagement.Infrastructure.Repositories
         {
             await _context.RefreshTokens.Where(t => t.Id == tokenId).ExecuteUpdateAsync(t => t.SetProperty(x => x.IsRevoked, true));
         }
+        public async System.Threading.Tasks.Task RevokeAllByUserAsync(int userId)
+        {
+            var tokens = await _context.RefreshTokens
+                .Where(t => t.UserId == userId && !t.IsRevoked)
+                .ToListAsync();
+            tokens.ForEach(t => t.IsRevoked = true);
+            await _context.SaveChangesAsync();
+        }
     }
 }

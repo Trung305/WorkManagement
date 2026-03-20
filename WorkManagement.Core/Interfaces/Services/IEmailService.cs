@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WorkManagement.Core.Interfaces.Services
 {
-    class IEmailService
+    public interface IEmailService
     {
+        Task SendAsync(string toEmail, string subject, string body);
     }
 }

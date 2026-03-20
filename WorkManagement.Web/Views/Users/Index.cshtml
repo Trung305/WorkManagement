@@ -1,0 +1,693 @@
+﻿@model WorkManagement.Web.Models.Admin.UserIndexViewModel
+@{
+    ViewData["Title"] = "Quản lý người dùng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    int     currentPage     = ViewBag.Page     ?? 1;
+    string? currentSearch   = ViewBag.Search;
+    int?    currentRole     = ViewBag.Role;
+    string? currentIsActive = ViewBag.IsActive;
+
+    var r = Model.PagedResult;
+}
+
+<!-- Header -->
+<div class="um-header">
+    <div>
+        <h1 class="um-title">Người dùng</h1>
+        <p class="um-subtitle">Quản lý tài khoản và phân quyền hệ thống</p>
+    </div>
+    <button class="um-btn-primary" onclick="openCreateModal()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        Tạo tài khoản
+    </button>
+</div>
+
+<!-- Stats -->
+<div class="um-stats">
+    <div class="um-stat-card">
+        <span class="um-stat-label">Tổng tài khoản</span>
+        <span class="um-stat-num">@r.TotalCount</span>
+    </div>
+    <div class="um-stat-card">
+        <span class="um-stat-label">Hoạt động</span>
+        <span class="um-stat-num" style="color:#16a34a">@r.ActiveCount</span>
+    </div>
+    <div class="um-stat-card">
+        <span class="um-stat-label">Bị khóa</span>
+        <span class="um-stat-num" style="color:#dc2626">@r.LockedCount</span>
+    </div>
+    <div class="um-stat-card">
+        <span class="um-stat-label">Manager</span>
+        <span class="um-stat-num" style="color:#4f46e5">@r.ManagerCount</span>
+    </div>
+</div>
+
+<!-- Main card -->
+<div class="um-card">
+
+    <!-- Toolbar -->
+    <div class="um-toolbar">
+        <form method="get" asp-action="Index" asp-controller="AdminUsers" class="um-toolbar-form">
+            <div class="um-search">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2.2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="text" name="search" value="@currentSearch"
+                       placeholder="Tìm theo tên, email..." class="um-search-input" />
+            </div>
+
+            <select name="role" class="um-select">
+                <option value="">Tất cả vai trò</option>
+                @if (currentRole == 1)
+                {
+                    <option value="1" selected>Admin</option>
+                }
+                else
+                {
+                    <option value="1">Admin</option>
+                }
+                @if (currentRole == 2)
+                {
+                    <option value="2" selected>Manager</option>
+                }
+                else
+                {
+                    <option value="2">Manager</option>
+                }
+                @if (currentRole == 3)
+                {
+                    <option value="3" selected>User</option>
+                }
+                else
+                {
+                    <option value="3">User</option>
+                }
+            </select>
+
+            <select name="isActive" class="um-select">
+                <option value="">Tất cả trạng thái</option>
+                @if (currentIsActive == "true")
+                {
+                    <option value="true" selected>Hoạt động</option>
+                }
+                else
+                {
+                    <option value="true">Hoạt động</option>
+                }
+                @if (currentIsActive == "false")
+                {
+                    <option value="false" selected>Bị khóa</option>
+                }
+                else
+                {
+                    <option value="false">Bị khóa</option>
+                }
+            </select>
+
+            <button type="submit" class="um-btn-filter">Lọc</button>
+
+            @if (!string.IsNullOrEmpty(currentSearch) || currentRole.HasValue || !string.IsNullOrEmpty(currentIsActive))
+            {
+                <a asp-action="Index" asp-controller="AdminUsers" class="um-btn-ghost">✕ Xóa lọc</a>
+            }
+        </form>
+    </div>
+
+    <!-- Table -->
+    <div class="um-table-wrap">
+        <table class="um-table">
+            <thead>
+                <tr>
+                    <th>Người dùng</th>
+                    <th>Vai trò</th>
+                    <th>Trạng thái</th>
+                    <th>Ngày tạo</th>
+                    <th>Đăng nhập gần nhất</th>
+                    <th class="th-right">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (r.Items.Any())
+                {
+                    foreach (var user in r.Items)
+                    {
+                        var userJson = System.Text.Json.JsonSerializer.Serialize(new
+                        {
+                            fullName = user.FullName,
+                            email    = user.Email,
+                            role     = user.Role,
+                            isActive = user.IsActive
+                        });
+
+                        <tr>
+                            <td>
+                                <div class="um-user-cell">
+                                    @if (!string.IsNullOrEmpty(user.AvatarUrl))
+                                    {
+                                        <img src="@user.AvatarUrl" class="um-avatar-img" alt="@user.FullName" />
+                                    }
+                                    else
+                                    {
+                                        <div class="um-avatar-init">
+                                            @(user.FullName.Length > 0 ? user.FullName[0].ToString().ToUpper() : "?")
+                                        </div>
+                                    }
+                                    <div class="um-user-info">
+                                        <span class="um-user-name">@user.FullName</span>
+                                        <span class="um-user-email">@user.Email</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                @switch (user.Role)
+                                {
+                                    case 0: <span class="um-badge um-badge-admin">Admin</span>     break;
+                                    case 2: <span class="um-badge um-badge-manager">Manager</span> break;
+                                    default:<span class="um-badge um-badge-user">User</span>       break;
+                                }
+                            </td>
+                            <td>
+                                <span class="um-status @(user.IsActive ? "um-status-active" : "um-status-locked")">
+                                    <i class="um-dot"></i>
+                                    @(user.IsActive ? "Hoạt động" : "Bị khóa")
+                                </span>
+                            </td>
+                            <td class="um-td-mono">@user.CreatedAt.ToString("dd/MM/yyyy")</td>
+                            <td class="um-td-mono">
+                                @(user.LastLoginAt.HasValue
+                                    ? user.LastLoginAt.Value.ToString("dd/MM/yyyy HH:mm")
+                                    : "—")
+                            </td>
+                            <td class="td-actions">
+                                <button class="um-action edit" title="Chỉnh sửa"
+                                        onclick='openEditModal(@user.Id, @Html.Raw(userJson))'>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                </button>
+                                <button class="um-action @(user.IsActive ? "lock" : "unlock")"
+                                        title="@(user.IsActive ? "Khóa" : "Mở khóa")"
+                                        onclick="doToggle(@user.Id, '@Html.Raw(user.FullName.Replace("'","\\'"  ))', @user.IsActive.ToString().ToLower())">
+                                    @if (user.IsActive)
+                                    {
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2"/>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                        </svg>
+                                    }
+                                    else
+                                    {
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2"/>
+                                            <path d="M7 11V7a5 5 0 0 1 9.9-1"/>
+                                        </svg>
+                                    }
+                                </button>
+                                <button class="um-action delete" title="Xóa"
+                                        onclick="confirmDelete(@user.Id, '@Html.Raw(user.FullName.Replace("'","\\'"))')">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                        <polyline points="3 6 5 6 21 6"/>
+                                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                                        <path d="M10 11v6M14 11v6M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="um-empty">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <p>Không tìm thấy tài khoản nào</p>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    @if (r.TotalPages > 1)
+    {
+        <div class="um-pagination">
+            <span class="um-page-info">
+                Trang @currentPage / @r.TotalPages &nbsp;·&nbsp; @r.TotalCount kết quả
+            </span>
+            <div class="um-page-btns">
+                @if (currentPage > 1)
+                {
+                    <a asp-action="Index" asp-controller="AdminUsers"
+                       asp-route-page="@(currentPage - 1)"
+                       asp-route-search="@currentSearch"
+                       asp-route-role="@currentRole"
+                       asp-route-isActive="@currentIsActive"
+                       class="um-page-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <polyline points="15 18 9 12 15 6"/>
+                        </svg>
+                    </a>
+                }
+                @for (int p = Math.Max(1, currentPage - 2); p <= Math.Min(r.TotalPages, currentPage + 2); p++)
+                {
+                    <a asp-action="Index" asp-controller="AdminUsers"
+                       asp-route-page="@p"
+                       asp-route-search="@currentSearch"
+                       asp-route-role="@currentRole"
+                       asp-route-isActive="@currentIsActive"
+                       class="um-page-btn @(p == currentPage ? "active" : "")">@p</a>
+                }
+                @if (currentPage < r.TotalPages)
+                {
+                    <a asp-action="Index" asp-controller="AdminUsers"
+                       asp-route-page="@(currentPage + 1)"
+                       asp-route-search="@currentSearch"
+                       asp-route-role="@currentRole"
+                       asp-route-isActive="@currentIsActive"
+                       class="um-page-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </a>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Modal Tạo / Chỉnh sửa -->
+<div class="um-overlay" id="userModal">
+    <div class="um-modal">
+        <div class="um-modal-header">
+            <h2 class="um-modal-title" id="modalTitle">Tạo tài khoản mới</h2>
+            <button class="um-modal-close" onclick="closeModal()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="um-modal-body">
+            <input type="hidden" id="editUserId" />
+            <div class="um-form-grid">
+                <div class="um-form-group um-span-2">
+                    <label class="um-label">Họ và tên <span class="um-req">*</span></label>
+                    <input type="text" id="fFullName" class="um-input" placeholder="Nguyễn Văn A" />
+                    <span class="um-err" id="errFullName"></span>
+                </div>
+                <div class="um-form-group um-span-2">
+                    <label class="um-label">Email <span class="um-req">*</span></label>
+                    <input type="email" id="fEmail" class="um-input" placeholder="example@email.com" />
+                    <span class="um-err" id="errEmail"></span>
+                </div>
+                <div class="um-form-group um-span-2" id="passwordGroup">
+                    <label class="um-label">Mật khẩu <span class="um-req">*</span></label>
+                    <div class="um-pw-wrap">
+                        <input type="password" id="fPassword" class="um-input" placeholder="Tối thiểu 6 ký tự" />
+                        <button type="button" class="um-pw-toggle" onclick="togglePw('fPassword',this)">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="um-err" id="errPassword"></span>
+                </div>
+                <div class="um-form-group">
+                    <label class="um-label">Vai trò</label>
+                    <select id="fRole" class="um-select-full">
+                        <option value="1">👤 User</option>
+                        <option value="2">🗂️ Manager</option>
+                        <option value="0">⚙️ Admin</option>
+                    </select>
+                </div>
+                <div class="um-form-group" id="activeGroup" style="display:none">
+                    <label class="um-label">Trạng thái</label>
+                    <select id="fIsActive" class="um-select-full">
+                        <option value="true">✅ Hoạt động</option>
+                        <option value="false">🔒 Bị khóa</option>
+                    </select>
+                </div>
+                <div class="um-form-group um-span-2" id="newPasswordGroup" style="display:none">
+                    <label class="um-label">
+                        Mật khẩu mới
+                        <span class="um-note">— để trống nếu không đổi</span>
+                    </label>
+                    <div class="um-pw-wrap">
+                        <input type="password" id="fNewPassword" class="um-input" placeholder="Tối thiểu 6 ký tự" />
+                        <button type="button" class="um-pw-toggle" onclick="togglePw('fNewPassword',this)">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="um-err" id="errNewPassword"></span>
+                </div>
+            </div>
+        </div>
+        <div class="um-modal-footer">
+            <button class="um-btn-ghost" onclick="closeModal()">Hủy</button>
+            <button class="um-btn-primary" id="btnSubmit" onclick="submitForm()">Tạo tài khoản</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Xác nhận xóa -->
+<div class="um-overlay" id="deleteModal">
+    <div class="um-modal um-modal-sm">
+        <div class="um-modal-header">
+            <h2 class="um-modal-title">Xác nhận xóa</h2>
+            <button class="um-modal-close" onclick="closeDeleteModal()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="um-modal-body um-delete-body">
+            <div class="um-delete-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+            </div>
+            <p class="um-delete-text">
+                Bạn có chắc muốn xóa tài khoản<br>
+                <strong id="deleteUserName"></strong>?<br>
+                <span style="color:#9ca3af;font-size:13px">Hành động này không thể hoàn tác.</span>
+            </p>
+        </div>
+        <div class="um-modal-footer">
+            <button class="um-btn-ghost" onclick="closeDeleteModal()">Hủy</button>
+            <button class="um-btn-danger" id="btnDelete" onclick="doDelete()">Xóa tài khoản</button>
+        </div>
+    </div>
+</div>
+
+<!-- Toast -->
+<div class="um-toast" id="toast"></div>
+
+@section Styles {
+<style>
+.um-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:24px; }
+.um-title  { font-size:22px; font-weight:700; color:#111827; margin:0 0 3px; }
+.um-subtitle { font-size:14px; color:#6b7280; margin:0; }
+
+.um-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:20px; }
+.um-stat-card { background:#fff; border:0.5px solid #e5e7eb; border-radius:12px; padding:18px 22px; display:flex; flex-direction:column; gap:6px; }
+.um-stat-label { font-size:13px; color:#6b7280; font-weight:500; }
+.um-stat-num   { font-size:28px; font-weight:700; color:#111827; font-family:'DM Mono',monospace; }
+
+.um-card { background:#fff; border:0.5px solid #e5e7eb; border-radius:12px; overflow:hidden; }
+
+.um-toolbar { padding:14px 18px; border-bottom:0.5px solid #e5e7eb; }
+.um-toolbar-form { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.um-search { display:flex; align-items:center; gap:8px; background:#f9fafb; border:0.5px solid #e5e7eb; border-radius:8px; padding:8px 12px; flex:1; min-width:180px; }
+.um-search:focus-within { border-color:#4f46e5; }
+.um-search-input { border:none; background:transparent; outline:none; font-size:14px; color:#111827; width:100%; font-family:'DM Sans',sans-serif; }
+.um-search-input::placeholder { color:#9ca3af; }
+.um-select { background:#f9fafb; border:0.5px solid #e5e7eb; border-radius:8px; padding:8px 12px; font-size:14px; color:#374151; font-family:'DM Sans',sans-serif; cursor:pointer; outline:none; }
+.um-select:focus { border-color:#4f46e5; }
+
+.um-table-wrap { overflow-x:auto; }
+.um-table      { width:100%; border-collapse:collapse; }
+.um-table thead tr { background:#f9fafb; border-bottom:0.5px solid #e5e7eb; }
+.um-table th { padding:11px 16px; text-align:left; font-size:11.5px; font-weight:600; color:#6b7280; text-transform:uppercase; letter-spacing:.05em; white-space:nowrap; }
+.um-table td { padding:13px 16px; font-size:14px; color:#374151; border-bottom:0.5px solid #f3f4f6; vertical-align:middle; }
+.um-table tbody tr:last-child td { border-bottom:none; }
+.um-table tbody tr:hover { background:#fafafa; }
+.th-right  { text-align:right !important; }
+.td-actions { display:flex; justify-content:flex-end; gap:4px; }
+
+.um-user-cell  { display:flex; align-items:center; gap:10px; }
+.um-avatar-img { width:34px; height:34px; border-radius:50%; object-fit:cover; border:1.5px solid #e5e7eb; flex-shrink:0; }
+.um-avatar-init { width:34px; height:34px; border-radius:50%; background:#ede9fe; color:#4f46e5; font-weight:700; font-size:13px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+.um-user-info  { display:flex; flex-direction:column; gap:1px; }
+.um-user-name  { font-size:13.5px; font-weight:600; color:#111827; }
+.um-user-email { font-size:12px; color:#6b7280; }
+.um-td-mono    { font-size:13px; color:#6b7280; font-family:'DM Mono',monospace; }
+
+.um-badge         { display:inline-block; padding:3px 10px; border-radius:6px; font-size:12px; font-weight:600; }
+.um-badge-admin   { background:#ede9fe; color:#5b21b6; }
+.um-badge-manager { background:#dbeafe; color:#1d4ed8; }
+.um-badge-user    { background:#f3f4f6; color:#374151; }
+
+.um-status        { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; }
+.um-dot           { width:6px; height:6px; border-radius:50%; display:inline-block; flex-shrink:0; }
+.um-status-active { color:#16a34a; }
+.um-status-active .um-dot { background:#16a34a; }
+.um-status-locked { color:#dc2626; }
+.um-status-locked .um-dot { background:#dc2626; }
+
+.um-action { width:30px; height:30px; border-radius:7px; border:0.5px solid #e5e7eb; background:#fff; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; color:#9ca3af; transition:all .15s; }
+.um-action:hover        { background:#f3f4f6; color:#374151; border-color:#d1d5db; }
+.um-action.edit:hover   { background:#ede9fe; border-color:#c4b5fd; color:#4f46e5; }
+.um-action.lock:hover   { background:#fef3c7; border-color:#fcd34d; color:#b45309; }
+.um-action.unlock:hover { background:#dcfce7; border-color:#86efac; color:#16a34a; }
+.um-action.delete:hover { background:#fee2e2; border-color:#fca5a5; color:#dc2626; }
+
+.um-empty { text-align:center; padding:52px 20px; color:#9ca3af; }
+.um-empty p { margin:12px 0 0; font-size:14px; }
+
+.um-pagination { display:flex; align-items:center; justify-content:space-between; padding:14px 18px; border-top:0.5px solid #e5e7eb; }
+.um-page-info { font-size:13px; color:#6b7280; }
+.um-page-btns { display:flex; gap:3px; }
+.um-page-btn { min-width:32px; height:32px; padding:0 8px; border-radius:7px; border:0.5px solid #e5e7eb; background:#fff; cursor:pointer; font-size:13px; color:#374151; display:inline-flex; align-items:center; justify-content:center; text-decoration:none; transition:all .15s; font-family:'DM Sans',sans-serif; }
+.um-page-btn:hover  { background:#f3f4f6; }
+.um-page-btn.active { background:#4f46e5; color:#fff; border-color:#4f46e5; font-weight:600; pointer-events:none; }
+
+.um-btn-primary { display:inline-flex; align-items:center; gap:6px; padding:9px 16px; border-radius:8px; background:#4f46e5; color:#fff; font-size:14px; font-weight:600; font-family:'DM Sans',sans-serif; border:none; cursor:pointer; transition:background .15s; text-decoration:none; }
+.um-btn-primary:hover { background:#4338ca; color:#fff; }
+.um-btn-filter  { display:inline-flex; align-items:center; padding:8px 14px; border-radius:8px; background:#fff; color:#374151; font-size:14px; font-weight:500; font-family:'DM Sans',sans-serif; border:0.5px solid #e5e7eb; cursor:pointer; transition:background .15s; }
+.um-btn-filter:hover { background:#f9fafb; }
+.um-btn-ghost   { display:inline-flex; align-items:center; gap:6px; padding:9px 16px; border-radius:8px; background:transparent; color:#374151; font-size:14px; font-weight:500; font-family:'DM Sans',sans-serif; border:0.5px solid #e5e7eb; cursor:pointer; transition:background .15s; text-decoration:none; }
+.um-btn-ghost:hover { background:#f3f4f6; color:#374151; }
+.um-btn-danger  { display:inline-flex; align-items:center; gap:6px; padding:9px 16px; border-radius:8px; background:#dc2626; color:#fff; font-size:14px; font-weight:600; font-family:'DM Sans',sans-serif; border:none; cursor:pointer; transition:background .15s; }
+.um-btn-danger:hover { background:#b91c1c; }
+
+.um-overlay { display:none; position:fixed; inset:0; background:rgba(17,24,39,0.4); z-index:1000; align-items:center; justify-content:center; backdrop-filter:blur(2px); }
+.um-overlay.open { display:flex; }
+.um-modal { background:#fff; border-radius:14px; width:100%; max-width:520px; margin:16px; box-shadow:0 24px 64px rgba(0,0,0,0.14); animation:umIn .2s ease; }
+.um-modal-sm { max-width:400px; }
+@@keyframes umIn { from{opacity:0;transform:translateY(-12px) scale(.97)} to{opacity:1;transform:translateY(0) scale(1)} }
+.um-modal-header { display:flex; align-items:center; justify-content:space-between; padding:20px 24px 0; }
+.um-modal-title  { font-size:17px; font-weight:700; color:#111827; margin:0; }
+.um-modal-close  { background:transparent; border:none; cursor:pointer; color:#9ca3af; padding:4px; border-radius:6px; display:flex; transition:all .15s; }
+.um-modal-close:hover { background:#f3f4f6; color:#374151; }
+.um-modal-body   { padding:20px 24px; }
+.um-modal-footer { display:flex; justify-content:flex-end; gap:8px; padding:16px 24px 20px; border-top:0.5px solid #f3f4f6; }
+
+.um-form-grid    { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.um-span-2       { grid-column:span 2; }
+.um-form-group   { display:flex; flex-direction:column; gap:5px; }
+.um-label { font-size:13.5px; font-weight:600; color:#374151; }
+.um-req   { color:#dc2626; }
+.um-note  { font-weight:400; color:#9ca3af; font-size:12px; margin-left:4px; }
+.um-input, .um-select-full { padding:9px 12px; border:0.5px solid #d1d5db; border-radius:8px; font-size:14px; font-family:'DM Sans',sans-serif; color:#111827; outline:none; background:#fff; transition:border-color .15s; width:100%; box-sizing:border-box; }
+.um-input:focus, .um-select-full:focus { border-color:#4f46e5; box-shadow:0 0 0 3px rgba(79,70,229,.07); }
+.um-input::placeholder { color:#9ca3af; }
+.um-input.error { border-color:#dc2626; }
+.um-err { font-size:12px; color:#dc2626; min-height:15px; }
+
+.um-pw-wrap { position:relative; }
+.um-pw-wrap .um-input { padding-right:38px; }
+.um-pw-toggle { position:absolute; right:10px; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; color:#9ca3af; padding:0; display:flex; transition:color .15s; }
+.um-pw-toggle:hover { color:#4f46e5; }
+
+.um-delete-body { display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; padding-top:8px; }
+.um-delete-icon { width:56px; height:56px; background:#fee2e2; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.um-delete-text { font-size:14px; color:#374151; line-height:1.7; margin:0; }
+
+.um-toast { position:fixed; bottom:24px; right:24px; background:#111827; color:#fff; padding:11px 18px; border-radius:10px; font-size:14px; font-weight:500; box-shadow:0 8px 24px rgba(0,0,0,.16); opacity:0; pointer-events:none; transition:opacity .25s,transform .25s; transform:translateY(8px); z-index:2000; }
+.um-toast.show  { opacity:1; transform:translateY(0); }
+.um-toast.success { background:#16a34a; }
+.um-toast.error   { background:#dc2626; }
+</style>
+}
+
+@section Scripts {
+<script>
+function getToken() {
+    return document.querySelector('input[name="__RequestVerificationToken"]')?.value ?? '';
+}
+
+function toast(msg, type = 'success') {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.className = `um-toast show ${type}`;
+    setTimeout(() => el.className = 'um-toast', 3000);
+}
+
+function togglePw(id, btn) {
+    const f = document.getElementById(id);
+    f.type = f.type === 'password' ? 'text' : 'password';
+    btn.style.color = f.type === 'text' ? '#4f46e5' : '#9ca3af';
+}
+
+function closeModal() { document.getElementById('userModal').classList.remove('open'); }
+function closeDeleteModal() { document.getElementById('deleteModal').classList.remove('open'); }
+
+document.getElementById('userModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+document.getElementById('deleteModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeDeleteModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeDeleteModal(); } });
+
+function clearErrors() {
+    ['errFullName','errEmail','errPassword','errNewPassword'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = '';
+    });
+    ['fFullName','fEmail','fPassword','fNewPassword'].forEach(id => {
+        document.getElementById(id)?.classList.remove('error');
+    });
+}
+
+function openCreateModal() {
+    clearErrors();
+    document.getElementById('editUserId').value        = '';
+    document.getElementById('modalTitle').textContent  = 'Tạo tài khoản mới';
+    document.getElementById('btnSubmit').textContent   = 'Tạo tài khoản';
+    document.getElementById('fFullName').value         = '';
+    document.getElementById('fEmail').value            = '';
+    document.getElementById('fPassword').value         = '';
+    document.getElementById('fRole').value             = '1';
+    document.getElementById('passwordGroup').style.display    = '';
+    document.getElementById('activeGroup').style.display      = 'none';
+    document.getElementById('newPasswordGroup').style.display = 'none';
+    document.getElementById('userModal').classList.add('open');
+    setTimeout(() => document.getElementById('fFullName').focus(), 120);
+}
+
+function openEditModal(id, data) {
+    clearErrors();
+    document.getElementById('editUserId').value        = id;
+    document.getElementById('modalTitle').textContent  = 'Chỉnh sửa tài khoản';
+    document.getElementById('btnSubmit').textContent   = 'Lưu thay đổi';
+    document.getElementById('fFullName').value         = data.fullName;
+    document.getElementById('fEmail').value            = data.email;
+    document.getElementById('fRole').value             = String(data.role);
+    document.getElementById('fIsActive').value         = String(data.isActive);
+    document.getElementById('fNewPassword').value      = '';
+    document.getElementById('passwordGroup').style.display    = 'none';
+    document.getElementById('activeGroup').style.display      = '';
+    document.getElementById('newPasswordGroup').style.display = '';
+    document.getElementById('userModal').classList.add('open');
+    setTimeout(() => document.getElementById('fFullName').focus(), 120);
+}
+
+function markErr(inputId, errId, msg) {
+    document.getElementById(inputId)?.classList.add('error');
+    const el = document.getElementById(errId);
+    if (el) el.textContent = msg;
+}
+
+async function submitForm() {
+    clearErrors();
+    const id       = document.getElementById('editUserId').value;
+    const isEdit   = id !== '';
+    const fullName = document.getElementById('fFullName').value.trim();
+    const email    = document.getElementById('fEmail').value.trim();
+    const role     = parseInt(document.getElementById('fRole').value);
+    const password = document.getElementById('fPassword').value;
+    const newPass  = isEdit ? document.getElementById('fNewPassword').value : '';
+    const isActive = isEdit ? document.getElementById('fIsActive').value === 'true' : true;
+
+    let valid = true;
+    if (!fullName) { markErr('fFullName','errFullName','Vui lòng nhập họ tên'); valid = false; }
+    if (!email || !/\S+@@\S+\.\S+/.test(email)) { markErr('fEmail','errEmail','Email không hợp lệ'); valid = false; }
+    if (!isEdit && password.length < 6) { markErr('fPassword','errPassword','Mật khẩu tối thiểu 6 ký tự'); valid = false; }
+    if (isEdit && newPass && newPass.length < 6) { markErr('fNewPassword','errNewPassword','Mật khẩu tối thiểu 6 ký tự'); valid = false; }
+    if (!valid) return;
+
+    const btn = document.getElementById('btnSubmit');
+    btn.disabled = true;
+    btn.textContent = 'Đang lưu...';
+
+    try {
+        const url    = isEdit ? `/users/${id}` : '/users/create';
+        const method = isEdit ? 'PUT' : 'POST';
+        const payload = isEdit
+            ? { id: parseInt(id), fullName, email, role, isActive, newPassword: newPass || null }
+            : { fullName, email, password, role };
+
+        const res = await fetch(url, {
+            method,
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': getToken()
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+            closeModal();
+            toast(isEdit ? 'Cập nhật thành công' : 'Tạo tài khoản thành công');
+            setTimeout(() => location.reload(), 900);
+        } else {
+            const msg = await res.text();
+            toast(msg || 'Có lỗi xảy ra', 'error');
+        }
+    } catch {
+        toast('Lỗi kết nối máy chủ', 'error');
+    } finally {
+        btn.disabled = false;
+        btn.textContent = isEdit ? 'Lưu thay đổi' : 'Tạo tài khoản';
+    }
+}
+
+async function doToggle(id, name, isActive) {
+    if (!confirm(`Bạn có chắc muốn ${isActive ? 'khóa' : 'mở khóa'} tài khoản "${name}"?`)) return;
+    try {
+        const res = await fetch(`/users/${id}/toggle`, {
+            method: 'POST',
+            headers: { 'RequestVerificationToken': getToken() }
+        });
+        if (res.ok) {
+            toast(isActive ? 'Đã khóa tài khoản' : 'Đã mở khóa tài khoản');
+            setTimeout(() => location.reload(), 900);
+        } else {
+            toast(await res.text() || 'Có lỗi xảy ra', 'error');
+        }
+    } catch { toast('Lỗi kết nối máy chủ', 'error'); }
+}
+
+let _deleteId = null;
+
+function confirmDelete(id, name) {
+    _deleteId = id;
+    document.getElementById('deleteUserName').textContent = name;
+    document.getElementById('deleteModal').classList.add('open');
+}
+
+async function doDelete() {
+    const btn = document.getElementById('btnDelete');
+    btn.disabled = true;
+    btn.textContent = 'Đang xóa...';
+    try {
+        const res = await fetch(`/users/${_deleteId}`, {
+            method: 'DELETE',
+            headers: { 'RequestVerificationToken': getToken() }
+        });
+        if (res.ok) {
+            closeDeleteModal();
+            toast('Đã xóa tài khoản');
+            setTimeout(() => location.reload(), 900);
+        } else {
+            closeDeleteModal();
+            toast(await res.text() || 'Không thể xóa tài khoản', 'error');
+        }
+    } catch {
+        toast('Lỗi kết nối máy chủ', 'error');
+    } finally {
+        btn.disabled = false;
+        btn.textContent = 'Xóa tài khoản';
+    }
+}
+</script>
+}

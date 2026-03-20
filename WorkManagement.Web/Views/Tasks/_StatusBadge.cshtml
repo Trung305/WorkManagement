@@ -1,0 +1,11 @@
+﻿@model int
+@{
+    var (label, cls) = Model switch {
+        2 => ("Đang làm",   "tk-status--progress"),
+        3 => ("Chờ duyệt",  "tk-status--review"),
+        4 => ("Hoàn thành", "tk-status--done"),
+        5 => ("Từ chối",    "tk-status--rejected"),
+        _ => ("Chờ xử lý",  "tk-status--pending")
+    };
+}
+<span class="tk-status-badge @cls">@label</span>

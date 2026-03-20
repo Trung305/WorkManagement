@@ -5,7 +5,7 @@
 @{
     Layout = null;
 }
-
+@model WorkManagement.Core.DTOs.Auth.LoginDto
 <style>
     body {
         margin: 0;
@@ -153,12 +153,23 @@
     </div>
 
     <div class="right">
-       <form class="form-box" method="post" action="/Account/Login">
+        <form class="form-box" asp-action="Login" asp-controller="Account" method="post">
+            @Html.AntiForgeryToken()
+
             <h2>Đăng nhập</h2>
 
-            <input class="input-box" type="email" name="email" placeholder="Email" required>
+            @if (ViewBag.Error != null)
+            {
+                <div style="color:red; text-align:center; margin-bottom:10px; font-size:13px;">
+                    @ViewBag.Error
+                </div>
+            }
 
-            <input class="input-box" type="password" name="password" placeholder="Mật khẩu" required>
+            <input class="input-box" asp-for="Email" placeholder="Email" />
+            <span asp-validation-for="Email" style="color:red; font-size:12px; margin-bottom:8px;"></span>
+
+            <input class="input-box" asp-for="Password" type="password" placeholder="Mật khẩu" />
+            <span asp-validation-for="Password" style="color:red; font-size:12px; margin-bottom:8px;"></span>
 
             <button type="submit" class="login-btn">Đăng nhập</button>
 

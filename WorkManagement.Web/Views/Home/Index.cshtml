@@ -1,169 +1,252 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model WorkManagement.Core.DTOs.Dashboard.DashboardStatsDto
 @{
-    Layout = null;
+    ViewData["Title"] = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var now = DateTime.Now;
+    var greeting = now.Hour < 12 ? "buổi sáng" : now.Hour < 18 ? "buổi chiều" : "buổi tối";
+    var userName = User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value ?? "bạn";
+
+    var priorityLabel = new[] { "", "🟢 Thấp", "🟡 Trung bình", "🔴 Cao" };
+    var statusLabel = new[] { "", "Chờ xử lý", "Đang làm", "Chờ duyệt", "Hoàn thành", "Từ chối" };
+
+    // Calendar
+    var firstDay = new DateTime(Model.CurrentYear, Model.CurrentMonth, 1);
+    var daysInMonth = DateTime.DaysInMonth(Model.CurrentYear, Model.CurrentMonth);
+    var startDow = (int)firstDay.DayOfWeek; // 0=CN
+    var monthName = firstDay.ToString("MMMM, yyyy", new System.Globalization.CultureInfo("vi-VN"));
 }
 
-<link rel="stylesheet" href="/css/dashboard.css">
-
-<div class="sidebar">
-    <div class="logo">
-        <span style="background: white; color: #5a5c69; padding: 2px 8px; border-radius: 4px;">C</span> CodingLab
+<div class="greeting">
+    <h1>Chào @greeting, @userName</h1>
+    <p>
+        @if (Model.TodayTasks > 0)
+        {
+            <span>Hôm nay bạn có <strong>@Model.TodayTasks</strong> công việc cần hoàn thành</span>
+        }
+        else
+        {
+            <span>Không có công việc nào đến hạn hôm nay</span>
+        }
+    </p>
+</div>
+<div class="stats-grid">
+    <div class="stat-card">
+        <h3>Công việc hôm nay</h3>
+        <div class="value">@Model.TodayTasks</div>
+        <div>
+            <span class="stat-badge badge-blue">@Model.TotalTasks tổng cộng</span>
+        </div>
     </div>
-    <ul class="menu">
-        <li>
-            <a href="#" class="menu-link active">
-                🏠 Trang chủ
-            </a>
-        </li>
-        <li>
-            <button class="menu-btn">
-                📄 Công việc
-            </button>
-        </li>
-    </ul>
-    <div class="logout">
-        🚪 Đăng xuất
+    <div class="stat-card">
+        <h3>Quá hạn</h3>
+        <div class="value @(Model.OverdueTasks > 0 ? "text-red" : "")">@Model.OverdueTasks</div>
+        <div>
+            @if (Model.OverdueTasks > 0)
+            {
+                <span class="stat-badge badge-red">Cần xử lý</span>
+            }
+            else
+            {
+                <span class="stat-badge badge-green">Tốt</span>
+            }
+        </div>
+    </div>
+    <div class="stat-card">
+        <h3>Hoàn thành tuần này</h3>
+        <div class="value">@Model.CompletedThisWeek</div>
+        <div>
+            @{
+                var diff = Model.CompletedThisWeek - Model.CompletedLastWeek;
+            }
+            @if (diff >= 0)
+            {
+                <span class="stat-badge badge-green">+@diff so với tuần trước</span>
+            }
+            else
+            {
+                <span class="stat-badge badge-red">@diff so với tuần trước</span>
+            }
+        </div>
+    </div>
+    <div class="stat-card">
+        <h3>Tỉ lệ hoàn thành</h3>
+        <div class="value">@Model.CompletionRate%</div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width:@Model.CompletionRate%"></div>
+        </div>
     </div>
 </div>
-<div class="main-content">
 
-    <div class="topbar">
-        <input type="text" class="search-bar" placeholder="🔍">
-        <div class="topbar-actions">
-            <button class="add-new-btn" onclick="window.location.href='/Home/NewTask'">+ Add New</button>
-
-            <a href="/Home/Notifications" style="font-size: 20px; text-decoration: none;">🔔</a>
-            <div class="profile-img">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
+<div class="content-grid">
+    <div class="tasks-column">
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">Công việc sắp tới</span>
+                <a href="@Url.Action("Index", "Tasks")" class="card-link">Xem tất cả</a>
             </div>
-        </div>
-    </div>
-
-    <div class="dashboard">
-        <h1 class="greeting">Good morning , Anna</h1>
-
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h3>Tasks Today</h3>
-                <div class="value">8</div>
-            </div>
-            <div class="stat-card">
-                <h3>Overdue</h3>
-                <div class="value text-red">2</div>
-            </div>
-            <div class="stat-card">
-                <h3 style="background: white; width: max-content; padding: 5px 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-size: 18px; margin-bottom: 15px; color: black; font-weight: bold;">75%</h3>
-                <div style="width: 100%; background: #eee; height: 10px; border-radius: 5px;">
-                    <div style="width: 75%; background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); height: 100%; border-radius: 5px;"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-grid">
-
-            <div class="tasks-column">
-                <div class="task-section" style="background: white;">
-                    <h3>Today's Tasks</h3>
+            @if (Model.UpcomingTasks.Any())
+            {
+                foreach (var t in Model.UpcomingTasks)
+                {
+                    var isDone = t.Status == 4;
                     <div class="task-item">
-                        <span>☑ Team Meeting - 10:00 AM</span>
-                        <span>✏️ 🗑️</span>
-                    </div>
-                    <div class="task-item">
-                        <span style="color:#f39c12;">⭐</span> <span>Review Project - 2:00 PM</span>
-                        <span>✏️ 🗑️</span>
-                    </div>
-                    <div class="task-item active">
-                        <span>⬜ Buy Groceries - 6:00 PM</span>
-                        <span>✏️ 🗑️</span>
-                    </div>
-                </div>
-
-                <div class="task-section" style="background: #bce0dd;">
-                    <h3>Upcoming Tasks</h3>
-                    <div class="task-item" style="background: #d4e3e3; box-shadow: none; margin-bottom: 5px;">
-                        <span>📘 Submit Math Assignment</span>
-                        <span style="font-size: 12px; color: #777; font-weight: normal;">Tomorrow 11:59</span>
-                    </div>
-                    <div class="task-item" style="background: #d4e3e3; box-shadow: none;">
-                        <span>📘 Submit Math Assignment</span>
-                        <span style="font-size: 12px; color: #777; font-weight: normal;">Friday, 11:59 AM</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right-column">
-
-                <div class="alert-box">
-                    <div style="background: white; width: max-content; padding: 5px; border-radius: 5px; color: red; margin-bottom: 15px; font-weight: bold;">⚠️</div>
-                    <p style="font-weight: bold; font-size: 14px; margin-bottom: 15px; color: #222;">Upcoming: Presentation in 30 mins<br>urgent tradevis.</p>
-                    <hr style="border: none; border-top: 2px solid #e74c3c; margin-bottom: 15px;">
-                    <p style="font-weight: bold; font-size: 14px; color: #222;">New request from Client X<br>urgent on message.</p>
-                </div>
-
-                <div class="calendar-box">
-                    <div class="calendar-header">
-                        <h4>April 2025 <span style="color:#4facfe; font-size:12px;">&gt;</span></h4>
-                        <div class="calendar-nav">
-                            <span>&lt;</span>
-                            <span>&gt;</span>
+                        <div class="task-check @(isDone ? "done" : "")"></div>
+                        <div class="task-info">
+                            <div class="task-name @(isDone ? "done" : "")"
+                                 style="cursor:pointer"
+                                 onclick="location.href='@Url.Action("Edit", "Tasks", new { id = t.Id })'">
+                                @t.Title
+                            </div>
+                            <div class="task-meta">
+                                @if (t.Deadline.HasValue)
+                                {
+                                    <span>Deadline: @t.Deadline.Value.ToLocalTime().ToString("dd/MM HH:mm")</span>
+                                }
+                                @if (!string.IsNullOrEmpty(t.AssignedToName))
+                                {
+                                    <span> · @t.AssignedToName</span>
+                                }
+                            </div>
                         </div>
+                        @{
+                            var (tagCls, tagLabel) = t.Priority switch
+                            {
+                                1 => ("tag-low", "Thấp"),
+                                2 => ("tag-mid", "Trung bình"),
+                                3 => ("tag-high", "Cao"),
+                                _ => ("tag-low", "—")
+                            };
+                        }
+                        <span class="task-tag @tagCls">@tagLabel</span>
                     </div>
-
-                    <div class="calendar-grid">
-                        <div class="calendar-day-name">SUN</div>
-                        <div class="calendar-day-name">MON</div>
-                        <div class="calendar-day-name">TUE</div>
-                        <div class="calendar-day-name">WED</div>
-                        <div class="calendar-day-name">THU</div>
-                        <div class="calendar-day-name">FRI</div>
-                        <div class="calendar-day-name">SAT</div>
-
-                        <div></div><div></div><div></div>
-                        <div class="calendar-date" style="color:#4facfe;">1</div>
-                        <div class="calendar-date">2</div>
-                        <div class="calendar-date">3</div>
-                        <div class="calendar-date">4</div>
-
-                        <div class="calendar-date">5</div>
-                        <div class="calendar-date">6</div>
-                        <div class="calendar-date">7</div>
-                        <div class="calendar-date">8</div>
-                        <div class="calendar-date">9</div>
-                        <div class="calendar-date">10</div>
-                        <div class="calendar-date">11</div>
-
-                        <div class="calendar-date">12</div>
-                        <div class="calendar-date">13</div>
-                        <div class="calendar-date">14</div>
-                        <div class="calendar-date">15</div>
-                        <div class="calendar-date">16</div>
-                        <div class="calendar-date">17</div>
-                        <div class="calendar-date">18</div>
-
-                        <div class="calendar-date">19</div>
-                        <div class="calendar-date active">20</div>
-                        <div class="calendar-date">21</div>
-                        <div class="calendar-date">22</div>
-                        <div class="calendar-date">23</div>
-                        <div class="calendar-date">24</div>
-                        <div class="calendar-date">25</div>
-
-                        <div class="calendar-date">26</div>
-                        <div class="calendar-date">27</div>
-                        <div class="calendar-date">28</div>
-                        <div class="calendar-date">29</div>
-                        <div class="calendar-date">30</div>
-                        <div></div><div></div>
-                    </div>
-
-                    <div class="calendar-footer">
-                        <span>Time</span>
-                        <span>9:41 AM</span>
-                    </div>
+                }
+            }
+            else
+            {
+                <div style="padding:24px 0;text-align:center;color:#9ca3af;font-size:13px;">
+                    Không có công việc nào
                 </div>
+            }
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">Sắp đến hạn</span>
+                <a href="@Url.Action("Index", "Tasks")" class="card-link">Xem tất cả</a>
+            </div>
+            @if (Model.NearDeadlineTasks.Any())
+            {
+                foreach (var t in Model.NearDeadlineTasks)
+                {
+                    <div class="task-item">
+                        <div class="task-check"></div>
+                        <div class="task-info">
+                            <div class="task-name"
+                                 style="cursor:pointer"
+                                 onclick="location.href='@Url.Action("Edit", "Tasks", new { id = t.Id })'">
+                                @t.Title
+                            </div>
+                            <div class="task-meta">
+                                @if (t.Deadline.HasValue)
+                                {
+                                    var daysLeft = (t.Deadline.Value.Date - DateTime.Today).Days;
+                                    @if (daysLeft == 0)
+                                    {
+                                        <span style="color:#dc2626;">Hôm nay</span>
+                                    }
+                                    else if (daysLeft == 1)
+                                    {
+                                        <span style="color:#ea580c;">Ngày mai</span>
+                                    }
+                                    else
+                                    {
+                                        <span>Còn @daysLeft ngày</span>
+                                    }
+                                }
+                            </div>
+                        </div>
+                        @{
+                            var (tagCls2, tagLabel2) = t.Priority switch
+                            {
+                                1 => ("tag-low", "Thấp"),
+                                2 => ("tag-mid", "Trung bình"),
+                                3 => ("tag-high", "Cao"),
+                                _ => ("tag-low", "—")
+                            };
+                        }
+                        <span class="task-tag @tagCls2">@tagLabel2</span>
+                    </div>
+                }
+            }
+            else
+            {
+                <div style="padding:24px 0;text-align:center;color:#9ca3af;font-size:13px;">
+                    Không có công việc nào sắp đến hạn
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="right-column">
+        @if (Model.OverdueTasks > 0)
+        {
+            <div class="alert-box">
+                <div class="alert-title">
+                    <div class="alert-dot"></div>
+                    Cảnh báo
+                </div>
+                <div class="alert-text">
+                    Bạn có <strong>@Model.OverdueTasks</strong> công việc đã quá hạn. Hãy xử lý sớm!
+                </div>
+            </div>
+        }
+
+        <div class="calendar-box">
+            <div class="calendar-header">
+                <span class="card-title">@monthName</span>
+            </div>
+            <div class="calendar-grid">
+                @foreach (var d in new[] { "CN", "T2", "T3", "T4", "T5", "T6", "T7" })
+                {
+                    <div class="calendar-day-name">@d</div>
+                }
+
+                @* Ô trống đầu tháng *@
+                @for (int i = 0; i < startDow; i++)
+                {
+                    <div></div>
+                }
+
+                @* Các ngày *@
+                @for (int d = 1; d <= daysInMonth; d++)
+                {
+                    var isToday = d == Model.Today;
+                    var hasTask = Model.DeadlineDays.Contains(d);
+                    var cls = "calendar-date";
+                    @if (isToday) { cls += " active"; }
+                    @if (hasTask && !isToday) { cls += " has-task"; }
+
+                    var dateStr = $"{Model.CurrentYear}-{Model.CurrentMonth:D2}-{d:D2}";
+                    <div class="@cls"
+                         style="cursor:pointer"
+                         onclick="filterByDate('@dateStr')"
+                         title="@(hasTask ? "Có task deadline ngày này" : "")">
+                        @d
+                    </div>
+                }
+            </div>
+            <div class="calendar-footer">
+                <span>Hôm nay</span>
+                <span>@DateTime.Now.ToString("dd/MM/yyyy")</span>
             </div>
         </div>
     </div>
 </div>
+@section Scripts{
+    <script>
+        function filterByDate(dateStr) {
+            window.location.href = `/Tasks/Index?status=&deadline=${dateStr}`;
+        }
+</script>
+}

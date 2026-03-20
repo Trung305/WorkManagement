@@ -1,0 +1,10 @@
+﻿@model int
+@{
+    var (label, cls) = Model switch
+    {
+        2 => ("Cao", "tk-pri--high"),
+        1 => ("Trung bình", "tk-pri--med"),
+        _ => ("Thấp", "tk-pri--low")
+    };
+}
+<span class="tk-priority @cls">@label</span>

@@ -6,42 +6,93 @@ namespace WorkManagement.Web.Controllers
 {
     public class AccountController : Controller
     {
-        private IAuthService _authService;
+        private readonly IAuthService _authService;
+
         public AccountController(IAuthService authService)
         {
             _authService = authService;
         }
-        // Hiển thị trang Login
+
+        // GET: /Account/Login
         [HttpGet]
         public IActionResult Login()
         {
+            // Nếu đã đăng nhập rồi thì redirect về Home
+            if (User.Identity?.IsAuthenticated == true)
+                return RedirectToAction("Index", "Home");
             return View();
         }
+
+        // POST: /Account/Login
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginDto dto)
+        {
+            if (!ModelState.IsValid)
+                return View(dto);
+
+            var result = await _authService.LoginAsync(dto);
+            if (!result.IsSuccess)
+            {
+                ViewBag.Error = result.ErrorMessage;
+                return View(dto);
+            }
+
+            // Lưu AccessToken vào cookie để dùng cho các request sau
+            Response.Cookies.Append("access_token", result.Data!.AccessToken, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = false,     // đổi thành true khi deploy HTTPS
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTimeOffset.UtcNow.AddMinutes(60)
+            });
+            Response.Cookies.Append("refresh_token", result.Data.RefreshToken, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = false,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTimeOffset.UtcNow.AddDays(7)
+            });
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        // GET: /Account/Register
         [HttpGet]
         public IActionResult Register()
         {
+            if (User.Identity?.IsAuthenticated == true)
+                return RedirectToAction("Index", "Home");
             return View();
         }
 
-            // Xử lý đăng nhập
+        // POST: /Account/Register
         [HttpPost]
-        public IActionResult Login(string email, string password)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterDto dto)
         {
-            if (email == "admin@gmail.com" && password == "123")
+            if (!ModelState.IsValid)
+                return View(dto);
+
+            var result = await _authService.RegisterAsync(dto);
+            if (!result.IsSuccess)
             {
-                return RedirectToAction("Index", "Home");
+                ViewBag.Error = result.ErrorMessage;
+                return View(dto);
             }
 
-            ViewBag.Error = "Sai email hoặc mật khẩu";
-            return View();
+            TempData["Success"] = "Đăng ký thành công! Vui lòng đăng nhập.";
+            return RedirectToAction("Login");
         }
-        [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterDto registerDto)
+
+        // POST: /Account/Logout
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Logout()
         {
-            var result = await _authService.RegisterAsync(registerDto);
-            if (!result.IsSuccess)
-                return BadRequest(new { message = result.ErrorMessage });
-            return Ok(new { message = "Đăng ký thành công" });
+            Response.Cookies.Delete("access_token");
+            Response.Cookies.Delete("refresh_token");
+            return RedirectToAction("Login");
         }
     }
 }

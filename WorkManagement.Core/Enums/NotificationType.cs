@@ -10,6 +10,8 @@ namespace WorkManagement.Core.Enums
     {
         TaskAssigned = 1,
         DeadlineReminder = 2,
-        TaskCompleted = 3
+        TaskCompleted = 3,
+        TaskStatusChanged =4,
+        TaskRejected =5
     }
 }

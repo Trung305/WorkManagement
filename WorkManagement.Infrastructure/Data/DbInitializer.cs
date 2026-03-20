@@ -26,7 +26,7 @@ namespace WorkManagement.Infrastructure.Data
                     Email = "admin@workmanagement.com",
                     PasswordHash = password,
                     FullName = "Admin",
-                    Role = (int)UserRole.Admin,
+                    Role = UserRole.Admin,
                     IsActive = true,
                     CreatedAt = DateTime.Now
                 },
@@ -35,7 +35,7 @@ namespace WorkManagement.Infrastructure.Data
                     Email = "manager@workmanagement.com",
                     PasswordHash = password,
                     FullName = "Manager",
-                    Role = (int)UserRole.Manager,
+                    Role = UserRole.Manager,
                     IsActive = true,
                     CreatedAt = DateTime.Now
                 },
@@ -44,7 +44,7 @@ namespace WorkManagement.Infrastructure.Data
                     Email = "user1@workmanagement.com",
                     PasswordHash = password,
                     FullName = "User1",
-                    Role = (int)UserRole.User,
+                    Role =UserRole.User,
                     IsActive = true,
                     CreatedAt = DateTime.Now
                 },
@@ -53,7 +53,7 @@ namespace WorkManagement.Infrastructure.Data
                     Email = "user2@workmanagement.com",
                     PasswordHash = password,
                     FullName = "User2",
-                    Role = (int)UserRole.User,
+                    Role = UserRole.User,
                     IsActive = true,
                     CreatedAt = DateTime.Now
                 },
@@ -64,7 +64,7 @@ namespace WorkManagement.Infrastructure.Data
                     Email = "googleuser@gmail.com",
                     GoogleId = "google_123456",
                     FullName = "Google User",
-                    Role = (int)UserRole.User,
+                    Role = UserRole.User,
                     IsActive = true,
                     CreatedAt = DateTime.Now
                 },
@@ -75,7 +75,7 @@ namespace WorkManagement.Infrastructure.Data
                     Email = "inactive@workmanagement.com",
                     PasswordHash = password,
                     FullName = "Inactive User",
-                    Role = (int)UserRole.User,
+                    Role = UserRole.User,
                     IsActive = false,
                     CreatedAt = DateTime.Now.AddMonths(-6)
                 }
@@ -94,8 +94,8 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     Title = "Thiết kế database cho hệ thống",
                     Description = "Tạo ERD và thiết kế các bảng cho hệ thống quản lý công việc",
-                    Priority = (int)TaskPriority.High,
-                    Status = (int)StatusTask.Completed,
+                    Priority = TaskPriority.High,
+                    Status = StatusTask.Completed,
                     Deadline = DateTime.Now.AddDays(-5),
                     AssignedTo = 3, // Lê Văn User
                     CreatedBy = 1, // Admin
@@ -105,8 +105,8 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     Title = "Implement Authentication",
                     Description = "Xây dựng chức năng đăng nhập, đăng ký với ASP.NET Identity",
-                    Priority = (int)TaskPriority.High,
-                    Status = (int)StatusTask.InProgress,
+                    Priority = TaskPriority.High,
+                    Status = StatusTask.InProgress,
                     Deadline = DateTime.Now.AddDays(3),
                     AssignedTo = 3,
                     CreatedBy = 2, // Manager
@@ -116,8 +116,8 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     Title = "Tạo giao diện Dashboard",
                     Description = "Thiết kế và code giao diện dashboard với Bootstrap 5",
-                    Priority = (int)TaskPriority.Medium,
-                    Status = (int)StatusTask.Pending,
+                    Priority = TaskPriority.Medium,
+                    Status = StatusTask.Pending,
                     Deadline = DateTime.Now.AddDays(7),
                     AssignedTo = 4, // Phạm Thị User 2
                     CreatedBy = 2,
@@ -127,8 +127,8 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     Title = "API Documentation",
                     Description = "Viết tài liệu API với Swagger",
-                    Priority = (int)TaskPriority.Low,
-                    Status = (int)StatusTask.Pending,
+                    Priority = TaskPriority.Low,
+                    Status = StatusTask.Pending,
                     Deadline = DateTime.Now.AddDays(14),
                     AssignedTo = 3,
                     CreatedBy = 1,
@@ -138,8 +138,8 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     Title = "Testing hệ thống",
                     Description = "Viết unit test và integration test",
-                    Priority = (int)TaskPriority.High,
-                    Status = (int)StatusTask.Pending,
+                    Priority = TaskPriority.High,
+                    Status = StatusTask.Pending,
                     Deadline = DateTime.Now.AddDays(10),
                     AssignedTo = 4,
                     CreatedBy = 2,
@@ -149,8 +149,8 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     Title = "Deploy lên Production",
                     Description = "Deploy ứng dụng lên Azure/AWS",
-                    Priority = (int)TaskPriority.Medium,
-                    Status = (int)StatusTask.Pending,
+                    Priority = TaskPriority.Medium,
+                    Status = StatusTask.Pending,
                     Deadline = DateTime.Now.AddDays(21),
                     AssignedTo = 3,
                     CreatedBy = 1,
@@ -171,9 +171,9 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     UserId = 3,
                     TaskId = 1,
-                    Type = (int)NotificationType.TaskAssigned,
+                    Type = NotificationType.TaskAssigned,
                     Title = "Bạn được giao task: Thiết kế database cho hệ thống",
-                    Channel = (int)NotificationChannel.InApp,
+                    Channel = NotificationChannel.InApp,
                     IsRead = true,
                     IsSent = true,
                     CreatedAt = DateTime.Now.AddDays(-10),
@@ -183,9 +183,9 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     UserId = 3,
                     TaskId = 2,
-                    Type = (int)NotificationType.TaskAssigned,
+                    Type = NotificationType.TaskAssigned,
                     Title = "Bạn được giao task: Implement Authentication",
-                    Channel = (int)NotificationChannel.InApp,
+                    Channel = NotificationChannel.InApp,
                     IsRead = true,
                     IsSent = true,
                     CreatedAt = DateTime.Now.AddDays(-7),
@@ -195,9 +195,9 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     UserId = 3,
                     TaskId = 2,
-                    Type = (int)NotificationType.DeadlineReminder,
+                    Type = NotificationType.DeadlineReminder,
                     Title = "Task 'Implement Authentication' sắp đến hạn (còn 3 ngày)",
-                    Channel = (int)NotificationChannel.Email,
+                    Channel = NotificationChannel.Email,
                     IsRead = false,
                     IsSent = true,
                     CreatedAt = DateTime.Now.AddHours(-2),
@@ -207,9 +207,9 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     UserId = 4,
                     TaskId = 3,
-                    Type = (int)NotificationType.TaskAssigned,
+                    Type = NotificationType.TaskAssigned,
                     Title = "Bạn được giao task: Tạo giao diện Dashboard",
-                    Channel = (int)NotificationChannel.InApp,
+                    Channel = NotificationChannel.InApp,
                     IsRead = false,
                     IsSent = true,
                     CreatedAt = DateTime.Now.AddDays(-3),
@@ -219,9 +219,9 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     UserId = 3,
                     TaskId = 4,
-                    Type = (int)NotificationType.TaskAssigned,
+                    Type = NotificationType.TaskAssigned,
                     Title = "Bạn được giao task: API Documentation",
-                    Channel = (int)NotificationChannel.InApp,
+                    Channel = NotificationChannel.InApp,
                     IsRead = false,
                     IsSent = true,
                     CreatedAt = DateTime.Now.AddDays(-2),
@@ -231,9 +231,9 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     UserId = 4,
                     TaskId = 5,
-                    Type = (int)NotificationType.TaskAssigned,
+                    Type = NotificationType.TaskAssigned,
                     Title = "Bạn được giao task: Testing hệ thống",
-                    Channel = (int)NotificationChannel.Email,
+                    Channel = NotificationChannel.Email,
                     IsRead = false,
                     IsSent = false,
                     CreatedAt = DateTime.Now.AddDays(-1)
@@ -242,9 +242,9 @@ namespace WorkManagement.Infrastructure.Data
                 {
                     UserId = 3,
                     TaskId = 6,
-                    Type = (int)NotificationType.TaskAssigned,
+                    Type = NotificationType.TaskAssigned,
                     Title = "Bạn được giao task: Deploy lên Production",
-                    Channel = (int)NotificationChannel.InApp,
+                    Channel = NotificationChannel.InApp,
                     IsRead = false,
                     IsSent = true,
                     CreatedAt = DateTime.Now,

@@ -22,6 +22,46 @@ namespace WorkManagement.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("WorkManagement.Core.Entities.FileAttachment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("FileSize")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("TaskId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UploadedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UploadedBy")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UploadedByRole")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TaskId");
+
+                    b.HasIndex("UploadedBy");
+
+                    b.ToTable("FileAttachments");
+                });
+
             modelBuilder.Entity("WorkManagement.Core.Entities.Notification", b =>
                 {
                     b.Property<int>("Id")
@@ -48,6 +88,9 @@ namespace WorkManagement.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
+
+                    b.Property<int?>("ReminderType")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("SentAt")
                         .HasColumnType("datetime2");
@@ -116,6 +159,9 @@ namespace WorkManagement.Infrastructure.Migrations
                     b.Property<int>("AssignedTo")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("CompletedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -124,7 +170,7 @@ namespace WorkManagement.Infrastructure.Migrations
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Deadline")
+                    b.Property<DateTime?>("Deadline")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
@@ -133,6 +179,18 @@ namespace WorkManagement.Infrastructure.Migrations
                     b.Property<int>("Priority")
                         .HasColumnType("int");
 
+                    b.Property<string>("RejectedReason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ReviewedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("StartedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
@@ -140,6 +198,9 @@ namespace WorkManagement.Infrastructure.Migrations
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -193,12 +254,34 @@ namespace WorkManagement.Infrastructure.Migrations
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Email")
                         .IsUnique();
 
                     b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("WorkManagement.Core.Entities.FileAttachment", b =>
+                {
+                    b.HasOne("WorkManagement.Core.Entities.Task", "Task")
+                        .WithMany("FileAttachments")
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WorkManagement.Core.Entities.User", "UploadedByUser")
+                        .WithMany("UploadedFiles")
+                        .HasForeignKey("UploadedBy")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Task");
+
+                    b.Navigation("UploadedByUser");
                 });
 
             modelBuilder.Entity("WorkManagement.Core.Entities.Notification", b =>
@@ -222,7 +305,7 @@ namespace WorkManagement.Infrastructure.Migrations
             modelBuilder.Entity("WorkManagement.Core.Entities.RefreshToken", b =>
                 {
                     b.HasOne("WorkManagement.Core.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("RefreshTokens")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -232,7 +315,7 @@ namespace WorkManagement.Infrastructure.Migrations
 
             modelBuilder.Entity("WorkManagement.Core.Entities.Task", b =>
                 {
-                    b.HasOne("WorkManagement.Core.Entities.User", "AssignedToUser")
+                    b.HasOne("WorkManagement.Core.Entities.User", "AssignedUser")
                         .WithMany("AssignedTasks")
                         .HasForeignKey("AssignedTo")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -244,13 +327,15 @@ namespace WorkManagement.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("AssignedToUser");
+                    b.Navigation("AssignedUser");
 
                     b.Navigation("CreatedByUser");
                 });
 
             modelBuilder.Entity("WorkManagement.Core.Entities.Task", b =>
                 {
+                    b.Navigation("FileAttachments");
+
                     b.Navigation("Notifications");
                 });
 
@@ -261,6 +346,10 @@ namespace WorkManagement.Infrastructure.Migrations
                     b.Navigation("CreatedTasks");
 
                     b.Navigation("Notifications");
+
+                    b.Navigation("RefreshTokens");
+
+                    b.Navigation("UploadedFiles");
                 });
 #pragma warning restore 612, 618
         }
