@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WorkManagement.Core.Entities;
+using WorkManagement.Core.Enums;
 using WorkManagement.Core.Interfaces.Repositories;
 using WorkManagement.Infrastructure.Data;
 using Task = System.Threading.Tasks.Task;
@@ -68,5 +69,11 @@ namespace WorkManagement.Infrastructure.Repositories
             .Include(n => n.User)
         .Where(n => !n.IsSent)
         .ToListAsync();
+        public async Task<bool> HasReminderAsync(int taskId, int userId, int reminderType)
+    => await _db.Notifications.AnyAsync(n =>
+        n.TaskId == taskId &&
+        n.UserId == userId &&
+        n.Type == NotificationType.DeadlineReminder &&
+        n.ReminderType == reminderType);
     }
 }

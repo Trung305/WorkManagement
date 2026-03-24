@@ -1,9 +1,13 @@
 ﻿using AuthSystem.Application.Common;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using WorkManagement.Core.DTOs.Task;
 using WorkManagement.Core.DTOs.User;
+using WorkManagement.Core.Enums;
+using WorkManagement.Core.Interfaces.Repositories;
 using WorkManagement.Core.Interfaces.Services;
 using WorkManagement.Web.Models.Task;
 
@@ -15,16 +19,23 @@ namespace WorkManagement.Web.Controllers
     {
         private readonly ITaskService _taskService;
         private readonly ILogger<TasksController> _logger;
-
-        public TasksController(ITaskService taskService, ILogger<TasksController> logger)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public TasksController(ITaskService taskService, ILogger<TasksController> logger, IWebHostEnvironment webHostEnvironment)
         {
             _taskService = taskService;
             _logger = logger;
+            _webHostEnvironment = webHostEnvironment;
         }
 
-        private int CurrentUserId =>
-            int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)
-                ?? User.FindFirstValue("sub") ?? "0");
+        private int CurrentUserId
+        {
+            get
+            {
+                var value = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                _logger.LogInformation("CurrentUserId claim value: {Value}", value);
+                return int.TryParse(value, out var id) ? id : 0;
+            }
+        }
 
         private int CurrentUserRole =>
             int.Parse(User.FindFirstValue(ClaimTypes.Role) ?? "3");
@@ -88,10 +99,18 @@ namespace WorkManagement.Web.Controllers
         {
             if (!IsManager && !IsAdmin) return Forbid();
 
+            if (vm.StartDate.HasValue && vm.Deadline.HasValue && vm.Deadline <= vm.StartDate)
+                ModelState.AddModelError(nameof(vm.Deadline), "Ngày kết thúc phải lớn hơn ngày bắt đầu.");
+
+            if (vm.Deadline.HasValue && vm.Deadline < DateTime.Now)
+                ModelState.AddModelError(nameof(vm.Deadline), "Ngày kết thúc không được ở trong quá khứ.");
+
             if (!ModelState.IsValid)
             {
                 var u = await _taskService.GetAssignableUsersAsync();
                 vm.AssignableUsers = u.Data ?? new();
+                ViewBag.CurrentUserId = CurrentUserId;  
+                ViewBag.CurrentUserRole = CurrentUserRole;
                 return View(vm);
             }
 
@@ -114,6 +133,8 @@ namespace WorkManagement.Web.Controllers
                 ModelState.AddModelError("", result.ErrorMessage);
                 var u = await _taskService.GetAssignableUsersAsync();
                 vm.AssignableUsers = u.Data ?? new();
+                ViewBag.CurrentUserId = CurrentUserId;
+                ViewBag.CurrentUserRole = CurrentUserRole;
                 return View(vm);
             }
 
@@ -164,6 +185,8 @@ namespace WorkManagement.Web.Controllers
                 AssignedToName = task.AssignedToName,
                 RejectedReason = task.RejectedReason
             };
+            ViewBag.CurrentUserId = CurrentUserId;
+            ViewBag.CurrentUserRole = CurrentUserRole;
             return View(vm);
         }
 
@@ -175,10 +198,21 @@ namespace WorkManagement.Web.Controllers
             if (!IsManager && !IsAdmin) return Forbid();
             vm.Id = id;
 
+            if (vm.StartDate.HasValue && vm.Deadline.HasValue && vm.Deadline <= vm.StartDate)
+                ModelState.AddModelError(nameof(vm.Deadline), "Ngày kết thúc phải lớn hơn ngày bắt đầu.");
+
+            if (vm.Deadline.HasValue && vm.Deadline < DateTime.Now)
+                ModelState.AddModelError(nameof(vm.Deadline), "Ngày kết thúc không được ở trong quá khứ.");
+
             if (!ModelState.IsValid)
             {
+                var taskResult = await _taskService.GetByIdAsync(id);
+                vm.Status = taskResult.Data?.Status ?? 0;
+
                 var u = await _taskService.GetAssignableUsersAsync();
                 vm.AssignableUsers = u.Data ?? new();
+                ViewBag.CurrentUserId = CurrentUserId;
+                ViewBag.CurrentUserRole = CurrentUserRole;
                 return View(vm);
             }
 
@@ -201,6 +235,8 @@ namespace WorkManagement.Web.Controllers
                 ModelState.AddModelError("", result.ErrorMessage);
                 var u = await _taskService.GetAssignableUsersAsync();
                 vm.AssignableUsers = u.Data ?? new();
+                ViewBag.CurrentUserId = CurrentUserId;
+                ViewBag.CurrentUserRole = CurrentUserRole;
                 return View(vm);
             }
 
@@ -377,7 +413,18 @@ namespace WorkManagement.Web.Controllers
                 HttpContext.TraceIdentifier, CurrentUserId, id, result.ErrorMessage);
             return BadRequest(result.ErrorMessage);
         }
+        [HttpDelete("files/{fileId}")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteFile(int fileId)
+        {
+            var result = await _taskService.DeleteFileAsync(
+                fileId, CurrentUserId, CurrentUserRole,
+                _webHostEnvironment.WebRootPath);
 
+            if (!result.IsSuccess)
+                return BadRequest(result.ErrorMessage);
+            return Ok();
+        }
         // ── POST /Tasks/{id}/submit ──────────────────────────
         [HttpPost("{id:int}/submit")]
         [ValidateAntiForgeryToken]
@@ -420,6 +467,27 @@ namespace WorkManagement.Web.Controllers
 
             var bytes = await System.IO.File.ReadAllBytesAsync(fullPath);
             return File(bytes, "application/octet-stream", file.FileName);
+        }
+        [HttpPost("test-reminder")]
+        public async Task<IActionResult> TestReminder()
+        {
+            using var scope = HttpContext.RequestServices.CreateScope();
+            var taskRepo = scope.ServiceProvider.GetRequiredService<ITaskRepository>();
+            var notifService = scope.ServiceProvider.GetRequiredService<INotificationService>();
+
+            var tasks = await taskRepo.GetTasksNeedingReminderAsync();
+            foreach (var task in tasks)
+            {
+                await notifService.AddAsync(
+                    userId: task.AssignedTo,
+                    taskId: task.Id,
+                    type: NotificationType.DeadlineReminder,
+                    title: $"⏰ [TEST] Task \"{task.Title}\" sắp đến hạn!",
+                    channel: NotificationChannel.InApp,
+                    reminderType: 1
+                );
+            }
+            return Ok($"Đã gửi {tasks.Count} thông báo test.");
         }
     }
 }

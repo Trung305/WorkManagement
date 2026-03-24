@@ -13,9 +13,15 @@ public class HomeController : Controller
     private readonly INotificationService _notifService;
     private readonly IDashboardService _dashboardService;
 
-    private int CurrentUserId =>
-        int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)
-            ?? User.FindFirstValue("sub") ?? "0");
+    private int CurrentUserId
+    {
+        get
+        {
+            var value = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            _logger.LogInformation("CurrentUserId claim value: {Value}", value);
+            return int.TryParse(value, out var id) ? id : 0;
+        }
+    }
 
     private int CurrentUserRole =>
         int.Parse(User.FindFirstValue(ClaimTypes.Role) ?? "3");

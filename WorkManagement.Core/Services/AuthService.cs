@@ -120,7 +120,59 @@ namespace WorkManagement.Core.Services
                 RefreshToken = newRefreshToken
             });
         }
+        public async Task<Result<LoginResponseDto>> LoginWithGoogleAsync(string email, string googleId, string fullName)
+        {
+            var user = await _userRepository.GetByEmailAsync(email);
 
+            if (user == null)
+            {
+                // Tự động tạo tài khoản nếu chưa có
+                user = new User
+                {
+                    Email = email,
+                    FullName = fullName,
+                    GoogleId = googleId,
+                    Role = UserRole.User,
+                    IsActive = true,
+                    CreatedAt = DateTime.Now,
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(Guid.NewGuid().ToString()) // random password
+                };
+                await _userRepository.AddAsync(user);
+            }
+            else
+            {
+                // Cập nhật GoogleId nếu chưa có
+                if (string.IsNullOrEmpty(user.GoogleId))
+                {
+                    user.GoogleId = googleId;
+                    await _userRepository.UpdateAsync(user);
+                }
+
+                if (!user.IsActive)
+                    return Result<LoginResponseDto>.Fail("Tài khoản đã bị khóa.");
+            }
+
+            user.LastLoginAt = DateTime.Now;
+            await _userRepository.UpdateAsync(user);
+
+            var accessToken = GenerateAccessToken(user);
+            var refreshToken = GenerateRefreshToken();
+
+            await _refreshTokenRepository.AddAsync(new RefreshToken
+            {
+                UserId = user.Id,
+                Token = refreshToken,
+                ExpiresAt = DateTime.Now.AddDays(7),
+                IsRevoked = false,
+                CreatedAt = DateTime.Now
+            });
+
+            return Result<LoginResponseDto>.Success(new LoginResponseDto
+            {
+                AccessToken = accessToken,
+                RefreshToken = refreshToken
+            });
+        }
         private string GenerateAccessToken(User user)
         {
             var claims = new[]

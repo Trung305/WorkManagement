@@ -15,6 +15,13 @@ namespace WorkManagement.Web.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
+            var path = context.Request.Path.Value;
+
+            if (!path.StartsWith("/api"))
+            {
+                await _next(context);
+                return;
+            }
             // Generate RequestId nếu chưa có
             var requestId = context.TraceIdentifier;
 

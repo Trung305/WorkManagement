@@ -1,0 +1,12 @@
+2026-03-24 18:46:30.717 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-24 18:46:31.232 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-24 18:46:36.312 [WRN] 0HNK9JBV705AN:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-24 18:46:36.325 [WRN] 0HNK9JBV705AN:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-24 18:46:39.613 [INF] 0HNK9JBV705AN:00000005 WorkManagement.Web.Controllers.TasksController Google RedirectUri: /google-callback?returnUrl=%2FHome%2FIndex
+2026-03-24 18:46:44.912 [INF] 0HNK9JBV705AN:00000009 WorkManagement.Web.Controllers.TasksController LOGIN_GOOGLE | RequestId: 0HNK9JBV705AN:00000009 | Email: phamtrantrung305@gmail.com
+2026-03-24 18:46:45.130 [INF] 0HNK9JBV705AN:0000000B WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 10
+2026-03-24 18:46:52.643 [INF] 0HNK9JBV705AN:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 10
+2026-03-24 18:46:52.649 [INF] 0HNK9JBV705AN:00000015 WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK9JBV705AN:00000015 | UserId: 10
+2026-03-24 18:46:52.777 [WRN] 0HNK9JBV705AN:00000017 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-24 18:46:52.781 [WRN] 0HNK9JBV705AN:00000017 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-24 18:46:55.292 [INF] 0HNK9JBV705AN:0000001B WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7

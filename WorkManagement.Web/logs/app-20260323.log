@@ -1,0 +1,734 @@
+2026-03-23 00:00:56.848 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 00:00:57.399 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 00:01:01.467 [INF] 0HNK86IBGQG7U:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:01:04.581 [INF] 0HNK86IBGQG7U:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:01:05.952 [INF] 0HNK86IBGQG7U:0000000F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:01:12.879 [INF] 0HNK86IBGQG7U:00000019 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:01:14.875 [INF] 0HNK86IBGQG7U:00000023 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:01:16.066 [INF] 0HNK86IBGQG7U:0000002D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:01:17.546 [INF] 0HNK86IBGQG7U:00000037 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:01:18.800 [INF] 0HNK86IBGQG7U:00000041 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:01:24.805 [INF] 0HNK86IBGQG7V:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 109418454216684506657
+2026-03-23 00:03:28.893 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 00:03:29.387 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 00:03:32.482 [INF] 0HNK86JOLPEIT:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:03:53.994 [INF] 0HNK86JOLPEIT:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:03:54.003 [INF] 0HNK86JOLPEIT:00000009 WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK86JOLPEIT:00000009 | UserId: 0
+2026-03-23 00:03:54.218 [INF] 0HNK86JOLPEIT:0000000D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:04:22.864 [INF] 0HNK86JOLPEIT:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:04:22.870 [INF] 0HNK86JOLPEIT:00000013 WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK86JOLPEIT:00000013 | UserId: 0
+2026-03-23 00:04:23.067 [INF] 0HNK86JOLPEIT:00000017 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:04:54.359 [INF] 0HNK86JOLPEIT:0000001D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:04:54.372 [INF] 0HNK86JOLPEIT:0000001D WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK86JOLPEIT:0000001D | UserId: 0
+2026-03-23 00:05:02.248 [INF] 0HNK86JOLPEIT:00000021 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:05:20.377 [INF] 0HNK86JOLPEIT:0000002D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:07:00.357 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 00:07:00.783 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 00:07:03.943 [INF] 0HNK86LNOI99G:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:07:06.442 [INF] 0HNK86LNOI99G:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 101008010457862392007
+2026-03-23 00:07:06.447 [INF] 0HNK86LNOI99G:00000009 WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK86LNOI99G:00000009 | UserId: 0
+2026-03-23 00:07:06.826 [INF] 0HNK86LNOI99G:0000000D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:05:11.908 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 09:05:12.259 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 09:05:16.785 [WRN] 0HNK8G2F85K1B:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:05:16.801 [WRN] 0HNK8G2F85K1B:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:05:19.103 [INF] 0HNK8G2F85K1B:00000003 WorkManagement.Web.Controllers.TasksController Google RedirectUri: /google-callback?returnUrl=%2FHome%2FIndex
+2026-03-23 09:05:25.651 [INF] 0HNK8G2F85K1B:00000007 WorkManagement.Web.Controllers.TasksController LOGIN_GOOGLE | RequestId: 0HNK8G2F85K1B:00000007 | Email: phamtrantrung305@gmail.com
+2026-03-23 09:05:25.829 [INF] 0HNK8G2F85K1B:00000009 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:05:38.525 [INF] 0HNK8G2F85K1B:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:05:38.532 [INF] 0HNK8G2F85K1B:00000011 WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK8G2F85K1B:00000011 | UserId: 0
+2026-03-23 09:05:38.934 [INF] 0HNK8G2F85K1B:00000015 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:05:53.135 [INF] 0HNK8G2F85K1B:00000021 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:05:53.139 [INF] 0HNK8G2F85K1B:00000021 WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK8G2F85K1B:00000021 | UserId: 0
+2026-03-23 09:05:53.462 [INF] 0HNK8G2F85K1B:00000025 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:08:19.990 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 09:08:20.577 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 09:08:24.058 [INF] 0HNK8G47JAUQO:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:08:26.543 [INF] 0HNK8G47JAUQO:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:08:26.558 [INF] 0HNK8G47JAUQO:00000009 WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK8G47JAUQO:00000009 | UserId: 0
+2026-03-23 09:08:27.165 [WRN] 0HNK8G47JAUQO:0000000B Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:08:27.176 [WRN] 0HNK8G47JAUQO:0000000B Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:08:33.139 [INF] 0HNK8G47JAUQO:0000000D WorkManagement.Web.Controllers.TasksController Google RedirectUri: /google-callback?returnUrl=%2FHome%2FIndex
+2026-03-23 09:08:38.294 [INF] 0HNK8G47JAUQO:00000011 WorkManagement.Web.Controllers.TasksController LOGIN_GOOGLE | RequestId: 0HNK8G47JAUQO:00000011 | Email: phamtrantrung305@gmail.com
+2026-03-23 09:08:38.438 [INF] 0HNK8G47JAUQO:00000013 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:08:53.623 [INF] 0HNK8G47JAUQO:00000019 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 101008010457862392007
+2026-03-23 09:08:53.630 [INF] 0HNK8G47JAUQO:00000019 WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK8G47JAUQO:00000019 | UserId: 0
+2026-03-23 09:08:53.764 [WRN] 0HNK8G47JAUQO:0000001B Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:08:53.769 [WRN] 0HNK8G47JAUQO:0000001B Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:09:11.144 [WRN] 0HNK8G47JAUQO:00000021 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:09:11.148 [WRN] 0HNK8G47JAUQO:00000021 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:09:19.691 [WRN] 0HNK8G47JAUQO:00000027 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:09:19.696 [WRN] 0HNK8G47JAUQO:00000027 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:10:45.002 [WRN] 0HNK8G47JAUQO:0000002F Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:10:45.027 [WRN] 0HNK8G47JAUQO:0000002F Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:12:04.794 [WRN] 0HNK8G47JAUQO:00000039 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:12:04.819 [WRN] 0HNK8G47JAUQO:00000039 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:12:10.919 [WRN] 0HNK8G47JAUQO:0000003F Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:12:10.926 [WRN] 0HNK8G47JAUQO:0000003F Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:12:15.798 [WRN] 0HNK8G47JAUQO:00000045 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:12:15.803 [WRN] 0HNK8G47JAUQO:00000045 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:13:00.108 [WRN] 0HNK8G47JAUQO:00000051 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:13:00.129 [WRN] 0HNK8G47JAUQO:00000051 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:13:30.605 [WRN] 0HNK8G47JAUQO:0000005B Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:13:30.610 [WRN] 0HNK8G47JAUQO:0000005B Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:13:31.794 [WRN] 0HNK8G47JAUQO:00000061 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:13:31.799 [WRN] 0HNK8G47JAUQO:00000061 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:13:52.763 [WRN] 0HNK8G47JAUQO:0000006B Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:13:52.789 [WRN] 0HNK8G47JAUQO:0000006B Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:14:59.183 [WRN] 0HNK8G47JAUQO:00000075 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:14:59.188 [WRN] 0HNK8G47JAUQO:00000075 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:17:15.524 [WRN] 0HNK8G47JAUQO:0000007F Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:17:15.549 [WRN] 0HNK8G47JAUQO:0000007F Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:17:29.804 [WRN] 0HNK8G47JAUQO:00000089 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:17:29.808 [WRN] 0HNK8G47JAUQO:00000089 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:19:25.352 [WRN] 0HNK8G47JAUQO:0000008F Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:19:25.366 [WRN] 0HNK8G47JAUQO:0000008F Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:20:33.565 [WRN] 0HNK8G47JAUQO:0000009F Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:20:33.571 [WRN] 0HNK8G47JAUQO:0000009F Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:21:52.977 [WRN] 0HNK8G47JAUQO:000000A9 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:21:53.009 [WRN] 0HNK8G47JAUQO:000000A9 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:22:04.711 [WRN] 0HNK8G47JAUQO:000000B3 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:22:04.715 [WRN] 0HNK8G47JAUQO:000000B3 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:25:02.157 [WRN] 0HNK8G47JAUQO:000000BD Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:25:02.160 [WRN] 0HNK8G47JAUQO:000000BD Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:28:32.557 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 09:28:33.359 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 09:28:36.838 [WRN] 0HNK8GFGV0121:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:28:36.855 [WRN] 0HNK8GFGV0121:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:28:40.357 [WRN] 0HNK8GFGV0121:00000007 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:28:40.366 [WRN] 0HNK8GFGV0121:00000007 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:28:43.118 [WRN] 0HNK8GFGV0121:0000000D Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:28:43.126 [WRN] 0HNK8GFGV0121:0000000D Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:29:16.417 [WRN] 0HNK8GFGV0121:00000013 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 09:29:16.435 [WRN] 0HNK8GFGV0121:00000013 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 09:31:45.711 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 09:31:46.501 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 09:31:50.119 [INF] 0HNK8GHAH3VN7:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 09:32:05.735 [INF] 0HNK8GHAH3VN7:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:33:31.635 [INF] 0HNK8GHAH3VN7:00000017 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:33:31.643 [INF] 0HNK8GHAH3VN7:00000017 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8GHAH3VN7:00000017 | UserId: 7 | TaskId: 18 | Title: 4345
+2026-03-23 09:33:31.773 [INF] 0HNK8GHAH3VN7:00000019 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:33:43.994 [INF] 0HNK8GHAH3VN7:00000027 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:33:44.002 [INF] 0HNK8GHAH3VN7:00000027 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8GHAH3VN7:00000027 | UserId: 7 | TaskId: 18 | Title: 4345
+2026-03-23 09:33:44.124 [INF] 0HNK8GHAH3VN7:00000029 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:33:54.548 [INF] 0HNK8GHAH3VN7:00000037 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:33:54.553 [INF] 0HNK8GHAH3VN7:00000037 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8GHAH3VN7:00000037 | UserId: 7 | TaskId: 18 | Title: 4345
+2026-03-23 09:33:54.660 [INF] 0HNK8GHAH3VN7:00000039 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:38:19.240 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 09:38:19.722 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 09:38:22.560 [INF] 0HNK8GKVJQN2D:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 09:38:57.326 [INF] 0HNK8GKVJQN2D:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:39:04.079 [INF] 0HNK8GKVJQN2D:00000017 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:39:04.386 [INF] 0HNK8GKVJQN2D:00000019 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:39:04.390 [INF] 0HNK8GKVJQN2D:00000019 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8GKVJQN2D:00000019 | UserId: 7 | TaskId: 18 | Title: 4345
+2026-03-23 09:39:04.409 [INF] 0HNK8GKVJQN2D:00000017 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:39:04.412 [INF] 0HNK8GKVJQN2D:00000017 WorkManagement.Web.Controllers.TasksController UPLOAD_FILES | RequestId: 0HNK8GKVJQN2D:00000017 | UserId: 7 | TaskId: 18 | FileCount: 1
+2026-03-23 09:39:04.518 [INF] 0HNK8GKVJQN2D:0000001B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:39:19.507 [INF] 0HNK8GKVJQN2D:0000002B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:39:19.516 [INF] 0HNK8GKVJQN2D:0000002B WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8GKVJQN2D:0000002B | UserId: 7 | TaskId: 18 | Title: 4345
+2026-03-23 09:39:19.630 [INF] 0HNK8GKVJQN2D:0000002D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:39:19.737 [INF] 0HNK8GKVJQN2D:00000029 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:39:19.788 [INF] 0HNK8GKVJQN2D:00000029 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 09:39:19.795 [INF] 0HNK8GKVJQN2D:00000029 WorkManagement.Web.Controllers.TasksController UPLOAD_FILES | RequestId: 0HNK8GKVJQN2D:00000029 | UserId: 7 | TaskId: 18 | FileCount: 1
+2026-03-23 13:30:50.328 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 13:30:50.760 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 13:30:53.665 [WRN] 0HNK8KMTBEMN9:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 13:30:53.671 [WRN] 0HNK8KMTBEMN9:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 13:30:56.871 [INF] 0HNK8KMTBEMN9:00000005 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 13:31:00.862 [INF] 0HNK8KMTBEMN9:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:31:02.486 [INF] 0HNK8KMTBEMN9:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:31:48.866 [INF] 0HNK8KMTBEMN9:00000027 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:32:26.298 [INF] 0HNK8KMTBEMNB:00000005 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 13:32:30.006 [INF] 0HNK8KMTBEMNB:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 13:32:30.010 [INF] 0HNK8KMTBEMNB:0000000F WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK8KMTBEMNB:0000000F | UserId: 9
+2026-03-23 13:32:30.065 [WRN] 0HNK8KMTBEMNB:00000011 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 13:32:30.066 [WRN] 0HNK8KMTBEMNB:00000011 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 13:32:31.589 [INF] 0HNK8KMTBEMNB:00000017 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 13:34:45.977 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 13:34:46.259 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 13:34:48.217 [INF] 0HNK8KP3FNU4G:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 13:34:50.349 [INF] 0HNK8KP3FNU4G:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:34:51.641 [INF] 0HNK8KP3FNU4G:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:36:10.503 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 13:36:10.750 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 13:36:13.085 [INF] 0HNK8KPSM4UKC:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 13:37:14.589 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 13:37:14.955 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 13:37:16.731 [INF] 0HNK8KQFOKCGU:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 13:37:31.424 [WRN] 0HNK8KQFOKCGV:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 13:37:31.427 [WRN] 0HNK8KQFOKCGV:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 13:37:33.279 [INF] 0HNK8KQFOKCGV:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 13:41:55.498 [INF] 0HNK8KQFOKCGU:00000083 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 13:41:56.422 [INF] 0HNK8KQFOKCGU:00000089 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:41:57.628 [INF] 0HNK8KQFOKCGU:0000008F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 13:41:58.996 [INF] 0HNK8KQFOKCGU:00000095 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:42:01.060 [INF] 0HNK8KQFOKCGU:0000009B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:42:10.130 [INF] 0HNK8KQFOKCGU:000000A3 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:42:13.866 [INF] 0HNK8KQFOKCGU:000000A9 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:42:18.801 [INF] 0HNK8KQFOKCGV:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 13:42:18.899 [WRN] 0HNK8KQFOKCGV:0000000B Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 13:42:18.904 [WRN] 0HNK8KQFOKCGV:0000000B Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 13:42:32.250 [INF] 0HNK8KQFOKCGV:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 13:44:01.897 [INF] 0HNK8KQFOKCGU:000000B1 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 13:44:15.641 [INF] 0HNK8KQFOKCGU:000000B7 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:48:06.360 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 13:48:06.782 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 13:48:08.702 [INF] 0HNK8L0I20F7P:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 13:52:43.375 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 13:52:43.779 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 13:52:45.883 [WRN] 0HNK8L34JJIBR:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 13:52:45.893 [WRN] 0HNK8L34JJIBR:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 13:52:51.703 [INF] 0HNK8L34JJIBR:00000005 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 13:53:38.783 [INF] 0HNK8L34JJIBR:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:53:38.931 [INF] 0HNK8L34JJIBR:00000011 WorkManagement.Core.Services.TaskService Task 20 created by 7
+2026-03-23 13:53:38.936 [INF] 0HNK8L34JJIBR:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:53:38.939 [INF] 0HNK8L34JJIBR:00000011 WorkManagement.Web.Controllers.TasksController CREATE_TASK | RequestId: 0HNK8L34JJIBR:00000011 | UserId: 7 | TaskId: 20 | Title: 32423432 | AssignedTo: 9
+2026-03-23 13:53:39.027 [INF] 0HNK8L34JJIBR:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:53:41.262 [INF] 0HNK8L34JJIBR:00000019 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 13:57:44.153 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 34
+2026-03-23 14:05:56.062 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:05:56.284 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:05:56.808 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 5
+2026-03-23 14:05:58.182 [INF] 0HNK8LAGPF6GQ:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 14:10:56.586 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 35
+2026-03-23 14:15:42.221 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:15:42.493 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:15:42.920 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 5
+2026-03-23 14:15:44.291 [WRN] 0HNK8LFVE49M2:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 14:15:44.298 [WRN] 0HNK8LFVE49M2:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 14:15:46.851 [INF] 0HNK8LFVE49M2:00000005 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 14:19:55.048 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:19:55.326 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:19:55.971 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 36
+2026-03-23 14:19:55.977 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 5
+2026-03-23 14:19:57.612 [INF] 0HNK8LIAUVKT3:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 14:20:30.547 [INF] 0HNK8LIAUVKT3:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 14:20:30.587 [INF] 0HNK8LIAUVKT3:0000000F WorkManagement.Core.Services.TaskService Task 21 created by 7
+2026-03-23 14:20:30.589 [INF] 0HNK8LIAUVKT3:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 14:20:30.590 [INF] 0HNK8LIAUVKT3:0000000F WorkManagement.Web.Controllers.TasksController CREATE_TASK | RequestId: 0HNK8LIAUVKT3:0000000F | UserId: 7 | TaskId: 21 | Title: 34234 | AssignedTo: 9
+2026-03-23 14:20:30.718 [INF] 0HNK8LIAUVKT3:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 14:20:32.730 [INF] 0HNK8LIAUVKT3:00000017 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 14:22:08.888 [INF] 0HNK8LIAUVKT3:00000021 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 14:27:11.393 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:27:11.751 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:27:12.428 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 37
+2026-03-23 14:27:12.441 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 38
+2026-03-23 14:27:12.441 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 5
+2026-03-23 14:27:13.738 [INF] 0HNK8LMCTFGRA:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 14:31:33.736 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:31:34.008 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:31:34.554 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 39
+2026-03-23 14:31:34.569 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 5
+2026-03-23 14:31:36.089 [INF] 0HNK8LOR25EL5:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 14:32:12.478 [INF] 0HNK8LOR25EL6:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 14:32:14.338 [INF] 0HNK8LOR25EL6:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:32:14.358 [INF] 0HNK8LOR25EL6:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:32:37.716 [INF] 0HNK8LOR25EL6:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:32:37.718 [INF] 0HNK8LOR25EL6:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:33:49.876 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:33:50.100 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:33:50.654 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 40
+2026-03-23 14:33:50.668 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 5
+2026-03-23 14:33:52.100 [INF] 0HNK8LQ3MGAH2:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 14:34:08.444 [INF] 0HNK8LQ3MGAH2:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 14:34:12.755 [INF] 0HNK8LQ3MGAH3:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:12.757 [INF] 0HNK8LQ3MGAH3:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:12.883 [INF] 0HNK8LQ3MGAH3:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:32.778 [INF] 0HNK8LQ3MGAH3:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:32.784 [INF] 0HNK8LQ3MGAH3:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:32.900 [INF] 0HNK8LQ3MGAH3:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:32.906 [INF] 0HNK8LQ3MGAH3:0000000B WorkManagement.Web.Controllers.TasksController UPLOAD_FILES | RequestId: 0HNK8LQ3MGAH3:0000000B | UserId: 9 | TaskId: 21 | FileCount: 1
+2026-03-23 14:34:33.103 [INF] 0HNK8LQ3MGAH3:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:33.153 [INF] 0HNK8LQ3MGAH3:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:33.155 [INF] 0HNK8LQ3MGAH3:0000000D WorkManagement.Web.Controllers.TasksController UPDATE_STATUS | RequestId: 0HNK8LQ3MGAH3:0000000D | UserId: 9 | TaskId: 21 | NewStatus: 1
+2026-03-23 14:34:33.225 [INF] 0HNK8LQ3MGAH3:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:35.216 [INF] 0HNK8LQ3MGAH3:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:35.217 [INF] 0HNK8LQ3MGAH3:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:35.286 [INF] 0HNK8LQ3MGAH3:0000001B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:44.642 [INF] 0HNK8LQ3MGAH3:0000001F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:44.644 [INF] 0HNK8LQ3MGAH3:0000001F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:34:44.726 [INF] 0HNK8LQ3MGAH3:00000027 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:38:50.718 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 41
+2026-03-23 14:51:21.326 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:51:21.730 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:51:22.302 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 5
+2026-03-23 14:51:25.182 [INF] 0HNK8M3T4242Q:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:51:25.206 [INF] 0HNK8M3T4242Q:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:51:25.317 [WRN] 0HNK8M3T4242P:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 14:51:25.322 [WRN] 0HNK8M3T4242P:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 14:52:56.312 [INF] 0HNK8M3T4242Q:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:52:56.316 [INF] 0HNK8M3T4242Q:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:53:18.925 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:53:19.186 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:53:19.734 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 42
+2026-03-23 14:53:19.738 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 5
+2026-03-23 14:53:21.318 [WRN] 0HNK8M502IAGK:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 14:53:21.326 [WRN] 0HNK8M502IAGK:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 14:53:24.737 [INF] 0HNK8M502IAGL:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:53:24.746 [INF] 0HNK8M502IAGL:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:53:25.182 [INF] 0HNK8M502IAGL:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:53:58.760 [INF] 0HNK8M502IAGL:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:53:58.762 [INF] 0HNK8M502IAGL:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:53:58.927 [INF] 0HNK8M502IAGL:00000017 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:56:09.583 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:56:09.799 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:56:10.364 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 43
+2026-03-23 14:56:12.028 [WRN] 0HNK8M6IRL6BU:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 14:56:12.034 [WRN] 0HNK8M6IRL6BU:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 14:56:16.985 [INF] 0HNK8M6IRL6BV:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:56:16.993 [INF] 0HNK8M6IRL6BV:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:56:17.428 [INF] 0HNK8M6IRL6BV:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:56:20.149 [INF] 0HNK8M6IRL6BV:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:56:20.150 [INF] 0HNK8M6IRL6BV:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:56:20.219 [INF] 0HNK8M6IRL6BV:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:57:42.637 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 14:57:42.860 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 14:57:44.946 [WRN] 0HNK8M7ELQ9MU:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 14:57:44.964 [WRN] 0HNK8M7ELQ9MU:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 14:57:57.786 [INF] 0HNK8M7ELQ9MV:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:57:57.792 [INF] 0HNK8M7ELQ9MV:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:57:58.101 [INF] 0HNK8M7ELQ9MV:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:18.972 [INF] 0HNK8M7ELQ9MV:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:19.259 [INF] 0HNK8M7ELQ9MV:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:50.792 [INF] 0HNK8M7ELQ9MV:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:50.797 [INF] 0HNK8M7ELQ9MV:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:50.966 [INF] 0HNK8M7ELQ9MV:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:50.968 [INF] 0HNK8M7ELQ9MV:00000011 WorkManagement.Web.Controllers.TasksController UPLOAD_FILES | RequestId: 0HNK8M7ELQ9MV:00000011 | UserId: 9 | TaskId: 21 | FileCount: 3
+2026-03-23 14:58:51.070 [INF] 0HNK8M7ELQ9MV:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:51.119 [INF] 0HNK8M7ELQ9MV:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:51.121 [INF] 0HNK8M7ELQ9MV:00000013 WorkManagement.Web.Controllers.TasksController UPDATE_STATUS | RequestId: 0HNK8M7ELQ9MV:00000013 | UserId: 9 | TaskId: 21 | NewStatus: 1
+2026-03-23 14:58:51.195 [INF] 0HNK8M7ELQ9MV:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:52.810 [INF] 0HNK8M7ELQ9MV:0000001B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:52.849 [INF] 0HNK8M7ELQ9MV:0000001B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:58:52.930 [INF] 0HNK8M7ELQ9MV:00000023 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:59:01.575 [INF] 0HNK8M7ELQ9MU:00000005 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 14:59:04.738 [INF] 0HNK8M7ELQ9MU:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 14:59:29.388 [INF] 0HNK8M7ELQ9MV:00000025 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:59:29.390 [INF] 0HNK8M7ELQ9MV:00000025 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:59:29.466 [INF] 0HNK8M7ELQ9MV:0000002D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 14:59:36.051 [INF] 0HNK8M7ELQ9MU:00000025 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:02:09.889 [INF] 0HNK8M7ELQ9MU:0000002D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:02:21.731 [INF] 0HNK8M7ELQ9MU:00000037 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:02:33.111 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:02:33.478 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:02:35.385 [INF] 0HNK8MA56KSQ4:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 15:02:45.707 [INF] 0HNK8MA56KSQ4:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:02:46.887 [INF] 0HNK8MA56KSQ4:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:03:16.383 [INF] 0HNK8MA56KSQ4:00000021 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:05:00.764 [INF] 0HNK8MA56KSQ4:00000027 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:05:04.233 [INF] 0HNK8MA56KSQ5:00000003 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:05:04.238 [INF] 0HNK8MA56KSQ5:00000003 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:05:04.361 [INF] 0HNK8MA56KSQ5:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:07:56.303 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:07:56.649 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:07:58.426 [INF] 0HNK8MD5H1E3M:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 15:08:10.001 [INF] 0HNK8MD5H1E3M:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:08:49.147 [INF] 0HNK8MD5H1E3M:0000001B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:10:02.470 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:10:02.728 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:10:04.513 [INF] 0HNK8MEB469HJ:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 15:11:18.547 [INF] 0HNK8MEB469HJ:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:11:38.346 [INF] 0HNK8MEB469HK:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:11:38.349 [INF] 0HNK8MEB469HK:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:11:38.471 [INF] 0HNK8MEB469HK:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:12:14.414 [INF] 0HNK8MEB469HK:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:12:14.416 [INF] 0HNK8MEB469HK:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:12:14.517 [INF] 0HNK8MEB469HK:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:12:52.009 [INF] 0HNK8MEB469HK:00000019 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:12:52.012 [INF] 0HNK8MEB469HK:00000019 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:12:52.518 [INF] 0HNK8MEB469HK:00000037 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:14:17.099 [INF] 0HNK8MEB469HK:0000003F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:14:17.103 [INF] 0HNK8MEB469HK:0000003F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:14:25.078 [INF] 0HNK8MEB469HK:0000004B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:14:25.081 [INF] 0HNK8MEB469HK:0000004B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:14:40.371 [INF] 0HNK8MEB469HK:0000006B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:14:40.374 [INF] 0HNK8MEB469HK:0000006B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:16:25.595 [INF] 0HNK8MEB469HK:00000075 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:16:25.597 [INF] 0HNK8MEB469HK:00000075 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:16:25.786 [INF] 0HNK8MEB469HK:0000007F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:16:45.199 [INF] 0HNK8MEB469HJ:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:17:15.433 [INF] 0HNK8MEB469HJ:00000027 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:22:24.028 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:22:24.400 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:22:27.193 [WRN] 0HNK8ML853PCL:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 15:22:27.208 [WRN] 0HNK8ML853PCL:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 15:22:33.106 [INF] 0HNK8ML853PCL:00000005 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 15:22:35.299 [INF] 0HNK8ML853PCL:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:22:42.100 [INF] 0HNK8ML853PCL:0000001D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:23:04.083 [INF] 0HNK8ML853PCL:00000043 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:23:07.770 [INF] 0HNK8ML853PCL:00000069 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:23:11.254 [INF] 0HNK8ML853PCL:0000008F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:23:29.873 [INF] 0HNK8ML853PCL:000000B5 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:23:47.054 [INF] 0HNK8ML853PCL:000000DB WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:24:00.639 [INF] 0HNK8ML853PCL:00000101 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:24:23.799 [INF] 0HNK8ML853PCL:00000127 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:26:21.703 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:26:21.991 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:26:23.879 [INF] 0HNK8MNEVPJB8:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 15:26:38.267 [INF] 0HNK8MNEVPJB8:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:26:54.249 [INF] 0HNK8MNEVPJB8:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:26:57.839 [INF] 0HNK8MNEVPJB8:0000001F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:27:11.024 [INF] 0HNK8MNEVPJB8:00000029 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:27:38.047 [INF] 0HNK8MNEVPJB8:00000043 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:29:18.316 [INF] 0HNK8MNEVPJB8:00000053 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:29:25.167 [INF] 0HNK8MNEVPJB8:00000079 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:30:47.849 [INF] 0HNK8MNEVPJB8:000000A1 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:33:23.777 [INF] 0HNK8MNEVPJB8:000000DF WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:36:17.592 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:36:17.957 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:36:19.835 [INF] 0HNK8MT0GV43O:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 15:36:21.848 [INF] 0HNK8MT0GV43O:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:36:25.230 [INF] 0HNK8MT0GV43O:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:37:27.740 [INF] 0HNK8MT0GV43O:00000023 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:37:33.387 [INF] 0HNK8MT0GV43O:0000002D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:37:33.390 [INF] 0HNK8MT0GV43O:0000002D WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8MT0GV43O:0000002D | UserId: 7 | TaskId: 21 | Title: 34234
+2026-03-23 15:37:33.481 [INF] 0HNK8MT0GV43O:0000002F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:37:35.739 [INF] 0HNK8MT0GV43O:00000035 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:38:21.193 [INF] 0HNK8MT0GV43O:0000003D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:11.214 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:41:11.487 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:41:13.248 [INF] 0HNK8MVO0U6FT:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 15:41:23.513 [INF] 0HNK8MVO0U6FT:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:32.749 [INF] 0HNK8MVO0U6FT:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:39.239 [INF] 0HNK8MVO0U6FT:0000001D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:39.243 [INF] 0HNK8MVO0U6FT:0000001D WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8MVO0U6FT:0000001D | UserId: 7 | TaskId: 21 | Title: 34234
+2026-03-23 15:41:39.312 [INF] 0HNK8MVO0U6FT:0000001F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:40.925 [INF] 0HNK8MVO0U6FT:00000025 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:53.876 [INF] 0HNK8MVO0U6FT:0000002D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:53.958 [INF] 0HNK8MVO0U6FT:0000002D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:53.961 [INF] 0HNK8MVO0U6FT:0000002D WorkManagement.Web.Controllers.TasksController UPLOAD_FILES | RequestId: 0HNK8MVO0U6FT:0000002D | UserId: 7 | TaskId: 21 | FileCount: 1
+2026-03-23 15:41:54.065 [INF] 0HNK8MVO0U6FT:0000002F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:54.067 [INF] 0HNK8MVO0U6FT:0000002F WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8MVO0U6FT:0000002F | UserId: 7 | TaskId: 21 | Title: 34234
+2026-03-23 15:41:54.126 [INF] 0HNK8MVO0U6FT:00000031 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:41:55.848 [INF] 0HNK8MVO0U6FT:00000037 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:42:01.843 [INF] 0HNK8MVO0U6FU:00000003 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:42:01.845 [INF] 0HNK8MVO0U6FU:00000003 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:42:02.390 [INF] 0HNK8MVO0U6FU:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:42:27.693 [INF] 0HNK8MVO0U6FU:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:42:27.713 [INF] 0HNK8MVO0U6FU:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:42:27.714 [INF] 0HNK8MVO0U6FU:0000000F WorkManagement.Web.Controllers.TasksController UPDATE_STATUS | RequestId: 0HNK8MVO0U6FU:0000000F | UserId: 9 | TaskId: 21 | NewStatus: 2
+2026-03-23 15:42:27.763 [INF] 0HNK8MVO0U6FU:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:42:32.576 [INF] 0HNK8MVO0U6FT:00000041 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:49:03.115 [INF] 0HNK8MVO0U6FV:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:49:03.117 [INF] 0HNK8MVO0U6FV:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:49:03.199 [INF] 0HNK8MVO0U6FV:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:49:06.852 [INF] 0HNK8MVO0U6FV:0000000D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:49:06.946 [INF] 0HNK8MVO0U6FV:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:49:18.444 [INF] 0HNK8MVO0U6FT:00000049 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:49:22.233 [INF] 0HNK8MVO0U6FV:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:49:22.237 [INF] 0HNK8MVO0U6FV:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:49:22.309 [INF] 0HNK8MVO0U6FV:00000011 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:49:22.311 [INF] 0HNK8MVO0U6FV:00000011 WorkManagement.Web.Controllers.TasksController SUBMIT_TASK | RequestId: 0HNK8MVO0U6FV:00000011 | UserId: 9 | TaskId: 21
+2026-03-23 15:49:23.306 [INF] 0HNK8MVO0U6FV:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:49:26.546 [INF] 0HNK8MVO0U6FT:00000055 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:49:41.984 [INF] 0HNK8MVO0U6FT:0000005D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:49:41.986 [INF] 0HNK8MVO0U6FT:0000005D WorkManagement.Web.Controllers.TasksController DOWNLOAD_FILE | RequestId: 0HNK8MVO0U6FT:0000005D | UserId: 7 | FileId: 21 | FileName: kiem_thu.docx
+2026-03-23 15:50:02.965 [INF] 0HNK8MVO0U6FT:0000005F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:50:02.999 [INF] 0HNK8MVO0U6FT:0000005F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:50:03.000 [INF] 0HNK8MVO0U6FT:0000005F WorkManagement.Web.Controllers.TasksController REVIEW_TASK | RequestId: 0HNK8MVO0U6FT:0000005F | UserId: 7 | TaskId: 21 | Approved: false | Reason: Sai yêu cầu
+2026-03-23 15:50:03.034 [INF] 0HNK8MVO0U6FT:00000061 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:50:04.000 [INF] 0HNK8MVO0U6FT:00000063 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:50:06.991 [INF] 0HNK8MVO0U6FT:00000069 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:50:33.929 [INF] 0HNK8MVO0U6FT:00000071 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:51:34.969 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 44
+2026-03-23 15:51:34.984 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 45
+2026-03-23 15:53:23.045 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:53:23.248 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:53:25.247 [INF] 0HNK8N6I48Q79:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 15:53:29.352 [INF] 0HNK8N6I48Q79:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:53:36.420 [INF] 0HNK8N6I48Q79:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:53:47.052 [INF] 0HNK8N6I48Q7A:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:53:47.053 [INF] 0HNK8N6I48Q7A:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:53:47.248 [INF] 0HNK8N6I48Q7A:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:55:00.187 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:55:00.438 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:55:02.287 [INF] 0HNK8N7F12E3G:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 15:55:26.115 [INF] 0HNK8N7F12E3G:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:55:27.180 [INF] 0HNK8N7F12E3G:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 15:55:50.013 [INF] 0HNK8N7F12E3H:00000001 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 15:57:42.457 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 15:57:42.711 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 15:57:44.725 [INF] 0HNK8N8VETD5P:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 16:22:38.684 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 16:22:39.043 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 16:22:41.586 [WRN] 0HNK8NMTE49CV:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 16:22:41.594 [WRN] 0HNK8NMTE49CV:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 16:22:44.019 [INF] 0HNK8NMTE49CV:00000005 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 16:23:38.268 [INF] 0HNK8NMTE49CV:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:23:38.396 [INF] 0HNK8NMTE49CV:00000013 WorkManagement.Core.Services.TaskService Task 22 created by 7
+2026-03-23 16:23:38.402 [INF] 0HNK8NMTE49CV:00000013 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:23:38.404 [INF] 0HNK8NMTE49CV:00000013 WorkManagement.Web.Controllers.TasksController CREATE_TASK | RequestId: 0HNK8NMTE49CV:00000013 | UserId: 7 | TaskId: 22 | Title: Check thông báo | AssignedTo: 9
+2026-03-23 16:23:38.511 [INF] 0HNK8NMTE49CV:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:23:42.832 [INF] 0HNK8NMTE49CV:0000001B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:23:50.333 [INF] 0HNK8NMTE49CV:00000027 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:23:50.335 [INF] 0HNK8NMTE49CV:00000027 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8NMTE49CV:00000027 | UserId: 7 | TaskId: 22 | Title: Check thông báo
+2026-03-23 16:23:50.394 [INF] 0HNK8NMTE49CV:00000029 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:23:55.465 [INF] 0HNK8NMTE49CV:0000002F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:24:08.105 [INF] 0HNK8NMTE49D0:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:24:54.667 [INF] 0HNK8NMTE49CV:00000037 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:24:54.669 [INF] 0HNK8NMTE49CV:00000037 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8NMTE49CV:00000037 | UserId: 7 | TaskId: 22 | Title: Check thông báo
+2026-03-23 16:24:54.722 [INF] 0HNK8NMTE49CV:00000039 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:24:59.347 [INF] 0HNK8NMTE49D0:00000009 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:25:01.765 [INF] 0HNK8NMTE49D0:0000000F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:25:27.302 [INF] 0HNK8NMTE49D0:00000015 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:25:28.144 [INF] 0HNK8NMTE49D0:0000001B WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:25:28.893 [INF] 0HNK8NMTE49D0:00000021 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:25:29.432 [INF] 0HNK8NMTE49D0:00000027 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:25:29.848 [INF] 0HNK8NMTE49D0:0000002D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:25:35.935 [INF] 0HNK8NMTE49D0:00000033 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:25:36.767 [INF] 0HNK8NMTE49D0:00000039 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:25:42.909 [INF] 0HNK8NMTE49CV:0000003F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:27:39.295 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 46
+2026-03-23 16:29:01.639 [INF] 0HNK8NMTE49D0:0000003F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:29:30.344 [INF] 0HNK8NMTE49D0:00000045 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:30:08.621 [INF] 0HNK8NMTE49CV:00000047 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:30:08.623 [INF] 0HNK8NMTE49CV:00000047 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8NMTE49CV:00000047 | UserId: 7 | TaskId: 22 | Title: Check thông báo
+2026-03-23 16:30:08.675 [INF] 0HNK8NMTE49CV:00000049 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:30:22.811 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 16:30:23.130 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 16:30:32.668 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 22
+2026-03-23 16:30:34.126 [INF] 0HNK8NRAB97CC:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 16:30:36.546 [INF] 0HNK8NRAB97CD:00000001 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:30:39.057 [INF] 0HNK8NRAB97CD:00000007 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:30:39.855 [INF] 0HNK8NRAB97CD:0000000D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:31:20.598 [INF] 0HNK8NRAB97CD:00000013 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:31:32.762 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 1.5h reminder for task 22
+2026-03-23 16:34:24.125 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 16:34:24.395 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 16:34:24.914 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 47
+2026-03-23 16:34:24.931 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 48
+2026-03-23 16:34:26.357 [INF] 0HNK8NTFJ1JGL:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 16:34:28.207 [INF] 0HNK8NTFJ1JGL:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:34:30.841 [INF] 0HNK8NTFJ1JGL:00000015 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 16:34:32.598 [INF] 0HNK8NTFJ1JGL:00000019 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:34:44.602 [INF] 0HNK8NTFJ1JGL:00000021 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:34:44.606 [INF] 0HNK8NTFJ1JGL:00000021 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8NTFJ1JGL:00000021 | UserId: 7 | TaskId: 22 | Title: Check thông báo
+2026-03-23 16:34:44.665 [INF] 0HNK8NTFJ1JGL:00000023 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 16:34:47.718 [INF] 0HNK8NTFJ1JGM:00000001 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 16:34:48.715 [INF] 0HNK8NTFJ1JGM:00000007 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:41:59.264 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 18:41:59.538 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 18:42:03.258 [WRN] 0HNK8Q4P01TTQ:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 18:42:03.271 [WRN] 0HNK8Q4P01TTQ:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 18:42:15.087 [INF] 0HNK8Q4P01TTQ:00000003 WorkManagement.Web.Controllers.TasksController Google RedirectUri: /google-callback?returnUrl=%2FHome%2FIndex
+2026-03-23 18:44:31.822 [INF] 0HNK8Q4P01TTQ:00000007 WorkManagement.Web.Controllers.TasksController LOGIN_GOOGLE | RequestId: 0HNK8Q4P01TTQ:00000007 | Email: phamtrantrung305@gmail.com
+2026-03-23 18:44:32.064 [INF] 0HNK8Q4P01TTQ:00000009 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 10
+2026-03-23 18:44:40.638 [INF] 0HNK8Q4P01TTQ:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 10
+2026-03-23 18:44:40.647 [INF] 0HNK8Q4P01TTQ:0000000F WorkManagement.Web.Controllers.TasksController LOGOUT | RequestId: 0HNK8Q4P01TTQ:0000000F | UserId: 10
+2026-03-23 18:44:40.773 [WRN] 0HNK8Q4P01TTQ:00000011 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 18:44:40.797 [WRN] 0HNK8Q4P01TTQ:00000011 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 18:44:45.246 [INF] 0HNK8Q4P01TTQ:00000015 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:44:50.089 [INF] 0HNK8Q4P01TTQ:00000021 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:44:53.841 [INF] 0HNK8Q4P01TTQ:00000027 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:45:00.131 [INF] 0HNK8Q4P01TTQ:00000033 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:45:01.789 [INF] 0HNK8Q4P01TTQ:00000037 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:45:19.783 [INF] 0HNK8Q4P01TTQ:0000003F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:45:19.788 [INF] 0HNK8Q4P01TTQ:0000003F WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8Q4P01TTQ:0000003F | UserId: 7 | TaskId: 5 | Title: Testing hệ thống
+2026-03-23 18:45:19.904 [INF] 0HNK8Q4P01TTQ:00000041 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:45:30.959 [INF] 0HNK8Q4P01TTR:00000003 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 18:45:34.172 [INF] 0HNK8Q4P01TTS:00000001 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:45:37.701 [INF] 0HNK8Q4P01TTS:00000007 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:45:44.195 [INF] 0HNK8Q4P01TTQ:00000047 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:45:46.149 [INF] 0HNK8Q4P01TTQ:0000004D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:45:50.994 [INF] 0HNK8Q4P01TTS:0000000D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:45:52.638 [INF] 0HNK8Q4P01TTS:00000013 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:06.030 [INF] 0HNK8Q4P01TTS:00000019 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:08.142 [INF] 0HNK8Q4P01TTS:0000001F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:09.027 [INF] 0HNK8Q4P01TTS:00000025 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:09.796 [INF] 0HNK8Q4P01TTS:0000002B WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:10.442 [INF] 0HNK8Q4P01TTS:00000031 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:20.483 [INF] 0HNK8Q4P01TTQ:00000055 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:46:20.492 [INF] 0HNK8Q4P01TTQ:00000055 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8Q4P01TTQ:00000055 | UserId: 7 | TaskId: 5 | Title: Testing hệ thống
+2026-03-23 18:46:20.600 [INF] 0HNK8Q4P01TTQ:00000057 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:46:27.061 [INF] 0HNK8Q4P01TTS:00000037 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:28.577 [INF] 0HNK8Q4P01TTS:0000003D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:29.388 [INF] 0HNK8Q4P01TTS:00000043 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:31.797 [INF] 0HNK8Q4P01TTS:00000049 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:50.723 [INF] 0HNK8Q4P01TTS:0000004F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:51.746 [INF] 0HNK8Q4P01TTS:00000055 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:52.655 [INF] 0HNK8Q4P01TTS:0000005B WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:46:53.935 [INF] 0HNK8Q4P01TTS:00000061 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:47:04.373 [INF] 0HNK8Q4P01TTS:00000067 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:47:05.351 [INF] 0HNK8Q4P01TTS:0000006D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:47:06.117 [INF] 0HNK8Q4P01TTS:00000073 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:47:07.446 [INF] 0HNK8Q4P01TTS:00000079 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:47:08.600 [INF] 0HNK8Q4P01TTS:0000007F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:47:09.925 [INF] 0HNK8Q4P01TTS:00000085 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:47:12.613 [INF] 0HNK8Q4P01TTS:0000008B WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:47:16.599 [INF] 0HNK8Q4P01TTS:00000091 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:47:27.282 [INF] 0HNK8Q4P01TTQ:0000005D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:47:29.458 [INF] 0HNK8Q4P01TTQ:00000063 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:47:58.553 [INF] 0HNK8Q4P01TTQ:0000006B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:47:58.559 [INF] 0HNK8Q4P01TTQ:0000006B WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8Q4P01TTQ:0000006B | UserId: 7 | TaskId: 5 | Title: Testing hệ thống
+2026-03-23 18:47:58.664 [INF] 0HNK8Q4P01TTQ:0000006D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:48:02.644 [INF] 0HNK8Q4P01TTS:00000097 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:48:08.706 [INF] 0HNK8Q4P01TTQ:00000073 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:48:10.747 [INF] 0HNK8Q4P01TTQ:0000007B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:48:12.728 [INF] 0HNK8Q4P01TTQ:0000007F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:48:14.743 [INF] 0HNK8Q4P01TTQ:00000085 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:48:23.618 [INF] 0HNK8Q4P01TTS:0000009D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:48:24.598 [INF] 0HNK8Q4P01TTS:000000A3 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:49:09.010 [INF] 0HNK8Q4P01TTQ:00000097 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:49:09.049 [INF] 0HNK8Q4P01TTQ:00000097 WorkManagement.Core.Services.TaskService Task 23 created by 7
+2026-03-23 18:49:09.060 [INF] 0HNK8Q4P01TTQ:00000097 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:49:09.068 [INF] 0HNK8Q4P01TTQ:00000097 WorkManagement.Web.Controllers.TasksController CREATE_TASK | RequestId: 0HNK8Q4P01TTQ:00000097 | UserId: 7 | TaskId: 23 | Title: Test thông báo 12h | AssignedTo: 9
+2026-03-23 18:49:09.087 [INF] 0HNK8Q4P01TTQ:00000097 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:49:09.198 [INF] 0HNK8Q4P01TTQ:00000097 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:49:09.202 [INF] 0HNK8Q4P01TTQ:00000097 WorkManagement.Web.Controllers.TasksController UPLOAD_FILES | RequestId: 0HNK8Q4P01TTQ:00000097 | UserId: 7 | TaskId: 23 | FileCount: 1
+2026-03-23 18:49:09.296 [INF] 0HNK8Q4P01TTQ:00000099 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:49:35.435 [INF] 0HNK8Q4P01TTS:000000A9 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:49:36.950 [INF] 0HNK8Q4P01TTS:000000AF WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:49:38.870 [INF] 0HNK8Q4P01TTS:000000B5 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:49:46.854 [INF] 0HNK8Q4P01TTS:000000BB WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:49:47.966 [INF] 0HNK8Q4P01TTS:000000C1 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:49:49.143 [INF] 0HNK8Q4P01TTS:000000C7 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:49:53.833 [INF] 0HNK8Q4P01TTS:000000CD WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:49:54.700 [INF] 0HNK8Q4P01TTS:000000D3 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:49:59.547 [INF] 0HNK8Q4P01TTS:000000D9 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:50:00.969 [INF] 0HNK8Q4P01TTS:000000DF WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:51:30.961 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 18:51:31.425 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 18:51:32.961 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 49
+2026-03-23 18:51:32.983 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 50
+2026-03-23 18:51:32.992 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 51
+2026-03-23 18:51:35.196 [INF] 0HNK8QA3KAAG5:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:51:39.479 [INF] 0HNK8QA3KAAG5:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:51:43.615 [INF] 0HNK8QA3KAAG5:0000000F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:51:50.440 [INF] 0HNK8QA3KAAG5:00000017 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:51:54.030 [INF] 0HNK8QA3KAAG5:0000001B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:54:03.825 [INF] 0HNK8QA3KAAG5:00000021 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 18:54:08.824 [INF] 0HNK8QA3KAAG5:00000027 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:54:32.721 [INF] 0HNK8QA3KAAG5:0000002F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:54:42.850 [ERR] 0HNK8QA3KAAG5:00000027 Microsoft.EntityFrameworkCore.Database.Command Failed executing DbCommand (33,916ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AssignedTo], [t].[CompletedAt], [t].[CreatedAt], [t].[CreatedBy], [t].[Deadline], [t].[Description], [t].[Priority], [t].[RejectedReason], [t].[ReviewedAt], [t].[StartDate], [t].[StartedAt], [t].[Status], [t].[Title], [t].[UpdatedAt], [u].[Id], [u].[AvatarUrl], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[GoogleId], [u].[IsActive], [u].[LastLoginAt], [u].[PasswordHash], [u].[Role], [u].[Status], [u0].[Id], [u0].[AvatarUrl], [u0].[CreatedAt], [u0].[Email], [u0].[FullName], [u0].[GoogleId], [u0].[IsActive], [u0].[LastLoginAt], [u0].[PasswordHash], [u0].[Role], [u0].[Status]
+FROM [Tasks] AS [t]
+INNER JOIN [Users] AS [u] ON [t].[AssignedTo] = [u].[Id]
+INNER JOIN [Users] AS [u0] ON [t].[CreatedBy] = [u0].[Id]
+2026-03-23 18:54:43.000 [ERR] 0HNK8QA3KAAG5:00000027 Microsoft.EntityFrameworkCore.Query An exception occurred while iterating over the results of a query for context type 'WorkManagement.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:0168aa71-c73a-40fe-b7e3-d4691498b5ba
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:0168aa71-c73a-40fe-b7e3-d4691498b5ba
+Error Number:-2,State:0,Class:11
+2026-03-23 18:54:44.303 [ERR] 0HNK8QA3KAAG5:00000027 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at WorkManagement.Infrastructure.Repositories.TaskRepository.GetAllForDashboardAsync(Int32 userId, Int32 userRole) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Infrastructure\Repositories\TaskRepository.cs:line 124
+   at WorkManagement.Core.Services.DashboardService.GetStatsAsync(Int32 userId, Int32 userRole) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Core\Services\DashboardService.cs:line 29
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:0168aa71-c73a-40fe-b7e3-d4691498b5ba
+Error Number:-2,State:0,Class:11
+2026-03-23 18:54:53.577 [INF] 0HNK8QA3KAAG5:00000043 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:55:08.933 [INF] 0HNK8QA3KAAG5:00000049 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 18:55:17.160 [INF] 0HNK8QA3KAAG6:00000001 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 9
+2026-03-23 18:55:50.119 [INF] 0HNK8QA3KAAG6:00000007 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 9
+2026-03-23 18:59:27.292 [WRN] 0HNK8QA3KAAG7:00000003 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 18:59:27.296 [WRN] 0HNK8QA3KAAG7:00000003 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 19:13:19.202 [WRN] 0HNK8QA3KAAG7:0000000F Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 19:13:19.227 [WRN] 0HNK8QA3KAAG7:0000000F Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 19:13:20.131 [INF] 0HNK8QA3KAAG7:00000011 WorkManagement.Web.Controllers.TasksController Google RedirectUri: /google-callback?returnUrl=%2FHome%2FIndex
+2026-03-23 19:13:37.855 [INF] 0HNK8QA3KAAG7:00000015 WorkManagement.Web.Controllers.TasksController LOGIN_GOOGLE | RequestId: 0HNK8QA3KAAG7:00000015 | Email: 25610006@student.hcmute.edu.vn
+2026-03-23 19:13:37.962 [INF] 0HNK8QA3KAAG7:00000017 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 12
+2026-03-23 19:13:39.756 [INF] 0HNK8QA3KAAG7:0000002B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 12
+2026-03-23 19:13:40.726 [INF] 0HNK8QA3KAAG7:00000031 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 12
+2026-03-23 19:13:44.206 [INF] 0HNK8QA3KAAG5:00000051 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 19:13:45.858 [INF] 0HNK8QA3KAAG5:00000057 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:14:21.858 [INF] 0HNK8QA3KAAG5:00000067 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:14:21.975 [INF] 0HNK8QA3KAAG5:00000067 WorkManagement.Core.Services.TaskService Task 24 created by 7
+2026-03-23 19:14:21.982 [INF] 0HNK8QA3KAAG5:00000067 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:14:21.990 [INF] 0HNK8QA3KAAG5:00000067 WorkManagement.Web.Controllers.TasksController CREATE_TASK | RequestId: 0HNK8QA3KAAG5:00000067 | UserId: 7 | TaskId: 24 | Title: Test gửi email | AssignedTo: 12
+2026-03-23 19:14:22.108 [INF] 0HNK8QA3KAAG5:00000069 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:14:26.812 [INF] 0HNK8QA3KAAG7:00000037 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 12
+2026-03-23 19:14:32.363 [INF] 0HNK8QA3KAAG7:0000003D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 12
+2026-03-23 19:16:33.172 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 52
+2026-03-23 19:16:33.176 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 53
+2026-03-23 19:19:13.629 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 19:19:14.292 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 19:19:17.857 [INF] 0HNK8QPJ57FOU:00000003 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 19:19:23.719 [INF] 0HNK8QPJ57FOU:00000009 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:19:31.854 [INF] 0HNK8QPJ57FOU:00000015 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:19:31.863 [INF] 0HNK8QPJ57FOU:00000015 WorkManagement.Web.Controllers.TasksController UPDATE_TASK | RequestId: 0HNK8QPJ57FOU:00000015 | UserId: 7 | TaskId: 24 | Title: Test gửi email
+2026-03-23 19:19:32.034 [INF] 0HNK8QPJ57FOU:00000017 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:20:51.451 [INF] 0HNK8QPJ57FOV:00000001 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 12
+2026-03-23 19:26:19.427 [INF]  WorkManagement.Infrastructure.Services.EmailService Email sent to 25610006@student.hcmute.edu.vn
+2026-03-23 19:26:19.519 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 53
+2026-03-23 19:34:18.229 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-23 19:34:18.722 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-23 19:34:22.274 [WRN] 0HNK8R20KLS01:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 19:34:22.288 [WRN] 0HNK8R20KLS01:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 19:37:26.285 [WRN] 0HNK8R20KLS01:0000000B Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-23 19:37:26.293 [WRN] 0HNK8R20KLS01:0000000B Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-23 19:37:30.607 [INF] 0HNK8R20KLS01:0000000F WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-23 19:38:02.572 [INF] 0HNK8R20KLS01:0000001D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:38:02.799 [INF] 0HNK8R20KLS01:0000001D WorkManagement.Core.Services.TaskService Task 25 created by 7
+2026-03-23 19:38:02.816 [INF] 0HNK8R20KLS01:0000001D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:38:02.826 [INF] 0HNK8R20KLS01:0000001D WorkManagement.Web.Controllers.TasksController CREATE_TASK | RequestId: 0HNK8R20KLS01:0000001D | UserId: 7 | TaskId: 25 | Title: Lo mà học đi | AssignedTo: 13
+2026-03-23 19:38:02.970 [INF] 0HNK8R20KLS01:0000001F WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-23 19:38:19.483 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 54
+2026-03-23 19:39:19.595 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 55
+2026-03-23 19:46:19.936 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 54
+2026-03-23 19:47:23.472 [INF]  WorkManagement.Infrastructure.Services.EmailService Email sent to 25610006@student.hcmute.edu.vn
+2026-03-23 19:47:23.518 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 53
+2026-03-23 19:52:26.666 [INF]  WorkManagement.Infrastructure.Services.EmailService Email sent to vohoaihung2@gmail.com
+2026-03-23 19:52:26.709 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 54

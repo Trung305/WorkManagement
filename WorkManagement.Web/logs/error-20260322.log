@@ -1,0 +1,526 @@
+2026-03-22 22:55:09.252 [ERR] 0HNK859B2G3Q1:00000019 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /signin-google FAILED in 939ms | RequestId: 0HNK859B2G3Q1:00000019
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultSignInScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 22:55:09.509 [ERR] 0HNK859B2G3Q1:00000019 WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK859B2G3Q1:00000019 | Path: /signin-google | Method: GET
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultSignInScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 22:55:56.968 [ERR] 0HNK859B2G3Q1:00000021 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /signin-google FAILED in 332ms | RequestId: 0HNK859B2G3Q1:00000021
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultSignInScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 22:55:57.116 [ERR] 0HNK859B2G3Q1:00000021 WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK859B2G3Q1:00000021 | Path: /signin-google | Method: GET
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultSignInScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:00:06.223 [ERR] 0HNK85G5TF96S:00000005 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /signin-google FAILED in 946ms | RequestId: 0HNK85G5TF96S:00000005
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultSignInScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:00:06.469 [ERR] 0HNK85G5TF96S:00000005 WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK85G5TF96S:00000005 | Path: /signin-google | Method: GET
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultSignInScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:01:04.640 [ERR] 0HNK85GPPCAVK:00000005 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /signin-google FAILED in 797ms | RequestId: 0HNK85GPPCAVK:00000005
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultSignInScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:01:04.876 [ERR] 0HNK85GPPCAVK:00000005 WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK85GPPCAVK:00000005 | Path: /signin-google | Method: GET
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultSignInScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:02:10.015 [ERR] 0HNK85HD4E44M:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /signin-google FAILED in 80ms | RequestId: 0HNK85HD4E44M:00000007
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:02:10.243 [ERR] 0HNK85HD4E44M:00000007 WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK85HD4E44M:00000007 | Path: /signin-google | Method: GET
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:05:17.469 [ERR] 0HNK85J4RCA63:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /signin-google FAILED in 78ms | RequestId: 0HNK85J4RCA63:00000007
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:05:17.682 [ERR] 0HNK85J4RCA63:00000007 WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK85J4RCA63:00000007 | Path: /signin-google | Method: GET
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:15:33.050 [ERR] 0HNK85NFDHSRB:00000029 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /google-response FAILED in 63ms | RequestId: 0HNK85NFDHSRB:00000029
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:15:33.238 [ERR] 0HNK85NFDHSRB:00000029 WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK85NFDHSRB:00000029 | Path: /google-response | Method: GET
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:23:25.761 [ERR] 0HNK85SCQIC3G:0000001B WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /google-response FAILED in 72ms | RequestId: 0HNK85SCQIC3G:0000001B
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:23:25.958 [ERR] 0HNK85SCQIC3G:0000001B WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK85SCQIC3G:0000001B | Path: /google-response | Method: GET
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:30:44.580 [ERR] 0HNK860LM0J4E:00000005 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /google-response FAILED in 169ms | RequestId: 0HNK860LM0J4E:00000005
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.ExchangeCodeAsync(OAuthCodeExchangeContext context)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.HandleRemoteAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:30:44.823 [ERR] 0HNK860LM0J4E:00000005 WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK860LM0J4E:00000005 | Path: /google-response | Method: GET
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.ExchangeCodeAsync(OAuthCodeExchangeContext context)
+   at Microsoft.AspNetCore.Authentication.OAuth.OAuthHandler`1.HandleRemoteAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:30:56.277 [ERR] 0HNK860LM0J4E:0000000F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /google-response FAILED in 90ms | RequestId: 0HNK860LM0J4E:0000000F
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:30:56.444 [ERR] 0HNK860LM0J4E:0000000F WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK860LM0J4E:0000000F | Path: /google-response | Method: GET
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:32:14.293 [ERR] 0HNK860LM0J4E:0000001B WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /google-response FAILED in 79ms | RequestId: 0HNK860LM0J4E:0000001B
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:32:14.429 [ERR] 0HNK860LM0J4E:0000001B WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK860LM0J4E:0000001B | Path: /google-response | Method: GET
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:36:28.829 [ERR] 0HNK863SM6L8M:00000011 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /google-response FAILED in 78ms | RequestId: 0HNK863SM6L8M:00000011
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+2026-03-22 23:36:29.031 [ERR] 0HNK863SM6L8M:00000011 WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware Unhandled exception | RequestId: 0HNK863SM6L8M:00000011 | Path: /google-response | Method: GET
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 36
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+2026-03-22 23:41:58.440 [ERR] 0HNK867MPOQNO:00000003 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:42:14.602 [ERR] 0HNK867MPOQNO:0000000B Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:42:56.813 [ERR] 0HNK867MPOQNO:00000019 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:46:51.147 [ERR] 0HNK867MPOQNO:00000031 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:47:22.202 [ERR] 0HNK867MPOQNP:0000000B Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:48:03.990 [ERR] 0HNK867MPOQNP:00000013 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:49:45.503 [ERR] 0HNK867MPOQNO:00000039 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:53:00.165 [ERR] 0HNK867MPOQNO:0000003F Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:53:29.962 [ERR] 0HNK86E52ODHK:00000003 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:53:48.394 [ERR] 0HNK86E52ODHL:00000001 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: The oauth state was missing or invalid.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:53:52.595 [ERR] 0HNK86E52ODHK:0000000B Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:54:13.181 [ERR] 0HNK86EHTMTFS:00000003 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:54:39.896 [ERR] 0HNK86EHTMTFT:0000000D Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.HomeController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 17
+   at WorkManagement.Web.Controllers.HomeController.Index() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\HomeController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-22 23:59:40.173 [ERR] 0HNK86H1JRHQO:00000021 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware An unhandled exception has occurred while executing the request.
+System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowException[TInteger]()
+   at System.Int32.Parse(String s)
+   at WorkManagement.Web.Controllers.TasksController.get_CurrentUserId() in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\TasksController.cs:line 26
+   at WorkManagement.Web.Controllers.TasksController.Index(Int32 page, String q, Nullable`1 status, Nullable`1 priority, Nullable`1 assignedTo, String view, String deadline) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Controllers\TasksController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WorkManagement.Web.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\RequestLoggingMiddleware.cs:line 22
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 20
+   at WorkManagement.Web.Middleware.WorkManagement.Web.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in D:\SPKT\HocKy2\CongNghePhanMem\DoAn\WorkManagement\WorkManagement.Web\Middleware\GlobalExceptionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)

@@ -16,6 +16,8 @@ using Serilog.Events;
 using Serilog;
 using WorkManagement.Web.Middleware.WorkManagement.Web.Middleware;
 using WorkManagement.Web.Middleware;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.IdentityModel.Tokens.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -79,10 +81,20 @@ builder.Services.AddAntiforgery(options =>
 {
     options.HeaderName = "RequestVerificationToken";
 });
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme; // JWT xử lý chính
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;    // JWT challenge
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme; // Cookie chỉ cho Google sign-in tạm
+})
+.AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+{
+    options.Cookie.SameSite = SameSiteMode.Lax;  
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+    options.AccessDeniedPath = "/Error/AccessDenied";
 })
 .AddJwtBearer(options =>
 {
@@ -104,6 +116,11 @@ builder.Services.AddAuthentication(options =>
         OnMessageReceived = context =>
         {
             context.Token = context.Request.Cookies["access_token"];
+            return Task.CompletedTask;
+        },
+        OnForbidden = context => 
+        {
+            context.Response.Redirect("/Error/AccessDenied");
             return Task.CompletedTask;
         },
         OnChallenge = async context =>
@@ -131,16 +148,16 @@ builder.Services.AddAuthentication(options =>
             var cookieOptions = new CookieOptions
             {
                 HttpOnly = true,
-                Secure = false, // production đổi true
-                SameSite = SameSiteMode.Strict,
+                Secure = true, 
+                SameSite = SameSiteMode.Lax,
                 Expires = DateTimeOffset.UtcNow.AddMinutes(60)
             };
 
             var refreshOptions = new CookieOptions
             {
                 HttpOnly = true,
-                Secure = false,
-                SameSite = SameSiteMode.Strict,
+                Secure = true,
+                SameSite = SameSiteMode.Lax,
                 Expires = DateTimeOffset.UtcNow.AddDays(7)
             };
 
@@ -151,6 +168,18 @@ builder.Services.AddAuthentication(options =>
             context.Response.Redirect(context.Request.Path + context.Request.QueryString);
         }
     };
+})
+.AddGoogle(options =>
+{
+    options.ClientId = builder.Configuration["Authentication:Google:ClientId"]!;
+    options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"]!;
+    options.CallbackPath = "/google-response";   
+    options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.SaveTokens = true;
+    options.CorrelationCookie.SameSite = SameSiteMode.Lax;
+    options.CorrelationCookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+    options.CorrelationCookie.HttpOnly = true;
+    options.CorrelationCookie.IsEssential = true;
 });
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
@@ -199,14 +228,16 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseMiddleware<GlobalExceptionMiddleware>();
+app.UseMiddleware<RequestLoggingMiddleware>();  
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-app.UseMiddleware<GlobalExceptionMiddleware>();
-app.UseMiddleware<RequestLoggingMiddleware>();
-app.UseAuthentication();
+
+app.UseAuthentication(); 
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",

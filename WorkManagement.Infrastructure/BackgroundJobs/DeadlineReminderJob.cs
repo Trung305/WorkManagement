@@ -34,7 +34,7 @@ namespace WorkManagement.Infrastructure.BackgroundJobs
                 }
 
                 // Chạy mỗi 1 giờ
-                await Task.Delay(TimeSpan.FromHours(1), stoppingToken);
+                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
             }
         }
 
@@ -43,42 +43,62 @@ namespace WorkManagement.Infrastructure.BackgroundJobs
             using var scope = _scopeFactory.CreateScope();
             var taskRepo = scope.ServiceProvider.GetRequiredService<ITaskRepository>();
             var notifService = scope.ServiceProvider.GetRequiredService<INotificationService>();
+            var notifRepo = scope.ServiceProvider.GetRequiredService<INotificationRepository>(); // ← thêm
 
-            var now = DateTime.UtcNow;
+            var now = DateTime.Now; // ← đổi UtcNow → Now
             var tasks = await taskRepo.GetTasksNeedingReminderAsync();
 
             foreach (var task in tasks)
             {
                 if (!task.Deadline.HasValue) continue;
-
                 var timeLeft = task.Deadline.Value - now;
 
-                // Nhắc 12 tiếng trước deadline (ReminderType = 1)
-                if (timeLeft.TotalHours <= 12 && timeLeft.TotalHours > 11)
-                {
-                    await notifService.AddAsync(
-                        userId: task.AssignedTo,
-                        taskId: task.Id,
-                        type: NotificationType.DeadlineReminder,
-                        title: $"⏰ Task \"{task.Title}\" còn 12 giờ nữa đến hạn!",
-                        channel: NotificationChannel.InApp,
-                        reminderType: 1
-                    );
-                    _logger.LogInformation("Sent 12h reminder for task {Id}", task.Id);
-                }
-
-                // Nhắc 1.5 tiếng trước deadline (ReminderType = 2)
+                // Check 1.5h TRƯỚC
                 if (timeLeft.TotalMinutes <= 90 && timeLeft.TotalMinutes > 80)
                 {
-                    await notifService.AddAsync(
-                        userId: task.AssignedTo,
-                        taskId: task.Id,
-                        type: NotificationType.DeadlineReminder,
-                        title: $"⏰ Task \"{task.Title}\" còn 1 tiếng 30 phút nữa đến hạn!",
-                        channel: NotificationChannel.InApp,
-                        reminderType: 2
-                    );
-                    _logger.LogInformation("Sent 1.5h reminder for task {Id}", task.Id);
+                    var alreadySent = await notifRepo.HasReminderAsync(task.Id, task.AssignedTo, 2);
+                    if (!alreadySent)
+                    {
+                        await notifService.AddAsync(
+                            userId: task.AssignedTo,
+                            taskId: task.Id,
+                            type: NotificationType.DeadlineReminder,
+                            title: $"⏰ Task \"{task.Title}\" còn 1 tiếng 30 phút nữa đến hạn!",
+                            channel: NotificationChannel.InApp,
+                            reminderType: 2
+                        );
+                        await notifService.AddAsync(
+                            userId: task.AssignedTo,
+                            taskId: task.Id,
+                            type: NotificationType.DeadlineReminder,
+                            title: $"⏰ Task \"{task.Title}\" còn 1 tiếng 30 phút nữa đến hạn!",
+                            channel: NotificationChannel.Email,
+                            reminderType: 2
+                        );
+                    }
+                }
+                else if (timeLeft.TotalHours <= 12 && timeLeft.TotalHours > 11)
+                {
+                    var alreadySent = await notifRepo.HasReminderAsync(task.Id, task.AssignedTo, 1);
+                    if (!alreadySent)
+                    {
+                        await notifService.AddAsync(
+                            userId: task.AssignedTo,
+                            taskId: task.Id,
+                            type: NotificationType.DeadlineReminder,
+                            title: $"⏰ Task \"{task.Title}\" còn 12 giờ nữa đến hạn!",
+                            channel: NotificationChannel.InApp,
+                            reminderType: 1
+                        );
+                        await notifService.AddAsync(
+                           userId: task.AssignedTo,
+                           taskId: task.Id,
+                           type: NotificationType.DeadlineReminder,
+                           title: $"⏰ Task \"{task.Title}\" còn 12 giờ nữa đến hạn!",
+                           channel: NotificationChannel.Email,
+                           reminderType: 2
+                       );
+                    }
                 }
             }
         }

@@ -43,7 +43,21 @@ namespace WorkManagement.Web.Models.Task
         public string? RejectedReason { get; set; }
 
         public List<UserListDto> AssignableUsers { get; set; } = new();
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (StartDate.HasValue && Deadline.HasValue)
+            {
+                if (Deadline <= StartDate)
+                    yield return new ValidationResult(
+                        "Ngày kết thúc phải lớn hơn ngày bắt đầu.",
+                        new[] { nameof(Deadline) });
+            }
 
+            if (Deadline.HasValue && Deadline < DateTime.Now)
+                yield return new ValidationResult(
+                    "Ngày kết thúc không được ở trong quá khứ.",
+                    new[] { nameof(Deadline) });
+        }
     }
 
     public class ReviewTaskViewModel

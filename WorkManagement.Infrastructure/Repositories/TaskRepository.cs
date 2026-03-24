@@ -102,6 +102,11 @@ namespace WorkManagement.Infrastructure.Repositories
             _db.FileAttachments.Add(file);
             await _db.SaveChangesAsync();
         }
+        public async Task DeleteFileAsync(FileAttachment file)
+        {
+            _db.FileAttachments.Remove(file);
+            await _db.SaveChangesAsync();
+        }
         public async Task<List<TaskItem>> GetAllForDashboardAsync(int userId, int userRole)
         {
             var query = _db.Tasks
@@ -120,7 +125,7 @@ namespace WorkManagement.Infrastructure.Repositories
         }
         public async Task<List<TaskItem>> GetTasksNeedingReminderAsync()
         {
-            var now = DateTime.UtcNow;
+            var now = DateTime.Now;
             var in12h = now.AddHours(12);
             var in90m = now.AddMinutes(90);
 

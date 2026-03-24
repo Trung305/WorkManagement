@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WorkManagement.Core.DTOs.File;
 using WorkManagement.Core.DTOs.Task;
 using WorkManagement.Core.DTOs.User;
+using WorkManagement.Core.Entities;
 
 namespace WorkManagement.Core.Interfaces.Services
 {
@@ -28,5 +29,6 @@ namespace WorkManagement.Core.Interfaces.Services
         Task<Result> UploadFilesAsync(int taskId, int uploadedBy, int uploadedByRole, List<(Stream stream, string fileName, long fileSize)> files);
         Task<Result> SubmitForReviewAsync(int taskId, int userId);
         Task<Result<FileAttachmentDto>> GetFileAsync(int fileId);
+        Task<Result> DeleteFileAsync(int fileId, int requesterId, int requesterRole, string webRootPath);
     }
 }

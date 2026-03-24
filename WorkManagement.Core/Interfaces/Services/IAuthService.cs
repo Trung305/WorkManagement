@@ -13,5 +13,6 @@ namespace WorkManagement.Core.Interfaces.Services
         public Task<Result> RegisterAsync(RegisterDto dto);
         public Task<Result<LoginResponseDto>> LoginAsync(LoginDto dto);
         public Task<Result<TokenResponseDto>> RefreshAsync(string refreshToken);
+        Task<Result<LoginResponseDto>> LoginWithGoogleAsync(string email, string googleId, string fullName);
     }
 }

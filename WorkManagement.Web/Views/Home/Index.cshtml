@@ -101,7 +101,7 @@
                             <div class="task-meta">
                                 @if (t.Deadline.HasValue)
                                 {
-                                    <span>Deadline: @t.Deadline.Value.ToLocalTime().ToString("dd/MM HH:mm")</span>
+                                    <span>Deadline: @t.Deadline.Value.ToString("dd/MM HH:mm")</span>
                                 }
                                 @if (!string.IsNullOrEmpty(t.AssignedToName))
                                 {

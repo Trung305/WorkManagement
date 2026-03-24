@@ -21,6 +21,12 @@
                 }
                 catch (Exception ex)
                 {
+                    var path = context.Request.Path.Value;
+
+                    if (!path.StartsWith("/api"))
+                    {
+                        throw;
+                    }
                     var requestId = context.TraceIdentifier;
                     _logger.LogError(ex,
                         "Unhandled exception | RequestId: {RequestId} | Path: {Path} | Method: {Method}",

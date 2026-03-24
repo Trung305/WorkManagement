@@ -39,8 +39,8 @@ namespace WorkManagement.Infrastructure.BackgroundJobs
                     _logger.LogError(ex, "Error in NotificationBackgroundJob");
                 }
 
-                // Chạy mỗi 5 phút
-                await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);
+                // Chạy mỗi 1 phút
+                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
             }
         }
 

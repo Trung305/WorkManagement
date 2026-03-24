@@ -1,0 +1,126 @@
+2026-03-20 18:43:29.074 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-20 18:43:29.513 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-20 18:43:33.484 [INF] 0HNK6ENK706UD:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET / started | RequestId: 0HNK6ENK706UD:00000001 | IP: ::1 | User: anonymous
+2026-03-20 18:43:34.585 [INF] 0HNK6ENK706UD:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET / 200 completed in 1109ms | RequestId: 0HNK6ENK706UD:00000001
+2026-03-20 18:43:34.606 [WRN] 0HNK6ENK706UD:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-20 18:43:34.613 [WRN] 0HNK6ENK706UD:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-20 18:43:36.617 [INF] 0HNK6ENK706UD:00000003 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST / started | RequestId: 0HNK6ENK706UD:00000003 | IP: ::1 | User: anonymous
+2026-03-20 18:43:38.838 [INF] 0HNK6ENK706UD:00000003 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST / 302 completed in 2221ms | RequestId: 0HNK6ENK706UD:00000003
+2026-03-20 18:43:38.954 [INF] 0HNK6ENK706UD:00000005 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index started | RequestId: 0HNK6ENK706UD:00000005 | IP: ::1 | User: anonymous
+2026-03-20 18:43:39.679 [INF] 0HNK6ENK706UD:00000005 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index 200 completed in 723ms | RequestId: 0HNK6ENK706UD:00000005
+2026-03-20 18:44:26.119 [INF] 0HNK6ENK706UD:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index started | RequestId: 0HNK6ENK706UD:0000000D | IP: ::1 | User: anonymous
+2026-03-20 18:44:26.641 [INF] 0HNK6ENK706UD:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index 200 completed in 521ms | RequestId: 0HNK6ENK706UD:0000000D
+2026-03-20 18:44:32.534 [INF] 0HNK6ENK706UD:00000013 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Users/Index started | RequestId: 0HNK6ENK706UD:00000013 | IP: ::1 | User: anonymous
+2026-03-20 18:44:32.863 [INF] 0HNK6ENK706UD:00000013 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Users/Index 200 completed in 329ms | RequestId: 0HNK6ENK706UD:00000013
+2026-03-20 18:44:38.218 [INF] 0HNK6ENK706UD:00000019 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Stats/Index started | RequestId: 0HNK6ENK706UD:00000019 | IP: ::1 | User: anonymous
+2026-03-20 18:44:38.414 [INF] 0HNK6ENK706UD:00000019 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Stats/Index 200 completed in 195ms | RequestId: 0HNK6ENK706UD:00000019
+2026-03-20 18:45:56.022 [INF] 0HNK6ENK706UD:00000021 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index started | RequestId: 0HNK6ENK706UD:00000021 | IP: ::1 | User: anonymous
+2026-03-20 18:45:56.172 [INF] 0HNK6ENK706UD:00000021 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index 200 completed in 150ms | RequestId: 0HNK6ENK706UD:00000021
+2026-03-20 18:46:05.239 [INF] 0HNK6ENK706UE:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index started | RequestId: 0HNK6ENK706UE:00000001 | IP: ::1 | User: anonymous
+2026-03-20 18:46:05.357 [INF] 0HNK6ENK706UE:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index 302 completed in 118ms | RequestId: 0HNK6ENK706UE:00000001
+2026-03-20 18:46:05.454 [INF] 0HNK6ENK706UE:00000003 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index started | RequestId: 0HNK6ENK706UE:00000003 | IP: ::1 | User: anonymous
+2026-03-20 18:46:05.579 [INF] 0HNK6ENK706UE:00000003 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index 200 completed in 124ms | RequestId: 0HNK6ENK706UE:00000003
+2026-03-20 18:46:14.179 [INF] 0HNK6ENK706UF:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index started | RequestId: 0HNK6ENK706UF:00000001 | IP: ::1 | User: anonymous
+2026-03-20 18:46:14.285 [INF] 0HNK6ENK706UF:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index 200 completed in 105ms | RequestId: 0HNK6ENK706UF:00000001
+2026-03-20 18:46:15.479 [INF] 0HNK6ENK706UF:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/14/edit started | RequestId: 0HNK6ENK706UF:00000007 | IP: ::1 | User: anonymous
+2026-03-20 18:46:15.646 [INF] 0HNK6ENK706UF:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/14/edit 200 completed in 166ms | RequestId: 0HNK6ENK706UF:00000007
+2026-03-20 18:46:15.803 [INF] 0HNK6ENK706UF:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/14/files started | RequestId: 0HNK6ENK706UF:0000000D | IP: ::1 | User: anonymous
+2026-03-20 18:46:15.896 [INF] 0HNK6ENK706UF:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/14/files 200 completed in 93ms | RequestId: 0HNK6ENK706UF:0000000D
+2026-03-20 18:46:18.566 [INF] 0HNK6ENK706UG:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index started | RequestId: 0HNK6ENK706UG:00000001 | IP: ::1 | User: anonymous
+2026-03-20 18:46:18.693 [INF] 0HNK6ENK706UG:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index 200 completed in 127ms | RequestId: 0HNK6ENK706UG:00000001
+2026-03-20 18:46:20.709 [INF] 0HNK6ENK706UG:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/13/edit started | RequestId: 0HNK6ENK706UG:00000007 | IP: ::1 | User: anonymous
+2026-03-20 18:46:20.791 [INF] 0HNK6ENK706UG:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/13/edit 200 completed in 82ms | RequestId: 0HNK6ENK706UG:00000007
+2026-03-20 18:46:20.832 [INF] 0HNK6ENK706UG:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/13/files started | RequestId: 0HNK6ENK706UG:0000000D | IP: ::1 | User: anonymous
+2026-03-20 18:46:20.935 [INF] 0HNK6ENK706UG:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/13/files 200 completed in 103ms | RequestId: 0HNK6ENK706UG:0000000D
+2026-03-20 18:46:39.062 [INF] 0HNK6ENK706UD:00000027 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index started | RequestId: 0HNK6ENK706UD:00000027 | IP: ::1 | User: anonymous
+2026-03-20 18:46:39.184 [INF] 0HNK6ENK706UD:00000027 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index 200 completed in 123ms | RequestId: 0HNK6ENK706UD:00000027
+2026-03-20 18:46:42.543 [INF] 0HNK6ENK706UD:0000002D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Users/Index started | RequestId: 0HNK6ENK706UD:0000002D | IP: ::1 | User: anonymous
+2026-03-20 18:46:42.647 [INF] 0HNK6ENK706UD:0000002D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Users/Index 200 completed in 104ms | RequestId: 0HNK6ENK706UD:0000002D
+2026-03-20 18:46:46.779 [INF] 0HNK6ENK706UH:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Users/Index started | RequestId: 0HNK6ENK706UH:00000001 | IP: ::1 | User: anonymous
+2026-03-20 18:46:46.791 [INF] 0HNK6ENK706UH:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Users/Index 403 completed in 12ms | RequestId: 0HNK6ENK706UH:00000001
+2026-03-20 18:48:32.796 [INF] 0HNK6ENK706UI:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index started | RequestId: 0HNK6ENK706UI:00000001 | IP: ::1 | User: anonymous
+2026-03-20 18:48:32.872 [INF] 0HNK6ENK706UI:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index 200 completed in 75ms | RequestId: 0HNK6ENK706UI:00000001
+2026-03-20 18:48:34.383 [INF] 0HNK6ENK706UI:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Notifications started | RequestId: 0HNK6ENK706UI:00000007 | IP: ::1 | User: anonymous
+2026-03-20 18:48:34.558 [INF] 0HNK6ENK706UI:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Notifications 200 completed in 175ms | RequestId: 0HNK6ENK706UI:00000007
+2026-03-20 18:50:08.509 [INF] 0HNK6ENK706UD:00000033 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index started | RequestId: 0HNK6ENK706UD:00000033 | IP: ::1 | User: anonymous
+2026-03-20 18:50:08.632 [INF] 0HNK6ENK706UD:00000033 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index 200 completed in 123ms | RequestId: 0HNK6ENK706UD:00000033
+2026-03-20 18:50:17.770 [INF] 0HNK6ENK706UD:00000039 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/2/edit started | RequestId: 0HNK6ENK706UD:00000039 | IP: ::1 | User: anonymous
+2026-03-20 18:50:17.927 [INF] 0HNK6ENK706UD:00000039 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/2/edit 200 completed in 156ms | RequestId: 0HNK6ENK706UD:00000039
+2026-03-20 18:50:17.998 [INF] 0HNK6ENK706UD:0000003F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/2/files started | RequestId: 0HNK6ENK706UD:0000003F | IP: ::1 | User: anonymous
+2026-03-20 18:50:18.049 [INF] 0HNK6ENK706UD:0000003F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/2/files 200 completed in 51ms | RequestId: 0HNK6ENK706UD:0000003F
+2026-03-20 18:50:29.466 [INF] 0HNK6ENK706UI:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index started | RequestId: 0HNK6ENK706UI:0000000D | IP: ::1 | User: anonymous
+2026-03-20 18:50:29.542 [INF] 0HNK6ENK706UI:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index 200 completed in 76ms | RequestId: 0HNK6ENK706UI:0000000D
+2026-03-20 18:50:31.259 [INF] 0HNK6ENK706UI:00000013 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/13/edit started | RequestId: 0HNK6ENK706UI:00000013 | IP: ::1 | User: anonymous
+2026-03-20 18:50:31.336 [INF] 0HNK6ENK706UI:00000013 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/13/edit 200 completed in 76ms | RequestId: 0HNK6ENK706UI:00000013
+2026-03-20 18:50:31.388 [INF] 0HNK6ENK706UI:00000019 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/13/files started | RequestId: 0HNK6ENK706UI:00000019 | IP: ::1 | User: anonymous
+2026-03-20 18:50:31.441 [INF] 0HNK6ENK706UI:00000019 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/13/files 200 completed in 53ms | RequestId: 0HNK6ENK706UI:00000019
+2026-03-20 18:50:38.625 [INF] 0HNK6ENK706UI:0000001B WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST /Tasks/13/submit started | RequestId: 0HNK6ENK706UI:0000001B | IP: ::1 | User: anonymous
+2026-03-20 18:50:38.874 [INF] 0HNK6ENK706UI:0000001B WorkManagement.Web.Controllers.TasksController SUBMIT_TASK | RequestId: 0HNK6ENK706UI:0000001B | UserId: 9 | TaskId: 13
+2026-03-20 18:50:38.880 [INF] 0HNK6ENK706UI:0000001B WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST /Tasks/13/submit 200 completed in 255ms | RequestId: 0HNK6ENK706UI:0000001B
+2026-03-20 18:50:39.771 [INF] 0HNK6ENK706UI:0000001D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index started | RequestId: 0HNK6ENK706UI:0000001D | IP: ::1 | User: anonymous
+2026-03-20 18:50:39.864 [INF] 0HNK6ENK706UI:0000001D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index 200 completed in 93ms | RequestId: 0HNK6ENK706UI:0000001D
+2026-03-20 18:50:47.406 [INF] 0HNK6ENK706UD:00000041 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index started | RequestId: 0HNK6ENK706UD:00000041 | IP: ::1 | User: anonymous
+2026-03-20 18:50:47.521 [INF] 0HNK6ENK706UD:00000041 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Tasks/Index 200 completed in 115ms | RequestId: 0HNK6ENK706UD:00000041
+2026-03-20 18:50:59.667 [INF] 0HNK6ENK706UD:00000047 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index started | RequestId: 0HNK6ENK706UD:00000047 | IP: ::1 | User: anonymous
+2026-03-20 18:50:59.768 [INF] 0HNK6ENK706UD:00000047 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index 200 completed in 100ms | RequestId: 0HNK6ENK706UD:00000047
+2026-03-20 18:51:51.678 [INF] 0HNK6ENK706UD:0000004D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST /Account/Logout started | RequestId: 0HNK6ENK706UD:0000004D | IP: ::1 | User: anonymous
+2026-03-20 18:51:51.734 [INF] 0HNK6ENK706UD:0000004D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST /Account/Logout 302 completed in 55ms | RequestId: 0HNK6ENK706UD:0000004D
+2026-03-20 18:51:51.805 [INF] 0HNK6ENK706UD:0000004F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET / started | RequestId: 0HNK6ENK706UD:0000004F | IP: ::1 | User: anonymous
+2026-03-20 18:51:51.891 [INF] 0HNK6ENK706UD:0000004F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET / 200 completed in 85ms | RequestId: 0HNK6ENK706UD:0000004F
+2026-03-20 18:51:51.944 [WRN] 0HNK6ENK706UD:0000004F Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-20 18:51:51.950 [WRN] 0HNK6ENK706UD:0000004F Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-20 18:52:23.031 [INF] 0HNK6ENK706UD:00000051 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST / started | RequestId: 0HNK6ENK706UD:00000051 | IP: ::1 | User: anonymous
+2026-03-20 18:52:23.714 [INF] 0HNK6ENK706UD:00000051 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST / 302 completed in 682ms | RequestId: 0HNK6ENK706UD:00000051
+2026-03-20 18:52:23.785 [INF] 0HNK6ENK706UD:00000053 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index started | RequestId: 0HNK6ENK706UD:00000053 | IP: ::1 | User: anonymous
+2026-03-20 18:52:23.879 [INF] 0HNK6ENK706UD:00000053 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index 200 completed in 94ms | RequestId: 0HNK6ENK706UD:00000053
+2026-03-20 18:52:32.679 [INF] 0HNK6ENK706UD:00000059 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Stats/Index started | RequestId: 0HNK6ENK706UD:00000059 | IP: ::1 | User: anonymous
+2026-03-20 18:52:32.766 [INF] 0HNK6ENK706UD:00000059 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Stats/Index 200 completed in 86ms | RequestId: 0HNK6ENK706UD:00000059
+2026-03-20 18:52:35.738 [INF] 0HNK6ENK706UD:0000005F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Stats/Index started | RequestId: 0HNK6ENK706UD:0000005F | IP: ::1 | User: anonymous
+2026-03-20 18:52:35.822 [INF] 0HNK6ENK706UD:0000005F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Stats/Index 200 completed in 83ms | RequestId: 0HNK6ENK706UD:0000005F
+2026-03-20 18:52:41.528 [INF] 0HNK6ENK706UD:00000065 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Users/Index started | RequestId: 0HNK6ENK706UD:00000065 | IP: ::1 | User: anonymous
+2026-03-20 18:52:41.643 [INF] 0HNK6ENK706UD:00000065 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Users/Index 200 completed in 115ms | RequestId: 0HNK6ENK706UD:00000065
+2026-03-20 18:53:29.850 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 32
+2026-03-20 19:24:03.849 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-20 19:24:04.675 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-20 19:24:06.242 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob Sent 12h reminder for task 9
+2026-03-20 19:24:09.076 [INF] 0HNK6FEA5OHNN:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET / started | RequestId: 0HNK6FEA5OHNN:00000001 | IP: ::1 | User: anonymous
+2026-03-20 19:24:10.558 [INF] 0HNK6FEA5OHNN:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET / 200 completed in 1489ms | RequestId: 0HNK6FEA5OHNN:00000001
+2026-03-20 19:24:10.583 [WRN] 0HNK6FEA5OHNN:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-20 19:24:10.592 [WRN] 0HNK6FEA5OHNN:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-20 19:24:11.998 [INF] 0HNK6FEA5OHNN:00000003 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST / started | RequestId: 0HNK6FEA5OHNN:00000003 | IP: ::1 | User: anonymous
+2026-03-20 19:24:13.626 [INF] 0HNK6FEA5OHNN:00000003 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP POST / 302 completed in 1628ms | RequestId: 0HNK6FEA5OHNN:00000003
+2026-03-20 19:24:13.788 [INF] 0HNK6FEA5OHNN:00000005 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index started | RequestId: 0HNK6FEA5OHNN:00000005 | IP: ::1 | User: anonymous
+2026-03-20 19:24:14.391 [INF] 0HNK6FEA5OHNN:00000005 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Home/Index 200 completed in 602ms | RequestId: 0HNK6FEA5OHNN:00000005
+2026-03-20 19:24:19.443 [INF] 0HNK6FEA5OHNN:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger started | RequestId: 0HNK6FEA5OHNN:0000000D | IP: ::1 | User: anonymous
+2026-03-20 19:24:19.472 [INF] 0HNK6FEA5OHNN:0000000D WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger 301 completed in 28ms | RequestId: 0HNK6FEA5OHNN:0000000D
+2026-03-20 19:24:19.594 [INF] 0HNK6FEA5OHNN:0000000F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.html started | RequestId: 0HNK6FEA5OHNN:0000000F | IP: ::1 | User: anonymous
+2026-03-20 19:24:19.804 [INF] 0HNK6FEA5OHNN:0000000F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.html 200 completed in 209ms | RequestId: 0HNK6FEA5OHNN:0000000F
+2026-03-20 19:24:19.993 [INF] 0HNK6FEA5OHNN:00000011 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui.css started | RequestId: 0HNK6FEA5OHNN:00000011 | IP: ::1 | User: anonymous
+2026-03-20 19:24:19.994 [INF] 0HNK6FEA5OHNN:00000013 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.css started | RequestId: 0HNK6FEA5OHNN:00000013 | IP: ::1 | User: anonymous
+2026-03-20 19:24:19.997 [INF] 0HNK6FEA5OHNN:00000015 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui-bundle.js started | RequestId: 0HNK6FEA5OHNN:00000015 | IP: ::1 | User: anonymous
+2026-03-20 19:24:20.150 [INF] 0HNK6FEA5OHNN:00000013 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.css 200 completed in 156ms | RequestId: 0HNK6FEA5OHNN:00000013
+2026-03-20 19:24:20.002 [INF] 0HNK6FEA5OHNN:00000019 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.js started | RequestId: 0HNK6FEA5OHNN:00000019 | IP: ::1 | User: anonymous
+2026-03-20 19:24:19.997 [INF] 0HNK6FEA5OHNN:00000017 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui-standalone-preset.js started | RequestId: 0HNK6FEA5OHNN:00000017 | IP: ::1 | User: anonymous
+2026-03-20 19:24:20.189 [INF] 0HNK6FEA5OHNN:00000019 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.js 200 completed in 188ms | RequestId: 0HNK6FEA5OHNN:00000019
+2026-03-20 19:24:20.173 [INF] 0HNK6FEA5OHNN:00000011 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui.css 200 completed in 179ms | RequestId: 0HNK6FEA5OHNN:00000011
+2026-03-20 19:24:20.222 [INF] 0HNK6FEA5OHNN:00000017 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui-standalone-preset.js 200 completed in 224ms | RequestId: 0HNK6FEA5OHNN:00000017
+2026-03-20 19:24:20.288 [INF] 0HNK6FEA5OHNN:00000015 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui-bundle.js 200 completed in 291ms | RequestId: 0HNK6FEA5OHNN:00000015
+2026-03-20 19:24:20.534 [INF] 0HNK6FEA5OHNN:0000001F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/v1/swagger.json started | RequestId: 0HNK6FEA5OHNN:0000001F | IP: ::1 | User: anonymous
+2026-03-20 19:24:20.619 [INF] 0HNK6FEA5OHNN:0000001F WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/v1/swagger.json 200 completed in 85ms | RequestId: 0HNK6FEA5OHNN:0000001F
+2026-03-20 19:24:53.838 [INF] 0HNK6FEA5OHNO:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.html started | RequestId: 0HNK6FEA5OHNO:00000001 | IP: ::1 | User: anonymous
+2026-03-20 19:24:53.873 [INF] 0HNK6FEA5OHNO:00000001 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.html 200 completed in 34ms | RequestId: 0HNK6FEA5OHNO:00000001
+2026-03-20 19:24:54.065 [INF] 0HNK6FEA5OHNO:00000005 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.css started | RequestId: 0HNK6FEA5OHNO:00000005 | IP: ::1 | User: anonymous
+2026-03-20 19:24:54.065 [INF] 0HNK6FEA5OHNO:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.js started | RequestId: 0HNK6FEA5OHNO:00000007 | IP: ::1 | User: anonymous
+2026-03-20 19:24:54.068 [INF] 0HNK6FEA5OHNO:0000000B WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui-bundle.js started | RequestId: 0HNK6FEA5OHNO:0000000B | IP: ::1 | User: anonymous
+2026-03-20 19:24:54.150 [INF] 0HNK6FEA5OHNO:00000005 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.css 200 completed in 84ms | RequestId: 0HNK6FEA5OHNO:00000005
+2026-03-20 19:24:54.184 [INF] 0HNK6FEA5OHNO:00000007 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/index.js 200 completed in 118ms | RequestId: 0HNK6FEA5OHNO:00000007
+2026-03-20 19:24:54.068 [INF] 0HNK6FEA5OHNO:00000009 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui-standalone-preset.js started | RequestId: 0HNK6FEA5OHNO:00000009 | IP: ::1 | User: anonymous
+2026-03-20 19:24:54.066 [INF] 0HNK6FEA5OHNO:00000003 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui.css started | RequestId: 0HNK6FEA5OHNO:00000003 | IP: ::1 | User: anonymous
+2026-03-20 19:24:54.306 [INF] 0HNK6FEA5OHNO:0000000B WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui-bundle.js 200 completed in 237ms | RequestId: 0HNK6FEA5OHNO:0000000B
+2026-03-20 19:24:54.322 [INF] 0HNK6FEA5OHNO:00000009 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui-standalone-preset.js 200 completed in 253ms | RequestId: 0HNK6FEA5OHNO:00000009
+2026-03-20 19:24:54.332 [INF] 0HNK6FEA5OHNO:00000003 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/swagger-ui.css 200 completed in 266ms | RequestId: 0HNK6FEA5OHNO:00000003
+2026-03-20 19:24:55.275 [INF] 0HNK6FEA5OHNO:00000011 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/v1/swagger.json started | RequestId: 0HNK6FEA5OHNO:00000011 | IP: ::1 | User: anonymous
+2026-03-20 19:24:55.317 [INF] 0HNK6FEA5OHNO:00000011 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/v1/swagger.json 200 completed in 42ms | RequestId: 0HNK6FEA5OHNO:00000011
+2026-03-20 19:24:55.338 [INF] 0HNK6FEA5OHNO:00000013 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/favicon-32x32.png started | RequestId: 0HNK6FEA5OHNO:00000013 | IP: ::1 | User: anonymous
+2026-03-20 19:24:55.356 [INF] 0HNK6FEA5OHNO:00000013 WorkManagement.Web.Middleware.RequestLoggingMiddleware HTTP GET /Swagger/favicon-32x32.png 200 completed in 17ms | RequestId: 0HNK6FEA5OHNO:00000013
+2026-03-20 19:29:05.282 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 33

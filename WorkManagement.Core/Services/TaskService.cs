@@ -22,7 +22,6 @@ namespace WorkManagement.Core.Services
         private readonly IUserRepository _userRepo;
         private readonly INotificationRepository _notifRepo;
         private readonly ILogger<TaskService> _logger;
-
         public TaskService(
             ITaskRepository taskRepo,
             IUserRepository userRepo,
@@ -203,7 +202,23 @@ namespace WorkManagement.Core.Services
 
             return Result.Success();
         }
+        public async Task<Result> DeleteFileAsync(int fileId, int requesterId, int requesterRole, string webRootPath)
+        {
+            var file = await _taskRepo.GetFileByIdAsync(fileId);
+            if (file == null)
+                return Result.Fail("File không tồn tại.");
 
+            if (requesterRole >= 3 && file.UploadedBy != requesterId)
+                return Result.Fail("Bạn không có quyền xóa file này.");
+
+            // Xóa file vật lý
+            var fullPath = Path.Combine(webRootPath, file.FilePath.TrimStart('/'));
+            if (System.IO.File.Exists(fullPath))
+                System.IO.File.Delete(fullPath);
+
+            await _taskRepo.DeleteFileAsync(file);
+            return Result.Success();
+        }
         public async Task<Result<List<UserListDto>>> GetAssignableUsersAsync()
         {
             var users = await _userRepo.GetByRoleAsync((int)UserRole.User);
@@ -235,7 +250,8 @@ namespace WorkManagement.Core.Services
             AssignedToName = t.AssignedUser?.FullName,
             AssignedToAvatar = t.AssignedUser?.AvatarUrl,
             CreatedById = t.CreatedBy,
-            CreatedByName = t.CreatedByUser?.FullName ?? ""
+            CreatedByName = t.CreatedByUser?.FullName ?? "",
+            RejectedReason = t.RejectedReason
         };
         public async Task<Result<List<FileAttachmentDto>>> GetFilesAsync(int taskId)
         {
@@ -248,6 +264,7 @@ namespace WorkManagement.Core.Services
                 FileSize = f.FileSize,
                 UploadedByRole = f.UploadedByRole,
                 UploadedByName = f.UploadedByUser?.FullName ?? "—",
+                UploadedByUser = f.UploadedByUser?.Id ?? 0,
                 UploadedAt = f.UploadedAt
             }).ToList());
         }

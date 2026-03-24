@@ -22,6 +22,7 @@ namespace WorkManagement.Core.Interfaces.Repositories
         Task<List<FileAttachment>> GetFilesByTaskIdAsync(int taskId);
         Task<FileAttachment?> GetFileByIdAsync(int fileId);
         Task AddFileAsync(FileAttachment file);
+        Task DeleteFileAsync(FileAttachment file);
         Task<List<TaskItem>> GetAllForDashboardAsync(int userId, int userRole);
 
         Task<List<TaskItem>> GetTasksNeedingReminderAsync();

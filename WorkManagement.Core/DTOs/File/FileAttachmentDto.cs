@@ -13,6 +13,7 @@ namespace WorkManagement.Core.DTOs.File
         public string FilePath { get; set; } = "";
         public long FileSize { get; set; }
         public int UploadedByRole { get; set; }
+        public int UploadedByUser { get; set; }
         public string UploadedByName { get; set; } = ""; // ← thêm
         public DateTime UploadedAt { get; set; }
     }

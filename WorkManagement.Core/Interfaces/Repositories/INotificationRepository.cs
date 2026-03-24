@@ -17,5 +17,6 @@ namespace WorkManagement.Core.Interfaces.Repositories
         System.Threading.Tasks.Task UpdateAsync(Notification notification);
         System.Threading.Tasks.Task MarkAllAsReadAsync(int userId);
         System.Threading.Tasks.Task<List<Notification>> GetUnsentAsync();
+        Task<bool> HasReminderAsync(int taskId, int userId, int reminderType);
     }
 }
