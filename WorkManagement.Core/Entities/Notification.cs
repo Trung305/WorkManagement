@@ -20,7 +20,7 @@ namespace WorkManagement.Core.Entities
         public NotificationChannel Channel { get; set; }        // NotificationChannel enum
         public bool IsSent { get; set; } = false;
         public DateTime? SentAt { get; set; }
-
+        public int FailCount { get; set; } = 0;
         // Navigation properties
         public User User { get; set; } = null!;
         public Task? Task { get; set; }

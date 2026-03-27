@@ -37,11 +37,13 @@ namespace WorkManagement.Core.Services
         public async Task<Result<TaskPagedResultDto>> GetPagedAsync(
     int page, int pageSize,
     string? search, int? status, int? priority,
-    int? assignedToId, int? viewerUserId, int? viewerRole, DateTime? deadlineDate)
+    int? assignedToId, int? viewerUserId, int? viewerRole, DateTime? deadlineDate, DateTime? deadlineFrom = null, 
+    DateTime? deadlineTo = null, 
+    bool overdue = false)
         {
             var (items, total, stats) = await _taskRepo.GetPagedAsync(
                 page, pageSize, search, status, priority,
-                assignedToId, viewerUserId, viewerRole, deadlineDate);
+                assignedToId, viewerUserId, viewerRole, deadlineDate, deadlineFrom, deadlineTo, overdue);
 
             var dto = new TaskPagedResultDto
             {
@@ -104,7 +106,7 @@ namespace WorkManagement.Core.Services
             var task = await _taskRepo.GetByIdAsync(dto.Id);
             if (task == null)
                 return Result.Fail("Không tìm thấy công việc.");
-
+            var oldAssignedTo = task.AssignedTo;
             task.Title = dto.Title;
             task.Description = dto.Description;
             task.Priority = (TaskPriority)dto.Priority;
@@ -114,6 +116,24 @@ namespace WorkManagement.Core.Services
             task.UpdatedAt = DateTime.Now;
 
             await _taskRepo.UpdateAsync(task);
+            if (dto.AssignedToId != oldAssignedTo)
+            {
+                await _notifRepo.DeleteByTaskAndUserAsync(task.Id, oldAssignedTo);
+
+                var notification = new Notification
+                {
+                    UserId = dto.AssignedToId,
+                    TaskId = task.Id,
+                    Type = NotificationType.TaskAssigned,
+                    Channel = NotificationChannel.InApp,
+                    Title = $"Bạn được phân công task: {task.Title}",
+                    IsRead = false,
+                    IsSent = false,
+                    CreatedAt = DateTime.Now
+                };
+
+                await _notifRepo.AddAsync(notification);
+            }
             return Result.Success();
         }
 
@@ -194,8 +214,8 @@ namespace WorkManagement.Core.Services
                 TaskId = task.Id,
                 Type = dto.Approved ? NotificationType.TaskCompleted : NotificationType.TaskRejected,
                 Title = dto.Approved
-                                    ? $"Task \"{task.Title}\" đã được duyệt ✓"
-                                    : $"Task \"{task.Title}\" bị từ chối",
+                                    ? $"Công việc \"{task.Title}\" đã được duyệt "
+                                    : $"Công việc \"{task.Title}\" bị từ chối",
                 Channel = NotificationChannel.InApp,
                 CreatedAt = DateTime.Now
             });

@@ -15,7 +15,9 @@ namespace WorkManagement.Core.Interfaces.Repositories
         Task<(IEnumerable<TaskItem> Items, int Total, Dictionary<int, int> Stats)> GetPagedAsync(
             int page, int pageSize,
             string? search, int? status, int? priority,
-            int? assignedToId, int? viewerUserId, int? viewerRole, DateTime? deadlineDate);
+            int? assignedToId, int? viewerUserId, int? viewerRole, DateTime? deadlineDate, DateTime? deadlineFrom = null,
+    DateTime? deadlineTo = null,
+    bool overdue = false);
         Task AddAsync(TaskItem task);
         Task UpdateAsync(TaskItem task);
         Task DeleteAsync(TaskItem task);

@@ -4,7 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var r = Model.PagedResult;
     bool canManage = Model.ViewerRole == 0 || Model.ViewerRole == 2;
+    var FullName = Context.Items["FullName"]?.ToString();
 }
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css" />
 <style>
     .tk-row--clickable {
         cursor: pointer;
@@ -185,6 +187,45 @@
         font-size: 12px; /* match .tk-task-desc */
         color: #6b7280;
     }
+    /* ===== DATE FILTER ===== */
+    .tk-date-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .tk-date-icon {
+        position: absolute;
+        left: 10px;
+        color: #9ca3af;
+        pointer-events: none;
+    }
+
+    .tk-date-input {
+        padding-left: 30px !important;
+        min-width: 130px;
+        cursor: pointer;
+    }
+
+    /* ===== OVERDUE CHECKBOX ===== */
+    .tk-overdue-label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #374151;
+        cursor: pointer;
+        white-space: nowrap;
+        user-select: none;
+    }
+
+        .tk-overdue-label input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            accent-color: #4f46e5;
+            cursor: pointer;
+        }
 </style>
 
     <div class="tk-header">
@@ -194,15 +235,31 @@
         </div>
         <div class="tk-header-actions">
             <div class="tk-view-toggle">
-                <a href="@Url.Action("Index", new { q=Model.SearchQuery, status=Model.StatusFilter, priority=Model.PriorityFilter, assignedTo=Model.AssignedToFilter, view="table" })"
-                   class="tk-view-btn @(Model.ViewMode=="table"?"tk-view-btn--active":"")">
+            <a href="@Url.Action("Index", new {
+    view         = "table",
+    q            = Model.SearchQuery,
+    status       = Model.StatusFilter,
+    priority     = Model.PriorityFilter,
+    assignedTo   = Model.AssignedToFilter,
+    deadlineFrom = Model.DeadlineFrom?.ToString("yyyy-MM-dd"),
+    deadlineTo   = Model.DeadlineTo.HasValue && !Model.Overdue ? Model.DeadlineTo.Value.ToString("yyyy-MM-dd") : null,
+    overdue      = Model.Overdue ? "true" : null
+})" class="tk-view-btn @(Model.ViewMode=="table"?"tk-view-btn--active":"")">
                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
                     </svg>
                     Table
                 </a>
-                <a href="@Url.Action("Index", new { q=Model.SearchQuery, status=Model.StatusFilter, priority=Model.PriorityFilter, assignedTo=Model.AssignedToFilter, view="kanban" })"
-                   class="tk-view-btn @(Model.ViewMode=="kanban"?"tk-view-btn--active":"")">
+            <a href="@Url.Action("Index", new {
+    view         = "kanban",
+    q            = Model.SearchQuery,
+    status       = Model.StatusFilter,
+    priority     = Model.PriorityFilter,
+    assignedTo   = Model.AssignedToFilter,
+    deadlineFrom = Model.DeadlineFrom?.ToString("yyyy-MM-dd"),
+    deadlineTo   = Model.DeadlineTo.HasValue && !Model.Overdue ? Model.DeadlineTo.Value.ToString("yyyy-MM-dd") : null,
+    overdue      = Model.Overdue ? "true" : null
+})" class="tk-view-btn @(Model.ViewMode=="kanban"?"tk-view-btn--active":"")">
                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="11" rx="1"/>
                     </svg>
@@ -224,22 +281,41 @@
     <div class="tk-stats">
         @{
             var statCards = new[] {
-                (label:"Chờ xử lý",    val:r.CountPending,       cls:"tk-stat--pending",  filter:1),
-                (label:"Đang làm",     val:r.CountInProgress,    cls:"tk-stat--progress", filter:2),
-                (label:"Chờ duyệt",    val:r.CountPendingReview, cls:"tk-stat--review",   filter:3),
-                (label:"Hoàn thành",   val:r.CountCompleted,     cls:"tk-stat--done",     filter:4),
-                (label:"Từ chối",      val:r.CountRejected,      cls:"tk-stat--rejected", filter:5),
-            };
+        (label:"Chờ xử lý",  val:Model.TotalStats.Pending,       cls:"tk-stat--pending",  filter:1),
+        (label:"Đang làm",   val:Model.TotalStats.InProgress,    cls:"tk-stat--progress", filter:2),
+        (label:"Chờ duyệt",  val:Model.TotalStats.PendingReview, cls:"tk-stat--review",   filter:3),
+        (label:"Hoàn thành", val:Model.TotalStats.Completed,     cls:"tk-stat--done",     filter:4),
+        (label:"Từ chối",    val:Model.TotalStats.Rejected,      cls:"tk-stat--rejected", filter:5),
+        };
             foreach (var sc in statCards)
             {
                 var isActive = Model.StatusFilter == sc.filter;
-                var href = isActive
-                    ? Url.Action("Index", new { q=Model.SearchQuery, priority=Model.PriorityFilter })
-                    : Url.Action("Index", new { status=sc.filter, q=Model.SearchQuery, priority=Model.PriorityFilter });
-            <a href="@href" class="tk-stat @sc.cls @(isActive?"tk-stat--active":"")">
-                <span class="tk-stat__val">@sc.val</span>
-                <span class="tk-stat__label">@sc.label</span>
-            </a>
+            var href = isActive
+            ? Url.Action("Index", new
+            {
+                view = Model.ViewMode,
+                q = Model.SearchQuery,
+                priority = Model.PriorityFilter,
+                assignedTo = Model.AssignedToFilter,
+                deadlineFrom = Model.DeadlineFrom?.ToString("yyyy-MM-dd"),
+                deadlineTo = Model.DeadlineTo.HasValue && !Model.Overdue ? Model.DeadlineTo.Value.ToString("yyyy-MM-dd") : null,
+                overdue = Model.Overdue ? "true" : null
+            })
+            : Url.Action("Index", new
+            {
+                view = Model.ViewMode,
+                status = sc.filter,
+                q = Model.SearchQuery,
+                priority = Model.PriorityFilter,
+                assignedTo = Model.AssignedToFilter,
+                deadlineFrom = Model.DeadlineFrom?.ToString("yyyy-MM-dd"),
+                deadlineTo = Model.DeadlineTo.HasValue && !Model.Overdue ? Model.DeadlineTo.Value.ToString("yyyy-MM-dd") : null,
+                overdue = Model.Overdue ? "true" : null
+            });
+                <a href="@href" class="tk-stat @sc.cls @(isActive?"tk-stat--active":"")">
+                    <span class="tk-stat__val">@sc.val</span>
+                    <span class="tk-stat__label">@sc.label</span>
+                </a>
             }
         }
     </div>
@@ -252,50 +328,6 @@
                 </svg>
                 <input name="q" value="@Model.SearchQuery" placeholder="Tìm công việc..." class="tk-search-input" />
             </div>
-            <select name="status" class="tk-select">
-                <option value="">Tất cả trạng thái</option>
-                @if (Model.StatusFilter == 1)
-                {
-                    <option value="1" selected>Chờ xử lý</option>
-                }
-                else
-                {
-                    <option value="1">Chờ xử lý</option>
-                }
-                @if (Model.StatusFilter == 2)
-                {
-                    <option value="2" selected>Đang làm</option>
-                }
-                else
-                {
-                    <option value="2">Đang làm</option>
-                }
-                @if (Model.StatusFilter == 3)
-                {
-                    <option value="3" selected>Chờ duyệt</option>
-                }
-                else
-                {
-                    <option value="3">Chờ duyệt</option>
-                }
-                @if (Model.StatusFilter == 4)
-                {
-                    <option value="4" selected>Hoàn thành</option>
-                }
-                else
-                {
-                    <option value="4">Hoàn thành</option>
-                }
-                @if (Model.StatusFilter == 5)
-                {
-                    <option value="5" selected>Từ chối</option>
-                }
-                else
-                {
-                    <option value="5">Từ chối</option>
-                }
-            </select>
-
             <select name="priority" class="tk-select">
                 <option value="">Tất cả độ ưu tiên</option>
                 @if (Model.PriorityFilter == 0)
@@ -323,6 +355,43 @@
                     <option value="2">🔴 Cao</option>
                 }
             </select>
+        <div class="tk-date-wrap">
+            <svg class="tk-date-icon" width="13" height="13" fill="none" stroke="currentColor"
+                 stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+            </svg>
+            <input type="text" id="deadlineFrom-picker" class="tk-select tk-date-input"
+                   placeholder="Từ ngày" readonly />
+            <input type="hidden" name="deadlineFrom" id="deadlineFrom-hidden"
+                   value="@(Model.DeadlineFrom?.ToString("yyyy-MM-dd") ?? "")" />
+        </div>
+
+        <div class="tk-date-wrap">
+            <svg class="tk-date-icon" width="13" height="13" fill="none" stroke="currentColor"
+                 stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+            </svg>
+            <input type="text" id="deadlineTo-picker" class="tk-select tk-date-input"
+                   placeholder="Đến ngày" readonly />
+            <input type="hidden" name="deadlineTo" id="deadlineTo-hidden"
+                   value="@(Model.DeadlineTo.HasValue && !Model.Overdue ? Model.DeadlineTo.Value.ToString("yyyy-MM-dd") : "")" />
+        </div>
+
+        <label class="tk-overdue-label">
+            @if (Model.Overdue)
+            {
+                <input type="checkbox" name="overdue" value="true" checked
+                       onchange="this.form.submit()" />
+            }
+            else
+            {
+                <input type="checkbox" name="overdue" value="true"
+                       onchange="this.form.submit()" />
+            }
+            <span>Hết hạn</span>
+        </label>
             @if (canManage && Model.Users.Any())
             {
                 <select name="assignedTo" class="tk-select">
@@ -341,7 +410,9 @@
                 </select>
             }
             <button type="submit" class="tk-btn-secondary">Lọc</button>
-            @if (Model.SearchQuery != null || Model.StatusFilter != null || Model.PriorityFilter != null || Model.AssignedToFilter != null)
+        @if (Model.SearchQuery != null || Model.StatusFilter != null || Model.PriorityFilter != null
+        || Model.AssignedToFilter != null || Model.DeadlineFrom != null
+        || Model.DeadlineTo != null || Model.Overdue)
             {
                 <a href="@Url.Action("Index", new { view = Model.ViewMode })" class="tk-btn-ghost">✕ Xóa lọc</a>
             }
@@ -398,7 +469,7 @@
                             <td>
                                 @if (t.Deadline.HasValue)
                                 {
-                                    var overdue = t.Deadline.Value < DateTime.UtcNow && t.Status < 4;
+                                    var overdue = t.Deadline.Value < DateTime.Now && t.Status < 4;
                                     <span class="tk-deadline @(overdue?"tk-deadline--over":"")">
                                         @t.Deadline.Value.ToString("dd/MM/yyyy")
                                     </span>
@@ -439,36 +510,6 @@
                                             </button>
                                         </form>
                                     }
-
-                                    @* User cập nhật trạng thái *@
-                                    @if (Model.ViewerRole == 1)
-                                    {
-                                        @if (t.Status == 1)
-                                        {
-                                            <form method="post" action="@Url.Action("UpdateStatus", new { id = t.Id })">
-                                                @Html.AntiForgeryToken()
-                                                <input type="hidden" name="newStatus" value="1" />
-                                                <button type="submit" class="tk-action-btn tk-action-btn--start" title="Bắt đầu làm">
-                                                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                                        <polygon points="5 3 19 12 5 21 5 3" />
-                                                    </svg>
-                                                </button>
-                                            </form>
-                                        }
-                                        @if (t.Status == 2)
-                                        {
-                                            <form method="post" action="@Url.Action("UpdateStatus", new { id = t.Id })">
-                                                @Html.AntiForgeryToken()
-                                                <input type="hidden" name="newStatus" value="2" />
-                                                <button type="submit" class="tk-action-btn tk-action-btn--submit" title="Gửi đánh giá">
-                                                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                                        <line x1="22" y1="2" x2="11" y2="13" />
-                                                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                                                    </svg>
-                                                </button>
-                                            </form>
-                                        }
-                                    }
                                 </div>
                             </td>
                         </tr>
@@ -495,8 +536,17 @@
                 <div class="tk-page-list">
                     @for (int i = 1; i <= r.TotalPages; i++)
                     {
-                        <a href="@Url.Action("Index", new{page=i,q=Model.SearchQuery,status=Model.StatusFilter,priority=Model.PriorityFilter,assignedTo=Model.AssignedToFilter,view="table"})"
-                           class="tk-page-btn @(i==r.Page?"tk-page-btn--active":"")">@i</a>
+                    <a href="@Url.Action("Index", new {
+    page         = i,
+    view         = "table",
+    q            = Model.SearchQuery,
+    status       = Model.StatusFilter,
+    priority     = Model.PriorityFilter,
+    assignedTo   = Model.AssignedToFilter,
+    deadlineFrom = Model.DeadlineFrom?.ToString("yyyy-MM-dd"),
+    deadlineTo   = Model.DeadlineTo.HasValue && !Model.Overdue ? Model.DeadlineTo.Value.ToString("yyyy-MM-dd") : null,
+    overdue      = Model.Overdue ? "true" : null
+})" class="tk-page-btn @(i==r.Page?"tk-page-btn--active":"")">@i</a>
                     }
                 </div>
             </div>
@@ -562,7 +612,7 @@
                                     </div>
                                     @if (t.Deadline.HasValue)
                                     {
-                                        var over = t.Deadline.Value < DateTime.UtcNow && t.Status < 3;
+                                        var over = t.Deadline.Value < DateTime.Now && t.Status < 3;
                                         <span class="tk-deadline @(over?"tk-deadline--over":"") kb-deadline">
                                             <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                                 <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
@@ -709,8 +759,10 @@
     </div>
 </div>
 @section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/l10n/vn.js"></script>
     <script>
-               const PRIORITY_LABEL = ['🟢 Thấp', '🟡 Trung bình', '🔴 Cao'];
+        const PRIORITY_LABEL = ['🟢 Thấp', '🟡 Trung bình', '🔴 Cao'];
         const STATUS_LABEL   = ['Chờ xử lý','Đang làm','Chờ duyệt','Hoàn thành','Từ chối'];
         const VIEWER_ROLE    = @Model.ViewerRole;
         const ANTIFORGERY    = () => document.querySelector('input[name="__RequestVerificationToken"]')?.value ?? '';
@@ -1055,5 +1107,68 @@
         }
 
         document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTaskModal(); });
+        // ── Flatpickr date filter ──────────────────────────────
+        (function () {
+            function initDatePicker(pickerId, hiddenId, initialVal) {
+                const hidden = document.getElementById(hiddenId);
+                const pickerEl = document.getElementById(pickerId);
+
+                // Restore hiển thị dd/MM/yyyy nếu có giá trị cũ
+                if (initialVal) {
+                    const p = initialVal.split('-');
+                    if (p.length === 3) pickerEl.value = `${p[2]}/${p[1]}/${p[0]}`;
+                }
+
+                const fp = flatpickr(pickerEl, {
+                    locale: 'vn',
+                    dateFormat: 'd/m/Y',
+                    allowInput: false,
+                    disableMobile: true,
+                    onChange(selectedDates) {
+                        if (selectedDates.length) {
+                            const d  = selectedDates[0];
+                            const yy = d.getFullYear();
+                            const mm = String(d.getMonth() + 1).padStart(2, '0');
+                            const dd = String(d.getDate()).padStart(2, '0');
+                            hidden.value = `${yy}-${mm}-${dd}`;
+                            clearBtn.style.display = '';
+                        } else {
+                            hidden.value = '';
+                            clearBtn.style.display = 'none';
+                        }
+                    }
+                });
+
+                // Nút ✕ xóa ngày
+                const wrap = pickerEl.parentElement;
+                wrap.style.position = 'relative';
+                const clearBtn = document.createElement('button');
+                clearBtn.type = 'button';
+                clearBtn.innerHTML = '✕';
+                clearBtn.title = 'Xóa ngày';
+                clearBtn.style.cssText =
+                    'position:absolute;right:8px;top:50%;transform:translateY(-50%);' +
+                    'background:none;border:none;cursor:pointer;color:#9ca3af;' +
+                    'font-size:12px;padding:2px 4px;line-height:1;display:none;';
+                clearBtn.addEventListener('click', () => {
+                    fp.clear();
+                    hidden.value = '';
+                    clearBtn.style.display = 'none';
+                });
+                wrap.appendChild(clearBtn);
+
+                // Hiện nút nếu đã có giá trị
+                if (initialVal) clearBtn.style.display = '';
+            }
+
+            initDatePicker(
+                'deadlineFrom-picker', 'deadlineFrom-hidden',
+                '@(Model.DeadlineFrom?.ToString("yyyy-MM-dd") ?? "")'
+            );
+            initDatePicker(
+                'deadlineTo-picker', 'deadlineTo-hidden',
+                '@(Model.DeadlineTo.HasValue && !Model.Overdue ? Model.DeadlineTo.Value.ToString("yyyy-MM-dd") : "")'
+            );
+        })();
     </script>
 }

@@ -3,6 +3,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WorkManagement.Core.Interfaces.Services;
+using WorkManagement.Core.Services;
 using WorkManagement.Web.Models;
 
 namespace WorkManagement.Web.Controllers;
@@ -61,5 +62,11 @@ public class HomeController : Controller
     {
         await _notifService.MarkAllAsReadAsync(CurrentUserId);
         return Ok();
+    }
+    [HttpGet]
+    public async Task<IActionResult> GetRecentNotifications()
+    {
+        var notifications = await _notifService.GetRecentAsync(CurrentUserId, 5);
+        return Json(notifications);
     }
 }

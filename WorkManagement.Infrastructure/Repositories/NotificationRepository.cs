@@ -32,7 +32,7 @@ namespace WorkManagement.Infrastructure.Repositories
         public async Task<Result<List<Notification>>> GetByUserIdAsync(int userId)
         {
             var list = await _db.Notifications
-                .Where(n => n.UserId == userId)
+                .Where(n => n.UserId == userId && n.Channel == NotificationChannel.InApp)
                 .OrderByDescending(n => n.CreatedAt)
                 .ToListAsync();
 
@@ -65,15 +65,47 @@ namespace WorkManagement.Infrastructure.Repositories
                 .ExecuteUpdateAsync(s => s.SetProperty(n => n.IsRead, true));
         }
         public async Task<List<Notification>> GetUnsentAsync()
-    => await _db.Notifications
-            .Include(n => n.User)
-        .Where(n => !n.IsSent)
-        .ToListAsync();
+        {
+            return await _db.Notifications
+                .Include(n => n.User)
+                .Where(n => !n.IsSent
+                         && n.Channel == NotificationChannel.Email
+                         && n.FailCount < 3)
+                .ToListAsync();
+        }
         public async Task<bool> HasReminderAsync(int taskId, int userId, int reminderType)
     => await _db.Notifications.AnyAsync(n =>
         n.TaskId == taskId &&
         n.UserId == userId &&
         n.Type == NotificationType.DeadlineReminder &&
         n.ReminderType == reminderType);
+        public async Task MarkAsReadByTaskAsync(int taskId, int userId)
+        {
+            var notifications = await _db.Notifications
+                .Where(n => n.TaskId == taskId && n.UserId == userId && !n.IsRead)
+                .ToListAsync();
+
+            foreach (var n in notifications)
+                n.IsRead = true;
+
+            await _db.SaveChangesAsync();
+        }
+        public async Task DeleteByTaskAndUserAsync(int taskId, int userId)
+        {
+            var notifications = await _db.Notifications
+                .Where(n => n.TaskId == taskId && n.UserId == userId)
+                .ToListAsync();
+
+            _db.Notifications.RemoveRange(notifications);
+            await _db.SaveChangesAsync();
+        }
+        public async Task<List<Notification>> GetRecentAsync(int userId, int count)
+        {
+            return await _db.Notifications
+                .Where(n => n.UserId == userId && n.Channel == NotificationChannel.InApp)
+                .OrderByDescending(n => n.CreatedAt)
+                .Take(count)
+                .ToListAsync();
+        }
     }
 }

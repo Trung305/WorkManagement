@@ -18,6 +18,7 @@ using WorkManagement.Web.Middleware.WorkManagement.Web.Middleware;
 using WorkManagement.Web.Middleware;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.IdentityModel.Tokens.Jwt;
+using WorkManagement.Web.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -202,7 +203,12 @@ Log.Logger = new LoggerConfiguration()
         outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {RequestId} {SourceContext} {Message:lj}{NewLine}{Exception}",
         retainedFileCountLimit: 30)
     .CreateLogger();
+builder.Services.AddScoped<SetUserAvatarFilter>();
 
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.AddService<SetUserAvatarFilter>();
+});
 builder.Host.UseSerilog();
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())

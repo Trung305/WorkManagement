@@ -15,8 +15,12 @@ namespace WorkManagement.Core.Interfaces.Services
     {
         Task<Result<TaskPagedResultDto>> GetPagedAsync(
             int page, int pageSize,
-            string? search, int? status, int? priority,
-            int? assignedToId, int? viewerUserId, int? viewerRole, DateTime? deadlineDate);
+            string? q, int? status, int? priority,
+            int? assignedTo, int? viewerUserId, int? viewerRole, 
+            DateTime? deadline,
+            DateTime? deadlineFrom,
+            DateTime? deadlineTo,
+            bool overdue);
 
         Task<Result<TaskListDto>> GetByIdAsync(int id);
         Task<Result<int>> CreateAsync(CreateTaskDto dto);

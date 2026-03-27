@@ -138,5 +138,43 @@ namespace WorkManagement.Core.Services
             _logger.LogWarning("Admin deleted user {Id} ({Email})", id, user.Email);
             return Result.Success();
         }
+        public async Task<Result> UpdateProfileAsync(UpdateProfileDto dto)
+        {
+            var user = await _userRepo.GetByIdAsync(dto.Id);
+            if (user == null) return Result.Fail("Không tìm thấy người dùng.");
+
+            if (await _userRepo.EmailExistsAsync(dto.Email, excludeId: dto.Id))
+                return Result.Fail("Email đã được sử dụng.");
+
+            user.FullName = dto.FullName;
+            user.Email = dto.Email;
+            await _userRepo.UpdateAsync(user);
+            return Result.Success();
+        }
+
+        public async Task<Result<string>> UpdateAvatarAsync(int userId, Stream stream, string fileName, string webRootPath)
+        {
+            var user = await _userRepo.GetByIdAsync(userId);
+            if (user == null) return Result<string>.Fail("Không tìm thấy người dùng.");
+
+            var ext = Path.GetExtension(fileName).ToLower();
+            var newFileName = $"{Guid.NewGuid()}{ext}";
+            var folder = Path.Combine(webRootPath, "uploads", "avatars");
+            Directory.CreateDirectory(folder);
+
+            using (var fs = new FileStream(Path.Combine(folder, newFileName), FileMode.Create))
+                await stream.CopyToAsync(fs);
+
+            // Xóa avatar cũ
+            if (!string.IsNullOrEmpty(user.AvatarUrl))
+            {
+                var oldPath = Path.Combine(webRootPath, user.AvatarUrl.TrimStart('/'));
+                if (File.Exists(oldPath)) File.Delete(oldPath);
+            }
+
+            user.AvatarUrl = $"/uploads/avatars/{newFileName}";
+            await _userRepo.UpdateAsync(user);
+            return Result<string>.Success(user.AvatarUrl);
+        }
     }
 }

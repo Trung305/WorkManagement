@@ -20,11 +20,13 @@ namespace WorkManagement.Web.Controllers
         private readonly ITaskService _taskService;
         private readonly ILogger<TasksController> _logger;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public TasksController(ITaskService taskService, ILogger<TasksController> logger, IWebHostEnvironment webHostEnvironment)
+        private readonly INotificationService _notificationService;
+        public TasksController(ITaskService taskService, ILogger<TasksController> logger, IWebHostEnvironment webHostEnvironment, INotificationService notificationService)
         {
             _taskService = taskService;
             _logger = logger;
             _webHostEnvironment = webHostEnvironment;
+            _notificationService = notificationService;
         }
 
         private int CurrentUserId
@@ -47,17 +49,30 @@ namespace WorkManagement.Web.Controllers
         // ── GET /Tasks/Index ─────────────────────────────────
         [HttpGet("Index")]
         public async Task<IActionResult> Index(
-            int page = 1, string? q = null, int? status = null,
-            int? priority = null, int? assignedTo = null,
-            string view = "table", string? deadline = null)
+    int page = 1, string? q = null, int? status = null,
+    int? priority = null, int? assignedTo = null,
+    string view = "table", string? deadline = null,
+    DateTime? deadlineFrom = null, DateTime? deadlineTo = null,  // thêm
+    bool overdue = false)                                         // thêm
         {
             DateTime? deadlineDate = null;
             if (!string.IsNullOrEmpty(deadline) && DateTime.TryParse(deadline, out var d))
                 deadlineDate = d;
 
+            // Nếu overdue=true → deadlineTo = now, chỉ lấy chưa hoàn thành
+            if (overdue)
+                deadlineTo = DateTime.Now;
+
             var pagedResult = await _taskService.GetPagedAsync(
                 page, 12, q, status, priority,
-                assignedTo, CurrentUserId, CurrentUserRole, deadlineDate);
+                assignedTo, CurrentUserId, CurrentUserRole, deadlineDate,
+                deadlineFrom, deadlineTo, overdue);          // truyền thêm
+
+            var allResult = await _taskService.GetPagedAsync(
+                1, int.MaxValue, q, null, priority,
+                assignedTo, CurrentUserId, CurrentUserRole, deadlineDate,
+                deadlineFrom, deadlineTo, overdue);
+            var allItems = allResult.Data?.Items ?? new();
 
             var usersResult = IsUser
                 ? Result<List<UserListDto>>.Success(new())
@@ -70,14 +85,24 @@ namespace WorkManagement.Web.Controllers
                 StatusFilter = status,
                 PriorityFilter = priority,
                 AssignedToFilter = assignedTo,
+                DeadlineFrom = deadlineFrom, 
+                DeadlineTo = deadlineTo,    
+                Overdue = overdue,      
                 ViewMode = view,
                 Users = usersResult.Data ?? new(),
-                ViewerRole = CurrentUserRole
+                ViewerRole = CurrentUserRole,
+                TotalStats = new TaskTotalStats
+                {
+                    Pending = allItems.Count(t => t.Status == 1),
+                    InProgress = allItems.Count(t => t.Status == 2),
+                    PendingReview = allItems.Count(t => t.Status == 3),
+                    Completed = allItems.Count(t => t.Status == 4),
+                    Rejected = allItems.Count(t => t.Status == 5),
+                }
             };
 
             return View("~/Views/Tasks/Index.cshtml", vm);
         }
-
         // ── GET /Tasks/create ────────────────────────────────
         [HttpGet("create")]
         public async Task<IActionResult> Create()
@@ -187,6 +212,7 @@ namespace WorkManagement.Web.Controllers
             };
             ViewBag.CurrentUserId = CurrentUserId;
             ViewBag.CurrentUserRole = CurrentUserRole;
+            await _notificationService.MarkAsReadByTaskAsync(id, CurrentUserId);
             return View(vm);
         }
 

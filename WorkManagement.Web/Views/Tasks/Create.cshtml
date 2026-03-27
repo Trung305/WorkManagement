@@ -122,17 +122,65 @@
                     </div>
 
                     <div class="cf-field">
-                        <label asp-for="AssignedToId" class="cf-label">
+                        <label class="cf-label">
                             Giao cho <span class="cf-req">*</span>
                         </label>
-                        <select asp-for="AssignedToId" class="cf-select">
-                            <option value="">— Chưa phân công —</option>
-                            @foreach (var u in Model.AssignableUsers)
-                            {
-                                <option value="@u.Id">@u.FullName</option>
-                            }
-                        </select>
-                        <span asp-validation-for="AssignedToId" class="cf-field-err"></span>
+
+                        <div class="us-wrapper" id="usWrapper">
+                            <input type="hidden" id="assignedToInput" name="AssignedToId" value="" />
+
+                            <button type="button" class="us-trigger" id="usTrigger">
+                                <span class="us-selected" id="usSelected">
+                                    <span class="us-placeholder">— Chưa phân công —</span>
+                                </span>
+                                <svg class="us-chevron" viewBox="0 0 20 20" fill="none">
+                                    <path d="M5 7.5l5 5 5-5" stroke="currentColor"
+                                          stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+
+                            <div class="us-dropdown" id="usDropdown">
+                                <div class="us-search-wrap">
+                                    <svg viewBox="0 0 20 20" fill="none" class="us-search-icon">
+                                        <circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5" />
+                                        <path d="M13.5 13.5l3 3" stroke="currentColor"
+                                              stroke-width="1.5" stroke-linecap="round" />
+                                    </svg>
+                                    <input type="text" id="usSearch" class="us-search-input"
+                                           placeholder="Tìm theo tên hoặc email..." />
+                                </div>
+
+                                <ul class="us-list" id="usList">
+                                    <li class="us-item is-selected" data-value="" data-name="" data-email="">
+                                        <span class="us-none-text">— Chưa phân công —</span>
+                                    </li>
+                                    @foreach (var u in Model.AssignableUsers)
+                                    {
+                                        <li class="us-item"
+                                            data-value="@u.Id"
+                                            data-name="@u.FullName.ToLower()"
+                                            data-email="@u.Email.ToLower()">
+                                            <span class="us-avatar">
+                                                @if (!string.IsNullOrEmpty(u.AvatarUrl))
+                                                {
+                                                    <img src="@u.AvatarUrl" alt="" class="us-avatar-img" />
+                                                }
+                                                else
+                                                {
+                                                    <span class="us-avatar-init">@u.FullName[0]</span>
+                                                }
+                                            </span>
+                                            <span class="us-info">
+                                                <span class="us-name">@u.FullName</span>
+                                                <span class="us-email">@u.Email</span>
+                                            </span>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+                        <span class="cf-field-err" id="assignedToErr"></span>
                     </div>
                 </div>
             </div>

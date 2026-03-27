@@ -12,12 +12,15 @@ namespace WorkManagement.Web.Models.Task
         public int? PriorityFilter { get; set; }
         public int? AssignedToFilter { get; set; }
         public string ViewMode { get; set; } = "table"; // "table" | "kanban"
-
+        public DateTime? DeadlineFrom { get; set; }
+        public DateTime? DeadlineTo { get; set; }
+        public bool Overdue { get; set; }
         // Cho dropdown filter
         public List<UserListDto> Users { get; set; } = new();
 
         // Role của người đang xem (để render đúng actions)
         public int ViewerRole { get; set; }
+        public TaskTotalStats TotalStats { get; set; } = new();
     }
 
     public class TaskFormViewModel
@@ -68,5 +71,13 @@ namespace WorkManagement.Web.Models.Task
 
         [MaxLength(500)]
         public string? RejectedReason { get; set; }
+    }
+    public class TaskTotalStats
+    {
+        public int Pending { get; set; }
+        public int InProgress { get; set; }
+        public int PendingReview { get; set; }
+        public int Completed { get; set; }
+        public int Rejected { get; set; }
     }
 }

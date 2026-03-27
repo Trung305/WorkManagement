@@ -36,6 +36,6 @@ namespace WorkManagement.Core.DTOs.Dashboard
         public DateTime? Deadline { get; set; }
         public string? AssignedToName { get; set; }
         public string? CreatedByName { get; set; }
-        public bool IsOverdue => Deadline.HasValue && Deadline.Value < DateTime.UtcNow && Status < 4;
+        public bool IsOverdue => Deadline.HasValue && Deadline.Value < DateTime.Now && Status < 4;
     }
 }

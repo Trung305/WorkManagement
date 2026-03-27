@@ -17,6 +17,7 @@ namespace WorkManagement.Core.Interfaces.Services
         Task<Result<List<NotificationDto>>> GetByUserIdAsync(int userId);
         Task<Result> MarkAsReadAsync(int notificationId, int userId);
         Task<Result> MarkAllAsReadAsync(int userId);
-
+        Task MarkAsReadByTaskAsync(int taskId, int userId);
+        Task<List<NotificationDto>> GetRecentAsync(int userId, int count);
     }
 }

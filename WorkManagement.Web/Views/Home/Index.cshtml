@@ -15,10 +15,11 @@
     var daysInMonth = DateTime.DaysInMonth(Model.CurrentYear, Model.CurrentMonth);
     var startDow = (int)firstDay.DayOfWeek; // 0=CN
     var monthName = firstDay.ToString("MMMM, yyyy", new System.Globalization.CultureInfo("vi-VN"));
+    var FullName = Context.Items["FullName"]?.ToString();
 }
 
 <div class="greeting">
-    <h1>Chào @greeting, @userName</h1>
+    <h1>Chào @greeting, @FullName</h1>
     <p>
         @if (Model.TodayTasks > 0)
         {
@@ -91,7 +92,6 @@
                 {
                     var isDone = t.Status == 4;
                     <div class="task-item">
-                        <div class="task-check @(isDone ? "done" : "")"></div>
                         <div class="task-info">
                             <div class="task-name @(isDone ? "done" : "")"
                                  style="cursor:pointer"
@@ -140,7 +140,6 @@
                 foreach (var t in Model.NearDeadlineTasks)
                 {
                     <div class="task-item">
-                        <div class="task-check"></div>
                         <div class="task-info">
                             <div class="task-name"
                                  style="cursor:pointer"

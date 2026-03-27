@@ -54,6 +54,13 @@ namespace WorkManagement.Infrastructure.BackgroundJobs
 
             foreach (var notif in pending)
             {
+                if (notif.FailCount >= 3)
+                {
+                    _logger.LogWarning("Notification {Id} skipped — failed {Count} times",
+                        notif.Id, notif.FailCount);
+                    continue;
+                }
+
                 try
                 {
                     if (notif.Channel == NotificationChannel.Email)
@@ -78,14 +85,18 @@ namespace WorkManagement.Infrastructure.BackgroundJobs
                     }
 
                     notif.IsSent = true;
-                    notif.SentAt = DateTime.UtcNow;
+                    notif.SentAt = DateTime.Now;
                     await notifRepo.UpdateAsync(notif);
-
-                    _logger.LogInformation("Processed notification {Id}", notif.Id);
+                    _logger.LogInformation("Sent notification {Id}", notif.Id);
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, "Failed to process notification {Id}", notif.Id);
+                    notif.FailCount++;
+                    await notifRepo.UpdateAsync(notif);
+
+                    _logger.LogError(ex,
+                        "Failed to send notification {Id} (attempt {Count}/3)",
+                        notif.Id, notif.FailCount);
                 }
             }
         }

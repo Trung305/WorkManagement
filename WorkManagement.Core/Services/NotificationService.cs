@@ -74,5 +74,21 @@ namespace WorkManagement.Core.Services
             await _notificationRepository.MarkAllAsReadAsync(userId);
             return Result.Success();
         }
+        public async System.Threading.Tasks.Task MarkAsReadByTaskAsync(int taskId, int userId)
+        {
+            await _notificationRepository.MarkAsReadByTaskAsync(taskId, userId);
+        }
+        public async Task<List<NotificationDto>> GetRecentAsync(int userId, int count)
+        {
+            var notifications = await _notificationRepository.GetRecentAsync(userId, count);
+            return notifications.Select(n => new NotificationDto
+            {
+                Id = n.Id,
+                Title = n.Title,
+                IsRead = n.IsRead,
+                CreatedAt = n.CreatedAt,
+                TaskId = n.TaskId
+            }).ToList();
+        }
     }
 }

@@ -63,7 +63,7 @@ namespace WorkManagement.Infrastructure.BackgroundJobs
                             userId: task.AssignedTo,
                             taskId: task.Id,
                             type: NotificationType.DeadlineReminder,
-                            title: $"⏰ Task \"{task.Title}\" còn 1 tiếng 30 phút nữa đến hạn!",
+                            title: $"Công việc \"{task.Title}\" còn 1 tiếng 30 phút nữa đến hạn!",
                             channel: NotificationChannel.InApp,
                             reminderType: 2
                         );
@@ -71,7 +71,7 @@ namespace WorkManagement.Infrastructure.BackgroundJobs
                             userId: task.AssignedTo,
                             taskId: task.Id,
                             type: NotificationType.DeadlineReminder,
-                            title: $"⏰ Task \"{task.Title}\" còn 1 tiếng 30 phút nữa đến hạn!",
+                            title: $"Công việc \"{task.Title}\" còn 1 tiếng 30 phút nữa đến hạn!",
                             channel: NotificationChannel.Email,
                             reminderType: 2
                         );
@@ -86,7 +86,7 @@ namespace WorkManagement.Infrastructure.BackgroundJobs
                             userId: task.AssignedTo,
                             taskId: task.Id,
                             type: NotificationType.DeadlineReminder,
-                            title: $"⏰ Task \"{task.Title}\" còn 12 giờ nữa đến hạn!",
+                            title: $"Công việc \"{task.Title}\" còn 12 giờ nữa đến hạn!",
                             channel: NotificationChannel.InApp,
                             reminderType: 1
                         );
@@ -94,7 +94,7 @@ namespace WorkManagement.Infrastructure.BackgroundJobs
                            userId: task.AssignedTo,
                            taskId: task.Id,
                            type: NotificationType.DeadlineReminder,
-                           title: $"⏰ Task \"{task.Title}\" còn 12 giờ nữa đến hạn!",
+                           title: $"Công việc \"{task.Title}\" còn 12 giờ nữa đến hạn!",
                            channel: NotificationChannel.Email,
                            reminderType: 2
                        );

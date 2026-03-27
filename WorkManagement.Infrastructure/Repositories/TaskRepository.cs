@@ -28,7 +28,9 @@ namespace WorkManagement.Infrastructure.Repositories
         public async Task<(IEnumerable<TaskItem>, int, Dictionary<int, int>)> GetPagedAsync(
             int page, int pageSize,
             string? search, int? status, int? priority,
-            int? assignedToId, int? viewerUserId, int? viewerRole, DateTime? deadlineDate)
+            int? assignedToId, int? viewerUserId, int? viewerRole, DateTime? deadlineDate, DateTime? deadlineFrom = null,
+    DateTime? deadlineTo = null,
+    bool overdue = false)
         {
             var query = _db.Tasks
                 .Include(t => t.AssignedUser)
@@ -57,6 +59,17 @@ namespace WorkManagement.Infrastructure.Repositories
             if (deadlineDate.HasValue)
                 query = query.Where(t => t.Deadline.HasValue &&
                                          t.Deadline.Value.Date == deadlineDate.Value.Date);
+
+            if (deadlineFrom.HasValue)
+                query = query.Where(t => t.Deadline >= deadlineFrom.Value);
+
+            if (deadlineTo.HasValue)
+                query = query.Where(t => t.Deadline <= deadlineTo.Value);
+
+            if (overdue)
+                query = query.Where(t => t.Deadline < DateTime.Now
+                                      && t.Status != WorkManagement.Core.Enums.TaskStatus.Completed
+                                      && t.Status != WorkManagement.Core.Enums.TaskStatus.Rejected);
             // Stats (trên toàn bộ filter, trước phân trang)
             var statsQuery = query;
             var stats = await statsQuery

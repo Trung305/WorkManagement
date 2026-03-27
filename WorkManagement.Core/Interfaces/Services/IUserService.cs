@@ -16,5 +16,7 @@ namespace WorkManagement.Core.Interfaces.Services
         Task<Result> UpdateAsync(UpdateUserDto dto);
         Task<Result> ToggleActiveAsync(int id);
         Task<Result> DeleteAsync(int id);
+        Task<Result> UpdateProfileAsync(UpdateProfileDto dto);
+        Task<Result<string>> UpdateAvatarAsync(int userId, Stream stream, string fileName, string webRootPath);
     }
 }

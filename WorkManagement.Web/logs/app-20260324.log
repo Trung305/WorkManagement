@@ -10,3 +10,23 @@
 2026-03-24 18:46:52.777 [WRN] 0HNK9JBV705AN:00000017 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
 2026-03-24 18:46:52.781 [WRN] 0HNK9JBV705AN:00000017 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
 2026-03-24 18:46:55.292 [INF] 0HNK9JBV705AN:0000001B WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-24 20:11:33.830 [INF]  WorkManagement.Infrastructure.BackgroundJobs.DeadlineReminderJob DeadlineReminderJob started.
+2026-03-24 20:11:34.384 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob NotificationBackgroundJob started.
+2026-03-24 20:11:37.861 [WRN] 0HNK9KRG60VBK:00000001 Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware Unable to configure Browser Link script injection on the response. 
+2026-03-24 20:11:37.873 [WRN] 0HNK9KRG60VBK:00000001 Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-03-24 20:11:44.408 [INF] 0HNK9KRG60VBK:00000005 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-24 20:11:52.038 [INF] 0HNK9KRG60VBK:0000000B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-24 20:11:55.156 [INF] 0HNK9KRG60VBK:00000011 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-24 20:12:04.654 [INF] 0HNK9KRG60VBK:00000027 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-24 20:12:05.418 [INF] 0HNK9KRG60VBK:0000002D WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-24 20:12:09.072 [INF] 0HNK9KRG60VBK:00000033 WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-24 20:12:09.860 [INF] 0HNK9KRG60VBK:00000039 WorkManagement.Web.Controllers.HomeController CurrentUserId claim value: 7
+2026-03-24 20:13:46.024 [INF] 0HNK9KRG60VBK:0000004B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-24 20:13:46.218 [INF] 0HNK9KRG60VBK:0000004B WorkManagement.Core.Services.TaskService Task 26 created by 7
+2026-03-24 20:13:46.233 [INF] 0HNK9KRG60VBK:0000004B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-24 20:13:46.239 [INF] 0HNK9KRG60VBK:0000004B WorkManagement.Web.Controllers.TasksController CREATE_TASK | RequestId: 0HNK9KRG60VBK:0000004B | UserId: 7 | TaskId: 26 | Title: viec cua oan | AssignedTo: 13
+2026-03-24 20:13:46.258 [INF] 0HNK9KRG60VBK:0000004B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-24 20:13:46.376 [INF] 0HNK9KRG60VBK:0000004B WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-24 20:13:46.382 [INF] 0HNK9KRG60VBK:0000004B WorkManagement.Web.Controllers.TasksController UPLOAD_FILES | RequestId: 0HNK9KRG60VBK:0000004B | UserId: 7 | TaskId: 26 | FileCount: 1
+2026-03-24 20:13:46.501 [INF] 0HNK9KRG60VBK:0000004D WorkManagement.Web.Controllers.TasksController CurrentUserId claim value: 7
+2026-03-24 20:14:34.836 [INF]  WorkManagement.Infrastructure.BackgroundJobs.NotificationBackgroundJob Processed notification 56
